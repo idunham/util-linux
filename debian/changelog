@@ -38,6 +38,35 @@ util-linux (2.24.2-0.1) UNRELEASED; urgency=low
 
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
+util-linux (2.20.1-5.8) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  
+  [Martin Pitt]
+  * misc-utils/wipefs.c: In --all mode, wipe several times until no further
+    signatures are found. This is required for file systems like VFAT which
+    can be detected in multiple different ways. This is fixed properly in 2.21
+    (see LP #1012081), but does not backport well, so use this local hack for
+    now. (LP: #1046665, Closes: #695473)
+
+ -- intrigeri <intrigeri@debian.org>  Mon, 02 Jun 2014 10:49:39 +0200
+
+util-linux (2.20.1-5.7) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Add arm64/aarch64 support (closes: #689607)
+
+ -- wookey <wookey@wookware.org>  Fri, 28 Mar 2014 10:34:21 +0000
+
+util-linux (2.20.1-5.6) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix m4 looping in configure.ac's _UTIL_CHECK_SYSCALL.
+    m4_shiftn(2, sequence of two elements) infloops. (Closes: #724255)
+  * mount should not strip MS_REC for --make-r* options. (Closes: #731574)
+
+ -- Helmut Grohne <helmut@subdivi.de>  Sat, 25 Jan 2014 13:38:36 +0100
+
 util-linux (2.20.1-5.5) unstable; urgency=medium
 
   * Non-maintainer upload by the Security Team.
