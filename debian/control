@@ -31,7 +31,7 @@ Package: util-linux-locales
 Architecture: all
 Section: utils
 Priority: optional
-Depends: util-linux (>= ${Upstream}-0), util-linux (<< ${Upstream}.0-0), ${misc:Depends}
+Depends: util-linux (>= ${source:Upstream-Version}), ${misc:Depends}
 Replaces: util-linux (<< 2.11b)
 Description: Locales files for util-linux
  This package contains the internationalization files of for the util-linux
