@@ -35,6 +35,9 @@ util-linux (2.24.2-0.1) UNRELEASED; urgency=low
   * Run wrap-and-sort
   * Add systemd [linux-any] build dependency
     - gets rid of an ugly configure warning
+  * Bump Standards-Version to 3.9.5
+  * Incorporate NMU changelogs for 2.20.1-5.[678]
+    - Their actual changes are all obsoleted by upstream changes.
 
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
