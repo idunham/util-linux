@@ -19,7 +19,7 @@ Section: base
 Priority: required
 Uploaders: Scott James Remnant <scott@ubuntu.com>,
            Adam Conrad <adconrad@0c3.net>
-Standards-Version: 3.9.2
+Standards-Version: 3.9.5
 Maintainer: LaMont Jones <lamont@debian.org>
 Vcs-Browser: http://git.debian.org/?p=users/lamont/util-linux.git
 Vcs-Git: git://git.debian.org/~lamont/util-linux.git
