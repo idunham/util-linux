@@ -23,6 +23,18 @@ util-linux (2.24.2-0.1) UNRELEASED; urgency=low
   * debian/source/format: switch to 3.0 (quilt)
   * gbp-pq export patches in quilt format from rebased branch
   * debian/watch: fix it - use http and xz extension
+  * debian/control: use source:Upstream-Version instead of reinventing it
+  * Switch to dh7 rules and use dh-autoreconf
+  * bsdutils: don't try to install removed files
+  * Bump debhelper compat to 9
+  * Update libblkid1 and libmount1 with added symbols
+  * Documentation files has been moved/renamed
+  * util-linux-locales: use wildcard to catch all locales
+  * Upstream no longer ships ddate
+  * Drop obsolete --enable-rdev configure switch
+  * Run wrap-and-sort
+  * Add systemd [linux-any] build dependency
+    - gets rid of an ugly configure warning
 
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
