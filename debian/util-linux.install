@@ -11,7 +11,6 @@ usr/bin/getopt
 usr/bin/mcookie
 usr/bin/namei
 usr/bin/whereis
-#usr/bin/ddate
 usr/bin/flock
 usr/bin/ipcrm
 usr/bin/ipcs
