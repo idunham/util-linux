@@ -1,14 +1,17 @@
-util-linux (2.20.1-5.5.1) UNRELEASED; urgency=low
+util-linux (2.24.2-0.1) UNRELEASED; urgency=low
 
   [ LaMont Jones ]
   * new branch, with separated patches.
 
   [ Andreas Henriksson ]
+  * New upstream release.
   * Rebase patches/v2.20.1 branch (commit ad744ecf) on upstream/stable/v2.24
     - drop patches for issues that has been fixed upstream:
       [8f1c9b31] "Fix cve-2013-0157: mount discloses information about ..."
       [f08936ba] "sfdisk: fix calculation due to type mismatch (ix86)"
       [3f051232] "Fix typo in misc-utils/blkid.c"
+      [b9b0ed84] "drop my_dev_t.h, based on 88d52b16ce4df..."
+      (Squashed into man-page-tweaks-cleanup-my_dev_t.h-ancient-stuff.patch)
       [9ecca8da] "sparc-utils 'sparc64' binary sets ADDR_LIMIT_32BIT. ..."
       [b153d64e] "Fix typo in unshare manpage."
       [01cfac31] "agetty: don't use log_err() for non-fatal errors"
@@ -17,6 +20,9 @@ util-linux (2.20.1-5.5.1) UNRELEASED; urgency=low
     - temporarily drop patch which needs to be reworked:
       [23c9f34b] "hash passphrases - debian compatibility"
       old mount deprecated, changes needs to be applied to sys-utils/*mount*
+  * debian/source/format: switch to 3.0 (quilt)
+  * gbp-pq export patches in quilt format from rebased branch
+  * debian/watch: fix it - use http and xz extension
 
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
