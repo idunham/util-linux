@@ -58,51 +58,80 @@ endif
 	    install -m 644 debian/hwclock.rules debian/tmp/lib/udev/rules.d/85-hwclock.rules; \
 	    install -m 755 debian/hwclock-set debian/tmp/lib/udev/hwclock-set; \
 	fi
+
+override_dh_install:
+	dh_install
+	#
+	# Install files into udebs....
 	#
 ifeq ($(DEB_HOST_ARCH_OS),linux)
 	# copy mount library and symlink into udeb
 	mkdir -p debian/libmount1-udeb/lib/
-	ln debian/tmp/lib/*/libmount.so.1.* debian/libmount1-udeb/lib/
-	ln debian/tmp/lib/*/libmount.so.1   debian/libmount1-udeb/lib/
+	ln debian/libmount1/lib/*/libmount.so.1.* debian/libmount1-udeb/lib/
+	ln debian/libmount1/lib/*/libmount.so.1   debian/libmount1-udeb/lib/
 endif
 	# copy blkid library and symlink into udeb
 	mkdir -p debian/libblkid1-udeb/lib/
-	ln debian/tmp/lib/*/libblkid.so.1.* debian/libblkid1-udeb/lib/
-	ln debian/tmp/lib/*/libblkid.so.1   debian/libblkid1-udeb/lib/
+	ln debian/libblkid1/lib/*/libblkid.so.1.* debian/libblkid1-udeb/lib/
+	ln debian/libblkid1/lib/*/libblkid.so.1   debian/libblkid1-udeb/lib/
 	mkdir -p debian/util-linux-udeb/sbin/
-	ln debian/tmp/sbin/blkid debian/util-linux-udeb/sbin/
+	ln debian/util-linux/sbin/blkid debian/util-linux-udeb/sbin/
 	# copy uuid library and symlink into udeb
 	mkdir -p debian/libuuid1-udeb/lib/
-	ln debian/tmp/lib/*/libuuid.so.1.* debian/libuuid1-udeb/lib/
-	ln debian/tmp/lib/*/libuuid.so.1   debian/libuuid1-udeb/lib/
+	ln debian/libuuid1/lib/*/libuuid.so.1.* debian/libuuid1-udeb/lib/
+	ln debian/libuuid1/lib/*/libuuid.so.1   debian/libuuid1-udeb/lib/
 	#
-	cd debian; if [ -f tmp/sbin/fdisk ]; then \
+	cd debian; if [ -f util-linux/sbin/fdisk ]; then \
 	    mkdir -p fdisk-udeb/usr/sbin/; \
-	    ln tmp/sbin/*fdisk fdisk-udeb/usr/sbin/; \
-	    S=fdisk-udeb/usr/sbin/cfdisk; if [ -f $$S ]; then mv $$S cfdisk-udeb/usr/sbin/; fi; \
+	    ln util-linux/sbin/*fdisk fdisk-udeb/usr/sbin/; \
+	    S=fdisk-udeb/usr/sbin/cfdisk; if [ -f $$S ]; then \
+	        mkdir -p cfdisk-udeb/usr/sbin; \
+	        mv $$S cfdisk-udeb/usr/sbin/; fi; \
 	fi
-	# XXX: fixme.... debian/cfdisk-udeb vs debian/tmp
 	if [ -d debian/cfdisk-udeb ]; then \
-		cd debian/util-linux-locales && find usr/share/locale -type f | while read x; do ln $$x ../cfdisk-udeb/$$x; done \
+		cd debian/util-linux-locales && find usr/share/locale -type f | while read x; do \
+			mkdir -p ../cfdisk-udeb/$$(dirname $$x); \
+			ln $$x ../cfdisk-udeb/$$x; \
+		done \
 	fi
-# XXX: fixme....
-#ifeq ($(DEB_HOST_ARCH_OS),linux)
-#ifeq ($(DEB_HOST_ARCH),$(findstring $(arch),powerpc ppc64))
-#	mv -f debian/util-linux/sbin/fdisk debian/util-linux/sbin/ddisk
-#	mv -f debian/util-linux/usr/share/man/man8/fdisk.8 debian/util-linux/usr/share/man/man8/ddisk.8
-#else
-#	cd debian/util-linux && if [ -f sbin/hwclock ] ; then ln -sf hwclock.8.gz usr/share/man/man8/clock.8.gz; fi
-#endif
-#endif
-ifneq ($(DEB_HOST_ARCH_OS),hurd)
-	cd debian/tmp/sbin ; ln agetty getty
-	cd debian/tmp/usr/share/man/man8 ; ln agetty.8 getty.8
+	#
+	# Architecture specific installs...
+	#
+	# Rename fdisk to ddisk on PowerPC
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+ifeq ($(DEB_HOST_ARCH),$(findstring $(arch),powerpc ppc64))
+	mv -f debian/util-linux/sbin/fdisk debian/util-linux/sbin/ddisk
 endif
+endif
+	# Use agetty for getty, except on Hurd.
+ifneq ($(DEB_HOST_ARCH_OS),hurd)
+	cd debian/util-linux/sbin ; ln agetty getty
+endif
+	# Use agetty for getty, except on Hurd.
 ifneq ($(DEB_HOST_ARCH_OS),linux)
-	cd debian/tmp/sbin ; mv mkswap mkswap.linux
-	cd debian/tmp/usr/share/man/man8 ; mv mkswap.8 mkswap.linux.8
+	cd debian/util-linux/sbin ; mv mkswap mkswap.linux
 endif
 	rm -rf debian/*-udeb/usr/share/doc
+
+override_dh_installman:
+	dh_installman
+	#
+	# Architecture specific installs...
+	#
+	# Rename fdisk to ddisk on PowerPC
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+ifeq ($(DEB_HOST_ARCH),$(findstring $(arch),powerpc ppc64))
+	cd debian/util-linux/usr/share/man/man8/ && mv fdisk.8 ddisk.8
+endif
+endif
+	# Use agetty for getty, except on Hurd.
+ifneq ($(DEB_HOST_ARCH_OS),hurd)
+	cd debian/util-linux/usr/share/man/man8 && ln agetty.8 getty.8
+endif
+	# Rename mkswap to mkswap.linux on non-linux.
+ifneq ($(DEB_HOST_ARCH_OS),linux)
+	cd debian/util-linux/usr/share/man/man8 && mv mkswap.8 mkswap.linux.8
+endif
 
 override_dh_gencontrol:
 	# FIXME: just use: Conflicts: getty [hurd-any]

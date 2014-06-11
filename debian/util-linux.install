@@ -17,7 +17,6 @@ sbin/fsck.cramfs
 sbin/fsck.minix
 sbin/fsfreeze
 sbin/fstrim
-sbin/getty
 sbin/hwclock
 sbin/isosize
 sbin/mkfs
