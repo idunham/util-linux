@@ -59,7 +59,6 @@ usr/bin/taskset
 usr/bin/unshare
 usr/bin/whereis
 usr/bin/x86_64
-usr/lib/mime/packages/util-linux
 usr/sbin/cytune
 usr/sbin/fdformat
 usr/sbin/ldattach

@@ -53,8 +53,6 @@ endif
 	rm -f debian/tmp/usr/share/info/dir
 	#
 	#
-	mkdir -p debian/tmp/usr/lib/mime/packages/
-	install -m 644 debian/mime.util-linux debian/tmp/usr/lib/mime/packages/util-linux
 	if [ -f debian/tmp/sbin/hwclock ] ; then \
 	    install -m 644 debian/hwclock.5 debian/tmp/usr/share/man/man5; \
 	    mkdir -p debian/tmp/lib/udev/rules.d/; \
