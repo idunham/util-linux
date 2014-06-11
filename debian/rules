@@ -95,7 +95,6 @@ endif
 	fi
 # XXX: fixme....
 #ifeq ($(DEB_HOST_ARCH_OS),linux)
-#	install -m 644 debian/mount.fstab debian/mount/usr/share/doc/mount/examples/fstab
 #ifeq ($(DEB_HOST_ARCH),$(findstring $(arch),powerpc ppc64))
 #	mv -f debian/util-linux/sbin/fdisk debian/util-linux/sbin/ddisk
 #	mv -f debian/util-linux/usr/share/man/man8/fdisk.8 debian/util-linux/usr/share/man/man8/ddisk.8
