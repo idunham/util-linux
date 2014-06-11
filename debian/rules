@@ -57,15 +57,11 @@ endif
 	mkdir -p debian/tmp/usr/lib/mime/packages/
 	install -m 644 debian/mime.util-linux debian/tmp/usr/lib/mime/packages/util-linux
 	if [ -f debian/tmp/sbin/hwclock ] ; then \
-	    mkdir -p debian/tmp/etc/init.d/; \
-	    install -m 755 debian/hwclock.sh debian/tmp/etc/init.d/hwclock.sh; \
 	    install -m 644 debian/hwclock.5 debian/tmp/usr/share/man/man5; \
 	    mkdir -p debian/tmp/lib/udev/rules.d/; \
 	    install -m 644 debian/hwclock.rules debian/tmp/lib/udev/rules.d/85-hwclock.rules; \
 	    install -m 755 debian/hwclock-set debian/tmp/lib/udev/hwclock-set; \
 	fi
-	# XXX: disabled, should be handeled by dh_installinit
-	    #install -m 644 debian/hwclock.default debian/tmp/etc/default/hwclock; \
 	#
 ifeq ($(DEB_HOST_ARCH_OS),linux)
 	# copy mount library and symlink into udeb
@@ -119,6 +115,15 @@ ifeq ($(DEB_HOST_ARCH_OS),hurd)
 endif
 	dh_gencontrol -Xbsdutils
 	dh_gencontrol -pbsdutils -u-v1:$(DEB_VERSION)
+
+override_dh_installinit:
+	# install /etc/init.d/hwclock.sh
+	# - update-rc.d manually handled in maintainers scripts as there
+	#   is special per-arch considerations.
+	dh_installinit --name=hwclock.sh --noscripts
+	# install /etc/default/hwclock
+	dh_installinit --name=hwclock
+
 
 override_dh_installdocs:
 	dh_installdocs
