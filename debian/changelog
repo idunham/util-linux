@@ -38,6 +38,18 @@ util-linux (2.24.2-0.1) UNRELEASED; urgency=low
   * Bump Standards-Version to 3.9.5
   * Incorporate NMU changelogs for 2.20.1-5.[678]
     - Their actual changes are all obsoleted by upstream changes.
+  * Install upstream fstab example in mount docs dir
+  * Install debian fstab example in mount again under new name
+  * (Re)add (unused) mount hashed passphrases patch
+    - This patch needs to be updated to apply again.
+  * Add debian/util-linux.NEWS documenting major changes
+  * Install manpages in util-linux package
+  * Use dh_installinit to install hwclock init.d and default files
+  * Install getopt-parse bash and tcsh examples in util-linux docs dir
+  * Let dh_installmime install util-linux mime config
+  * Let dh_installdirs create /etc/fstab.d/
+  * Split up old debian/rules hacks further
+  * lintian said mount needed ${misc:Depends} dependency
 
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
