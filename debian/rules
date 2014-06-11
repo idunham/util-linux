@@ -2,6 +2,7 @@
 
 DEB_VERSION ?= $(shell dpkg-parsechangelog | awk '/^Version: /{print $$2}')
 DEB_HOST_ARCH_OS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS 2>/dev/null)
+DEB_HOST_ARCH ?= $(shell dpkg --print-architecture)
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 CONFOPTS= --enable-raw --enable-rdev --with-slang --enable-ddate --enable-line
@@ -95,7 +96,7 @@ endif
 # XXX: fixme....
 #ifeq ($(DEB_HOST_ARCH_OS),linux)
 #	install -m 644 debian/mount.fstab debian/mount/usr/share/doc/mount/examples/fstab
-#ifeq ($(arch),$(findstring $(arch),powerpc ppc64))
+#ifeq ($(DEB_HOST_ARCH),$(findstring $(arch),powerpc ppc64))
 #	mv -f debian/util-linux/sbin/fdisk debian/util-linux/sbin/ddisk
 #	mv -f debian/util-linux/usr/share/man/man8/fdisk.8 debian/util-linux/usr/share/man/man8/ddisk.8
 #else
