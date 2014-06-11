@@ -37,7 +37,6 @@ endif
 	mv debian/tmp/usr/share/man/man8/linux64.8 debian/tmp/usr/share/man/man1/linux64.1
 	# initscripts delivers this
 	rm -f debian/tmp/bin/mountpoint debian/tmp/usr/share/man/man1/mountpoint.1*
-	install -d -m 755 debian/tmp/etc/fstab.d
 	# the version in bsdmainutils seems newer.
 	rm -f debian/tmp/usr/bin/look debian/tmp/usr/share/man/man1/look.1
 	rm -f debian/tmp/usr/bin/hexdump debian/tmp/usr/share/man/man1/hexdump.1
