@@ -53,7 +53,6 @@ endif
 	rm -f debian/tmp/usr/share/info/dir
 	#
 	#
-	mv debian/tmp/usr/share/doc/util-linux/getopt debian/tmp/usr/share/doc/util-linux/examples/
 	mkdir -p debian/tmp/usr/lib/mime/packages/
 	install -m 644 debian/mime.util-linux debian/tmp/usr/lib/mime/packages/util-linux
 	if [ -f debian/tmp/sbin/hwclock ] ; then \
