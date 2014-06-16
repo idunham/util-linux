@@ -17,9 +17,9 @@ util-linux (2.24.2-0.1) UNRELEASED; urgency=low
       [01cfac31] "agetty: don't use log_err() for non-fatal errors"
     - drop translation updates conflicting with upstream translation updates:
       [83bc98c2] "Translation updates, various bugs."
-    - temporarily drop patch which needs to be reworked:
+    - drop patch for feature deprecated upstream:
       [23c9f34b] "hash passphrases - debian compatibility"
-      old mount deprecated, changes needs to be applied to sys-utils/*mount*
+      (losetup encryption support dropped, use cryptsetup.)
   * debian/source/format: switch to 3.0 (quilt)
   * gbp-pq export patches in quilt format from rebased branch
   * debian/watch: fix it - use http and xz extension
@@ -40,8 +40,6 @@ util-linux (2.24.2-0.1) UNRELEASED; urgency=low
     - Their actual changes are all obsoleted by upstream changes.
   * Install upstream fstab example in mount docs dir
   * Install debian fstab example in mount again under new name
-  * (Re)add (unused) mount hashed passphrases patch
-    - This patch needs to be updated to apply again.
   * Add debian/util-linux.NEWS documenting major changes
   * Install manpages in util-linux package
   * Use dh_installinit to install hwclock init.d and default files
