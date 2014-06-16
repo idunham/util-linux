@@ -8,9 +8,6 @@ util-linux (2.24.2-0.1) UNRELEASED; urgency=low
   ddate - convert Gregorian dates to Discordian dates
   chkdupexe - report dangling symlinks and duplicately-named binaries
 
-  The support for hashed passphrases / keybits in mount has been disabled.
-  (debian/patches/mount-hashed-passphrases.patch needs updating.)
-
   The cross-building support in debian/rules might also need to
   be revisited since the rules files has had a major overhaul
   without any special consideration for cross-building.
