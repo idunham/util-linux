@@ -1,2 +1,2 @@
 version=3
-http://ftp.kernel.org/pub/linux/utils/util-linux/v([\.\d]+)/util-linux-([\.\d]+)\.tar\.xz
+https://www.kernel.org/pub/linux/utils/util-linux/v([\.\d]+)/util-linux-([\.\d]+)\.tar\.xz
