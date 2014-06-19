@@ -48,6 +48,9 @@ util-linux (2.24.2-0.1) UNRELEASED; urgency=low
   * Let dh_installdirs create /etc/fstab.d/
   * Split up old debian/rules hacks further
   * lintian said mount needed ${misc:Depends} dependency
+  * Add mount/losetup encryption NEWS and recommend cryptsetup
+  * debian/watch: use https url
+  * debian/copyright: update and make machine readable (DEP-5)
 
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
