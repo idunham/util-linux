@@ -149,17 +149,6 @@ override_dh_installinit:
 	# install /etc/default/hwclock
 	dh_installinit --name=hwclock
 
-
-override_dh_installdocs:
-	dh_installdocs
-	# overwrite copyright
-	#install -m 644 debian/libblkid.copyright debian/libblkid1/usr/share/doc/libblkid1/copyright
-	#install -m 644 debian/libblkid.copyright debian/libblkid-dev/usr/share/doc/libblkid-dev/copyright
-	# overwrite copyright
-	#install -m 644 debian/libuuid.copyright debian/libuuid1/usr/share/doc/libuuid1/copyright
-	#install -m 644 debian/libuuid.copyright debian/uuid-dev/usr/share/doc/uuid-dev/copyright
-	#install -m 644 debian/libuuid.copyright debian/uuid-runtime/usr/share/doc/uuid-runtime/copyright
-
 override_dh_fixperms:
 	dh_fixperms -i -s -Xusr/bin/wall -Xbin/mount -Xbin/umount
 

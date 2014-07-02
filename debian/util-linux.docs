@@ -2,4 +2,3 @@ debian/README.Debian.hwclock
 AUTHORS
 Documentation/*.txt
 Documentation/releases/
-Documentation/licenses/
