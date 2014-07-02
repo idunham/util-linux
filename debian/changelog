@@ -54,8 +54,12 @@ util-linux (2.24.2-1) UNRELEASED; urgency=low
     (Closes: #651676)
   * Add debian/gbp.conf
   * Add myself to uploaders, with Adam Conrads blessing.
-  * Point Vcs-* fields to new collab-maint repository
+  * Point Vcs-* fields to new collab-maint repository (Closes: #696005)
   * debian/gbp.conf: gbp-pq --no-patch-numbers
+  * Drop Homepage field (Closes: #657757)
+  * Bump shlibs to latest API according to symbols (Closes: #588183)
+  * Fix hwclock.sh to add a final newline in /etc/adjtime (Closes: #699554)
+  * Stop installing extra license files
 
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
