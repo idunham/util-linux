@@ -23,8 +23,8 @@ Uploaders: Scott James Remnant <scott@ubuntu.com>,
            Andreas Henriksson <andreas@fatal.se>,
            Adam Conrad <adconrad@0c3.net>
 Standards-Version: 3.9.5
-Vcs-Browser: http://git.debian.org/?p=users/lamont/util-linux.git
-Vcs-Git: git://git.debian.org/~lamont/util-linux.git
+Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/pkg-util-linux.git
+Vcs-Git: git://git.debian.org/git/collab-maint/pkg-util-linux.git
 Homepage: http://userweb.kernel.org/~kzak/util-linux/
 
 Package: util-linux
