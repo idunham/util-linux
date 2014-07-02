@@ -4,8 +4,8 @@ util-linux (2.24.2-1) UNRELEASED; urgency=low
   * new branch, with separated patches.
 
   [ Andreas Henriksson ]
-  * New upstream release.
-  * Rebase patches/v2.20.1 branch (commit ad744ecf) on upstream/stable/v2.24
+  * New upstream release (Closes: #678446).
+  * Rebase patches/v2.20.1 branch (commit ad744ecf) on upstream v2.24.2 tag
     - drop patches for issues that has been fixed upstream:
       [8f1c9b31] "Fix cve-2013-0157: mount discloses information about ..."
       [f08936ba] "sfdisk: fix calculation due to type mismatch (ix86)"
@@ -51,9 +51,11 @@ util-linux (2.24.2-1) UNRELEASED; urgency=low
   * Add mount/losetup encryption NEWS and recommend cryptsetup
   * debian/watch: use https url
   * debian/copyright: update and make machine readable (DEP-5)
+    (Closes: #651676)
   * Add debian/gbp.conf
   * Add myself to uploaders, with Adam Conrads blessing.
   * Point Vcs-* fields to new collab-maint repository
+  * debian/gbp.conf: gbp-pq --no-patch-numbers
 
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
