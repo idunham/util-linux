@@ -25,7 +25,6 @@ Uploaders: Scott James Remnant <scott@ubuntu.com>,
 Standards-Version: 3.9.5
 Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/pkg-util-linux.git
 Vcs-Git: git://git.debian.org/git/collab-maint/pkg-util-linux.git
-Homepage: http://userweb.kernel.org/~kzak/util-linux/
 
 Package: util-linux
 Architecture: any
