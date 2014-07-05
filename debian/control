@@ -138,7 +138,7 @@ Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Architecture: any
 Multi-Arch: same
-Description: block device id library
+Description: stripped down block device id library, for debian-installer
  The blkid library which allows system programs like fsck and
  mount to quickly and easily find block devices by filesystem UUID and
  LABEL.  This allows system administrators to avoid specifiying
@@ -170,8 +170,8 @@ Priority: required
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: multiarch-support
 Architecture: linux-any
-Description: block device id library
- The device mounting library, used by mount and mount helpers.
+Description: device mounting library
+ The device mounting library, used by mount and umount helpers.
 
 Package: libmount1-udeb
 XC-Package-Type: udeb
@@ -179,8 +179,8 @@ Section: debian-installer
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Architecture: linux-any
-Description: block device id library
- The device mounting library, used by mount and mount helpers.
+Description: stripped down device mounting library, for debian-installer
+ The device mounting library, used by mount and umount helpers.
  .
  This is a minimal package for debian-installer.
 
@@ -192,8 +192,8 @@ Depends: libc6-dev | libc-dev,
          uuid-dev,
          ${misc:Depends}
 Architecture: linux-any
-Description: block device id library - headers and static libraries
- The device mounting library, used by mount and mount helpers.
+Description: device mounting library - headers and static libraries
+ The device mounting library, used by mount and umount helpers.
  .
  This package contains the development environment for the mount library.
 
@@ -270,6 +270,6 @@ Priority: optional
 Section: debian-installer
 Depends: ${misc:Depends}, ${shlibs:Depends}
 XC-Package-Type: udeb
-Description: Miscellaneous system utilities
+Description: stripped down miscellaneous system utilities, for debian-installer
  This is a minimal version of util-linux for debian-installer. It only
  contains the blkid binary at the moment.
