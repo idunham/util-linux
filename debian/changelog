@@ -283,7 +283,7 @@ util-linux (2.20.1-1.1) unstable; urgency=high
     (Closes: #650534).
   * Add autoconf, automake, autopoint, and libtool to Build-Depends
     accordingly.
-  * Set severity to “high” for the RC bug fix.
+  * Set severity to "high" for the RC bug fix.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 05 Jan 2012 18:24:37 +0100
 
@@ -523,7 +523,7 @@ util-linux (2.17.2-3.1) unstable; urgency=high
   * Apply trivial patch by Adam D. Barratt (thanks!): Only attempt to link
     locale-specific files in to the cfdisk-udeb hierarchy if cfdisk-udeb
     is actually being built.  Closes: #581725
-  * Set urgency to “high” since some packages are waiting for util-linux.
+  * Set urgency to "high" since some packages are waiting for util-linux.
 
  -- Cyril Brulebois <kibi@debian.org>  Sun, 20 Jun 2010 16:03:46 +0200
 
