@@ -94,10 +94,10 @@ Section: utils
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: bsdmainutils
 Multi-Arch: foreign
-Description: Basic utilities from 4.4BSD-Lite
- This package contains the bare minimum number of BSD utilities needed
- to boot a Debian system: logger, renice, script, scriptreplay, and wall.
- The remaining standard BSD utilities are provided by bsdmainutils.
+Description: basic utilities from 4.4BSD-Lite
+ This package contains the bare minimum of BSD utilities needed for a
+ Debian system: logger, renice, script, scriptreplay, and wall. The
+ remaining standard BSD utilities are provided by bsdmainutils.
 
 Package: fdisk-udeb
 Architecture: hurd-any linux-any
