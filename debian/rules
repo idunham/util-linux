@@ -149,6 +149,15 @@ override_dh_installinit:
 	# install /etc/default/hwclock
 	dh_installinit --name=hwclock
 
+override_dh_makeshlibs:
+	dh_makeshlibs -N libblkid1 -N libmount1 -N libuuid1
+	dh_makeshlibs -plibblkid1 -V \
+		--add-udeb=libblkid1-udeb
+	dh_makeshlibs -plibmount1 -V \
+		--add-udeb=libmount1-udeb
+	dh_makeshlibs -plibuuid1 -V \
+		--add-udeb=libuuid1-udeb
+
 override_dh_fixperms:
 	dh_fixperms -i -s -Xusr/bin/wall -Xbin/mount -Xbin/umount
 
