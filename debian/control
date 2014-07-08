@@ -171,6 +171,7 @@ Priority: required
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
 Architecture: linux-any
+Multi-Arch: same
 Description: device mounting library
  The device mounting library, used by mount and umount helpers.
 
