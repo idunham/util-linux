@@ -75,6 +75,12 @@ util-linux (2.24.2-1) UNRELEASED; urgency=low
     - replaces fancy utf-8 characters in 2.20.1-1.1 and 2.17.2-3.1
     (Closes: #745681)
 
+  [ Andreas Henriksson ]
+  * Use ${misc:Pre-Depends} instead of hardcoding multiarch-support
+  * Fix dh_makeshlibs to add udebs in generated shlibs
+  * Multi-arch -dev packages (Closes: #731308)
+  * Add missing Multi-Arch line to libmount1 package (Closes: #696004)
+
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
 util-linux (2.20.1-5.8) unstable; urgency=medium
