@@ -155,6 +155,7 @@ Depends: libblkid1 (= ${binary:Version}),
          uuid-dev,
          ${misc:Depends}
 Architecture: any
+Multi-Arch: same
 Description: block device id library - headers and static libraries
  The blkid library which allows system programs like fsck and
  mount to quickly and easily find block devices by filesystem UUID and
@@ -192,6 +193,7 @@ Depends: libc6-dev | libc-dev,
          uuid-dev,
          ${misc:Depends}
 Architecture: linux-any
+Multi-Arch: same
 Description: device mounting library - headers and static libraries
  The device mounting library, used by mount and umount helpers.
  .
@@ -258,6 +260,7 @@ Priority: extra
 Depends: libc6-dev | libc-dev, libuuid1 (= ${binary:Version}), ${misc:Depends}
 Replaces: e2fslibs-dev (<< 1.15)
 Architecture: any
+Multi-Arch: same
 Description: universally unique id library - headers and static libraries
  libuuid generates and parses 128-bit universally unique ids (UUIDs).
  See RFC 4122 for more information.
