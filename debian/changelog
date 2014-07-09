@@ -80,6 +80,13 @@ util-linux (2.24.2-1) UNRELEASED; urgency=low
   * Fix dh_makeshlibs to add udebs in generated shlibs
   * Multi-arch -dev packages (Closes: #731308)
   * Add missing Multi-Arch line to libmount1 package (Closes: #696004)
+  * Put util-linux-locales in section localization
+
+  [ Martin Pitt ]
+  * Fix check for systemd in hwclock-set udev script (Closes: #703597)
+
+  [ Andreas Henriksson ]
+  * Fix mismerge in remaining-kFreeBSD-hackery-for-building.patch
 
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
