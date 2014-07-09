@@ -4,7 +4,7 @@
 
 dev=$1
 
-if [ -e /sys/fs/cgroup/systemd ] ; then
+if [ -e /run/systemd/system ] ; then
     exit 0
 fi
 
