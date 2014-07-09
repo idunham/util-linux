@@ -17,7 +17,7 @@ diff --git a/sys-utils/ipcs.c b/sys-utils/ipcs.c
 index 16e5206..597a09e 100644
 --- a/sys-utils/ipcs.c
 +++ b/sys-utils/ipcs.c
-@@ -461,10 +461,13 @@ static void do_msg (char format, int unit)
+@@ -461,10 +461,12 @@ static void do_msg (char format, int unit)
  			return;
  		}
  		printf (_("------ Messages Status --------\n"));
@@ -27,7 +27,6 @@ index 16e5206..597a09e 100644
 +#endif
  		ipc_print_size(unit, _("used space"), msginfo.msgtql,
  			       unit == IPC_UNIT_DEFAULT ? _(" bytes\n") : "\n", 0);
-+		printf (_("used space = %d bytes\n"), msginfo.msgtql);
  		return;
  	}
  	case CREATOR:
