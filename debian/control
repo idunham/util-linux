@@ -65,7 +65,7 @@ Description: Miscellaneous system utilities
 
 Package: util-linux-locales
 Architecture: all
-Section: utils
+Section: localization
 Priority: optional
 Depends: util-linux (>= ${source:Upstream-Version}), ${misc:Depends}
 Replaces: util-linux (<< 2.11b)
