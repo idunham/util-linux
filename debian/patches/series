@@ -7,3 +7,4 @@ Report-correct-disk-size-on-GNU-kFreeBSD.-Thanks-Tuc.patch
 mount-segfault-when-creating-mtab-and-cannot-determi.patch
 remaining-kFreeBSD-hackery-for-building.patch
 2.20.1-1.2.patch
+Use-libuuid-user-group-in-sysvinit-script-systemd-un.patch
