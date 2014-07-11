@@ -15,7 +15,7 @@ CONFOPTS += --disable-silent-rules
 
 
 %:
-	dh $@ --with autoreconf
+	dh $@ --with autoreconf,systemd
 
 override_dh_autoreconf:
 	AM_OPTS=--copy LT_OPTS=--copy dh_autoreconf ./autogen.sh
@@ -111,6 +111,12 @@ endif
 ifneq ($(DEB_HOST_ARCH_OS),linux)
 	cd debian/util-linux/sbin ; mv mkswap mkswap.linux
 endif
+	# install uuidd systemd unit files on linux
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+	dh_install --package=uuid-runtime --autodest \
+		debian/tmp/lib/systemd/system/uuidd.*
+endif
+	#
 	rm -rf debian/*-udeb/usr/share/doc
 
 override_dh_installman:
@@ -148,6 +154,11 @@ override_dh_installinit:
 	dh_installinit --name=hwclock.sh --noscripts
 	# install /etc/default/hwclock
 	dh_installinit --name=hwclock
+	# install uuidd sysvinit script
+	make misc-utils/uuidd.rc
+	ln -s ../misc-utils/uuidd.rc debian/uuid-runtime.uuidd.init
+	dh_installinit --name=uuidd
+	rm -f debian/uuid-runtime.uuidd.init
 
 override_dh_makeshlibs:
 	dh_makeshlibs -N libblkid1 -N libmount1 -N libuuid1
