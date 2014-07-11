@@ -12,6 +12,7 @@ CONFOPTS += --with-selinux --enable-partx \
 		--enable-socket-activation
 endif
 CONFOPTS += --enable-tunelp
+CONFOPTS += --localstatedir=/run
 CONFOPTS += --disable-silent-rules
 
 
