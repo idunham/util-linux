@@ -41,6 +41,7 @@ debian/tmp/usr/share/man/man8/fdformat.8
 debian/tmp/usr/share/man/man8/fdisk.8
 debian/tmp/usr/share/man/man8/findfs.8
 debian/tmp/usr/share/man/man8/fsck.8
+debian/tmp/usr/share/man/man8/fsck.cramfs.8
 debian/tmp/usr/share/man/man8/fsck.minix.8
 debian/tmp/usr/share/man/man8/fsfreeze.8
 debian/tmp/usr/share/man/man8/fstrim.8
@@ -52,6 +53,7 @@ debian/tmp/usr/share/man/man8/lsblk.8
 debian/tmp/usr/share/man/man8/lslocks.8
 debian/tmp/usr/share/man/man8/mkfs.8
 debian/tmp/usr/share/man/man8/mkfs.bfs.8
+debian/tmp/usr/share/man/man8/mkfs.cramfs.8
 debian/tmp/usr/share/man/man8/mkfs.minix.8
 debian/tmp/usr/share/man/man8/mkswap.8
 debian/tmp/usr/share/man/man8/partx.8
