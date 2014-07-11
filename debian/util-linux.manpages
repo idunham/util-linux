@@ -19,6 +19,7 @@ debian/tmp/usr/share/man/man1/pg.1
 debian/tmp/usr/share/man/man1/prlimit.1
 debian/tmp/usr/share/man/man1/rename.ul.1
 debian/tmp/usr/share/man/man1/rev.1
+debian/tmp/usr/share/man/man1/runuser.1
 debian/tmp/usr/share/man/man1/setsid.1
 debian/tmp/usr/share/man/man1/setterm.1
 debian/tmp/usr/share/man/man1/tailf.1
