@@ -12,9 +12,4 @@ chmod 6755 /usr/sbin/uuidd
 
 #DEBHELPER#
 
-# The service is socket-activated under systemd, start it otherwise.
-if [ ! -d /run/systemd/system/ ] && [ -x /etc/init.d/uuidd ]; then
-	invoke-rc.d uuidd start
-fi
-
 exit 0
