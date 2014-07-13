@@ -89,7 +89,7 @@ util-linux (2.24.2-1) UNRELEASED; urgency=low
   * Fix mismerge in remaining-kFreeBSD-hackery-for-building.patch
   * Remove /usr/doc/libblkid-dev symlink in postinst/prerm (Closes: #622742)
   * Add patch to use "libuuid" user/group instead of "uuidd"
-  * Install uuidd sysvinit script and systemd units
+  * Install uuidd sysvinit script and systemd units (Closes: #719759)
   * Explicitly configure with socket activation enabled
   * Ship new utilities
     chcpu, blkdiscard, wdctl, resizepart, lslocks, nsenter, prlimit, utmpdump
@@ -98,6 +98,9 @@ util-linux (2.24.2-1) UNRELEASED; urgency=low
   * Drop obsolete configure switch enable-libmount-mount
   * Override localstatedir to /run instead of /var
   * Ship runuser manpage
+
+  [ Paulo Flabiano Smorigo ]
+  * Add ppc64el to archs where fdisk is renamed ddisk (Closes: #748365)
 
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
