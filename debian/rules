@@ -107,10 +107,8 @@ endif
 	# Architecture specific installs...
 	#
 	# Rename fdisk to ddisk on PowerPC
-ifeq ($(DEB_HOST_ARCH_OS),linux)
-ifeq ($(DEB_HOST_ARCH),$(findstring $(arch),powerpc ppc64 ppc64el))
+ifneq (,$(findstring $(DEB_HOST_ARCH),powerpc ppc64 ppc64el))
 	mv -f debian/util-linux/sbin/fdisk debian/util-linux/sbin/ddisk
-endif
 endif
 	# Use agetty for getty, except on Hurd.
 ifneq ($(DEB_HOST_ARCH_OS),hurd)
@@ -134,10 +132,8 @@ override_dh_installman:
 	# Architecture specific installs...
 	#
 	# Rename fdisk to ddisk on PowerPC
-ifeq ($(DEB_HOST_ARCH_OS),linux)
-ifeq ($(DEB_HOST_ARCH),$(findstring $(arch),powerpc ppc64 ppc64el))
+ifneq (,$(findstring $(DEB_HOST_ARCH),powerpc ppc64 ppc64el))
 	cd debian/util-linux/usr/share/man/man8/ && mv fdisk.8 ddisk.8
-endif
 endif
 	# Use agetty for getty, except on Hurd.
 ifneq ($(DEB_HOST_ARCH_OS),hurd)
