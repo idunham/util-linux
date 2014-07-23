@@ -28,6 +28,7 @@ debian/tmp/usr/share/man/man1/unshare.1
 debian/tmp/usr/share/man/man1/utmpdump.1
 debian/tmp/usr/share/man/man1/whereis.1
 debian/tmp/usr/share/man/man5/hwclock.5
+debian/tmp/usr/share/man/man5/terminal-colors.d.5
 debian/tmp/usr/share/man/man8/addpart.8
 debian/tmp/usr/share/man/man8/agetty.8
 debian/tmp/usr/share/man/man8/blkdiscard.8
