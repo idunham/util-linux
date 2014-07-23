@@ -1,3 +1,21 @@
+util-linux (2.25-1) UNRELEASED; urgency=medium
+
+  * The cytune command is no longer available since it has
+    been removed upstream.
+
+  * Upstream Release Notes also includes these highlights:
+
+    The "swapon --summary" output format is deprecated in favor of the
+    "swapon --show[=<columns>]" that provides better control on output
+    formatting.
+
+    cfdisk(8):
+    - the code been completely rewritten, now it uses libfdisk and
+      libsmartcols, supports GPT, SUN, SGI and BSD disk labels
+    - the command is no more based on CHS addressing
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 23 Jul 2014 14:05:13 +0200
+
 util-linux (2.24.2-1) experimental; urgency=low
 
   This is a major update which is long overdue.
