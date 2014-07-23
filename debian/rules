@@ -18,6 +18,22 @@ CONFOPTS += --localstatedir=/run
 CONFOPTS += --disable-silent-rules
 CONFOPTS += --without-python
 
+# disable utilities shipped by other packages
+# => login
+CONFOPTS += --disable-login
+CONFOPTS += --disable-nologin
+CONFOPTS += --disable-su
+# => sysvinit-utils
+CONFOPTS += --disable-sulogin
+CONFOPTS += --disable-last
+CONFOPTS += --disable-mesg
+# => procps
+CONFOPTS += --disable-kill
+# => eject
+CONFOPTS += --disable-eject
+# => passwd
+CONFOPTS += --disable-chfn-chsh
+
 ifeq ($(DEB_BUILD_GNU_TYPE),$(DEB_HOST_GNU_TYPE))
 	CROSS :=
 else
