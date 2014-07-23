@@ -4,16 +4,21 @@ include /usr/share/dpkg/architecture.mk
 
 DEB_VERSION ?= $(shell dpkg-parsechangelog | awk '/^Version: /{print $$2}')
 
-CONFOPTS= --enable-raw --with-slang --enable-line
-CONFOPTS += --libdir=/lib/$(DEB_HOST_MULTIARCH) --libexecdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
+CONFOPTS = --with-slang
+CONFOPTS += --enable-line
+CONFOPTS += --libdir=/lib/$(DEB_HOST_MULTIARCH)
+CONFOPTS += --libexecdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
+CONFOPTS += --enable-raw
 CONFOPTS += --with-selinux
 CONFOPTS += --enable-partx
 CONFOPTS += --with-systemd
+CONFOPTS += --enable-tunelp
+else
+CONFOPTS += --disable-pivot_root
 endif
 
-CONFOPTS += --enable-tunelp
 CONFOPTS += --localstatedir=/run
 CONFOPTS += --disable-silent-rules
 CONFOPTS += --without-python
