@@ -102,6 +102,13 @@ util-linux (2.24.2-1) UNRELEASED; urgency=low
   [ Paulo Flabiano Smorigo ]
   * Add ppc64el to archs where fdisk is renamed ddisk (Closes: #748365)
 
+  [ Andreas Henriksson ]
+  * Attempt to reinstate cross-building support
+  * Disable tests for now
+    - Requires network access and prints scary warnings
+  * Fix Multiarch-support-in-util-linux-build.patch
+    - Make sure @libexecdir@ gets expanded in pkg-config files
+
  -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
 
 util-linux (2.20.1-5.8) unstable; urgency=medium
