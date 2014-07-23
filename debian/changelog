@@ -20,6 +20,11 @@ util-linux (2.25-1) UNRELEASED; urgency=medium
   * Update debian/copyright for upstream v2.25
   * util-linux: Install new terminal-colors.d(5) manpage
   * Explicitly disable unused utilities
+  * Use correct configure options on non-linux
+  * Add debian/patches/kFreeBSD-add-hacks-in-ipcrm-to-avoid-FTBFS.patch
+    - fixes build failure in ipcrm on kFreeBSD
+  * Skip installing a whole bunch of utils on non-linux
+  * Add WARNING about missing fsck on non-linux to util-linux.NEWS
 
  -- Andreas Henriksson <andreas@fatal.se>  Wed, 23 Jul 2014 13:15:04 +0200
 
