@@ -10,14 +10,14 @@ Conflicts:
 	login-utils/agetty.c
 	sys-utils/ipcs.c
 ---
- sys-utils/ipcs.c | 3 +++
- 1 file changed, 3 insertions(+)
+ sys-utils/ipcs.c | 2 ++
+ 1 file changed, 2 insertions(+)
 
 diff --git a/sys-utils/ipcs.c b/sys-utils/ipcs.c
-index 16e5206..597a09e 100644
+index 8ed5698..9ce5366 100644
 --- a/sys-utils/ipcs.c
 +++ b/sys-utils/ipcs.c
-@@ -461,10 +461,12 @@ static void do_msg (char format, int unit)
+@@ -461,8 +461,10 @@ static void do_msg (char format, int unit)
  			return;
  		}
  		printf (_("------ Messages Status --------\n"));
@@ -28,5 +28,3 @@ index 16e5206..597a09e 100644
  		ipc_print_size(unit, _("used space"), msginfo.msgtql,
  			       unit == IPC_UNIT_DEFAULT ? _(" bytes\n") : "\n", 0);
  		return;
- 	}
- 	case CREATOR:

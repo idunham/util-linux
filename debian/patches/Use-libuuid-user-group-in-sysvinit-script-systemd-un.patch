@@ -11,10 +11,10 @@ Patch things to use the debian name for now....
  2 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/misc-utils/uuidd.rc.in b/misc-utils/uuidd.rc.in
-index 27b75c6..1e9f3ab 100644
+index cebe228..9de6bed 100644
 --- a/misc-utils/uuidd.rc.in
 +++ b/misc-utils/uuidd.rc.in
-@@ -20,8 +20,8 @@ UUIDD_ON_DEMAND_ONLY="no"
+@@ -15,8 +15,8 @@ set -e
  
  PATH=/bin:/usr/bin:/sbin:/usr/sbin
  DAEMON=/usr/sbin/uuidd
@@ -26,12 +26,12 @@ index 27b75c6..1e9f3ab 100644
  PIDFILE=$UUIDD_DIR/uuidd.pid
  
 diff --git a/misc-utils/uuidd.service.in b/misc-utils/uuidd.service.in
-index 89e0eac..86990c6 100644
+index 5316727..d0beb87 100644
 --- a/misc-utils/uuidd.service.in
 +++ b/misc-utils/uuidd.service.in
 @@ -5,8 +5,8 @@ Requires=uuidd.socket
  [Service]
- ExecStart=@usrsbin_execdir@/uuidd --socket-activation --timeout 60
+ ExecStart=@usrsbin_execdir@/uuidd --socket-activation
  Restart=no
 -User=uuidd
 -Group=uuidd

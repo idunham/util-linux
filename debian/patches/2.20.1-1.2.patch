@@ -66,10 +66,10 @@ index 4f2fd88..e842f9f 100644
  	tp->c_iflag &= ~(IGNBRK | INLCR | IGNCR | IXOFF | IUCLC | IXANY | ISTRIP);
  	tp->c_oflag |=  (OPOST | ONLCR | NL0 | CR0 | TAB0 | BS0 | VT0 | FF0);
 diff --git a/term-utils/Makemodule.am b/term-utils/Makemodule.am
-index e53471f..69d99dd 100644
+index 5c73f3e..627aca0 100644
 --- a/term-utils/Makemodule.am
 +++ b/term-utils/Makemodule.am
-@@ -21,6 +21,7 @@ sbin_PROGRAMS += agetty
+@@ -23,6 +23,7 @@ sbin_PROGRAMS += agetty
  dist_man_MANS += term-utils/agetty.8
  agetty_SOURCES = term-utils/agetty.c
  agetty_LDADD = $(LDADD) libcommon.la
@@ -78,7 +78,7 @@ index e53471f..69d99dd 100644
  
  
 diff --git a/term-utils/agetty.c b/term-utils/agetty.c
-index c881f3d..4478127 100644
+index 2b5932d..0caeeb3 100644
 --- a/term-utils/agetty.c
 +++ b/term-utils/agetty.c
 @@ -10,6 +10,7 @@
@@ -89,7 +89,7 @@ index c881f3d..4478127 100644
  #include <stdio.h>
  #include <unistd.h>
  #include <stdlib.h>
-@@ -42,6 +43,12 @@
+@@ -44,6 +45,12 @@
  #include "widechar.h"
  #include "ttyutils.h"
  
@@ -102,7 +102,7 @@ index c881f3d..4478127 100644
  #ifdef __linux__
  #  include <sys/kd.h>
  #  include <sys/param.h>
-@@ -73,6 +80,10 @@
+@@ -76,6 +83,10 @@
  #  endif
  #endif
  
@@ -113,7 +113,7 @@ index c881f3d..4478127 100644
  /* If USE_SYSLOG is undefined all diagnostics go to /dev/console. */
  #ifdef	USE_SYSLOG
  #  include <syslog.h>
-@@ -1070,6 +1081,11 @@ static void open_tty(char *tty, struct termios *tp, struct options *op)
+@@ -1088,6 +1099,11 @@ static void open_tty(char *tty, struct termios *tp, struct options *op)
  			op->term = DEFAULT_TTYS1;
  	}
  #endif
@@ -124,4 +124,4 @@ index c881f3d..4478127 100644
 +
  	/*
  	 * Detect if this is a virtual console or serial/modem line.
- 	 * In case of a virtual console the ioctl TIOCMGET fails and
+ 	 * In case of a virtual console the ioctl KDGKBMODE succeeds

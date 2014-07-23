@@ -6,14 +6,14 @@ Conflicts:
 	getopt/getopt.1
 	mount/my_dev_t.h
 ---
- mount/my_dev_t.h    | 5 +++++
+ mount/my_dev_t.h    | 0
  sys-utils/hwclock.8 | 4 ++--
- 2 files changed, 7 insertions(+), 2 deletions(-)
+ 2 files changed, 2 insertions(+), 2 deletions(-)
  create mode 100644 mount/my_dev_t.h
 
 diff --git a/mount/my_dev_t.h b/mount/my_dev_t.h
 new file mode 100644
-index 0000000..5c4c0a1
+index 0000000..e69de29
 diff --git a/sys-utils/hwclock.8 b/sys-utils/hwclock.8
 index 09f1edc..91d698c 100644
 --- a/sys-utils/hwclock.8

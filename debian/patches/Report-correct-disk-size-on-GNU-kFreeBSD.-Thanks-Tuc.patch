@@ -1,6 +1,6 @@
 From: Robert Millan <rmh@debian.org>
 Date: Sat, 21 Dec 2013 17:04:48 -0700
-Subject: Report correct disk size on GNU/kFreeBSD.  Thanks Tuco.
+Subject: Report correct disk size on GNU/kFreeBSD. Thanks Tuco.
 
 Addresses-Debian-Bug: 592292
 ---

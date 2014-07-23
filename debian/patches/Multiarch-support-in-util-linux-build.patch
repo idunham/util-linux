@@ -23,22 +23,22 @@ Conflicts:
  5 files changed, 6 insertions(+), 2 deletions(-)
 
 diff --git a/Makefile.am b/Makefile.am
-index 17f4c33..0cbfa82 100644
+index 79b5aea..ff99c78 100644
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -113,6 +113,7 @@ edit_cmd = sed \
+@@ -116,6 +116,7 @@ edit_cmd = sed \
  	 -e 's|@usrlib_execdir[@]|$(usrlib_execdir)|g' \
  	 -e 's|@usrbin_execdir[@]|$(usrbin_execdir)|g' \
  	 -e 's|@usrsbin_execdir[@]|$(usrsbin_execdir)|g' \
 +	 -e 's|@libexecdir[@]|$(libexecdir)|g' \
  	 -e 's|@VERSION[@]|$(VERSION)|g' \
+ 	 -e 's|@ADJTIME_PATH[@]|$(ADJTIME_PATH)|g' \
  	 -e 's|@LIBUUID_VERSION[@]|$(LIBUUID_VERSION)|g' \
- 	 -e 's|@LIBMOUNT_VERSION[@]|$(LIBMOUNT_VERSION)|g' \
 diff --git a/configure.ac b/configure.ac
-index 79fceeb..c8a1240 100644
+index db53dff..c6bb840 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -64,7 +64,6 @@ AS_CASE([$prefix:$localstatedir],
+@@ -71,7 +71,6 @@ AS_CASE([$prefix:$localstatedir],
  )
  AC_SUBST([localstatedir])
  
@@ -46,7 +46,7 @@ index 79fceeb..c8a1240 100644
  # The original default values of {bin,sbin,lib}dir
  usrbin_execdir='${exec_prefix}/bin'
  AC_SUBST([usrbin_execdir])
-@@ -75,9 +74,10 @@ AC_SUBST([usrsbin_execdir])
+@@ -82,9 +81,10 @@ AC_SUBST([usrsbin_execdir])
  AS_CASE([$libdir],
   ['${exec_prefix}/'* | '${prefix}/'* | /usr/*],
     [usrlib_execdir=$libdir],
