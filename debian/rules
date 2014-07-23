@@ -63,11 +63,13 @@ override_dh_auto_install:
 	# XXX - push things to where debian has always(?) had them...
 ifeq ($(DEB_HOST_ARCH_OS),linux)
 	mv debian/tmp/usr/sbin/*part* debian/tmp/usr/bin
+	mv debian/tmp/usr/share/man/man8/linux32.8 \
+		debian/tmp/usr/share/man/man1/linux32.1
+	mv debian/tmp/usr/share/man/man8/linux64.8 \
+		debian/tmp/usr/share/man/man1/linux64.1
 endif
 	mv debian/tmp/usr/bin/tailf debian/tmp/bin
 	mv debian/tmp/usr/bin/isosize debian/tmp/sbin
-	mv debian/tmp/usr/share/man/man8/linux32.8 debian/tmp/usr/share/man/man1/linux32.1
-	mv debian/tmp/usr/share/man/man8/linux64.8 debian/tmp/usr/share/man/man1/linux64.1
 	# initscripts delivers this
 	rm -f debian/tmp/bin/mountpoint debian/tmp/usr/share/man/man1/mountpoint.1*
 	# the version in bsdmainutils seems newer.
@@ -93,7 +95,14 @@ endif
 	fi
 
 override_dh_install:
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+	cp -a debian/util-linux.install debian/util-linux.install.backup
+	cat debian/util-linux.install.linux-only >> debian/util-linux.install
+endif
 	dh_install
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+	mv -f debian/util-linux.install.backup debian/util-linux.install
+endif
 	#
 	# Install files into udebs....
 	#
@@ -160,7 +169,14 @@ endif
 	rm -rf debian/*-udeb/usr/share/doc
 
 override_dh_installman:
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+	cp -a debian/util-linux.manpages debian/util-linux.manpages.backup
+	cat debian/util-linux.manpages.linux-only >> debian/util-linux.manpages
+endif
 	dh_installman
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+	mv -f debian/util-linux.manpages.backup debian/util-linux.manpages
+endif
 	#
 	# Architecture specific installs...
 	#
