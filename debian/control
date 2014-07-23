@@ -179,17 +179,6 @@ Multi-Arch: same
 Description: device mounting library
  The device mounting library, used by mount and umount helpers.
 
-Package: libmount1-udeb
-XC-Package-Type: udeb
-Section: debian-installer
-Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Architecture: linux-any
-Description: stripped down device mounting library, for debian-installer
- The device mounting library, used by mount and umount helpers.
- .
- This is a minimal package for debian-installer.
-
 Package: libmount-dev
 Section: libdevel
 Priority: extra
