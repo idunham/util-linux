@@ -1,4 +1,4 @@
-util-linux (2.24.2-1) UNRELEASED; urgency=low
+util-linux (2.24.2-1) experimental; urgency=low
 
   This is a major update which is long overdue.
   This release attempts to unify the work that has happened upstream

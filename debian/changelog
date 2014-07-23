@@ -1,4 +1,4 @@
-util-linux (2.24.2-1) UNRELEASED; urgency=low
+util-linux (2.24.2-1) experimental; urgency=low
 
   [ LaMont Jones ]
   * new branch, with separated patches.
@@ -109,7 +109,7 @@ util-linux (2.24.2-1) UNRELEASED; urgency=low
   * Fix Multiarch-support-in-util-linux-build.patch
     - Make sure @libexecdir@ gets expanded in pkg-config files
 
- -- LaMont Jones <lamont@debian.org>  Sat, 21 Dec 2013 17:32:07 -0700
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 23 Jul 2014 08:42:00 +0200
 
 util-linux (2.20.1-5.8) unstable; urgency=medium
 

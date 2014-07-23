@@ -1,4 +1,4 @@
-util-linux (2.24.2-1) UNRELEASED; urgency=low
+util-linux (2.24.2-1) experimental; urgency=low
 
   The support for encryption in losetup has been dropped.
   (And the patch for supporting hashed passphrases in debian with it.)
