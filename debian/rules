@@ -82,6 +82,12 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
 	ln debian/libmount1/lib/*/libmount.so.1.* debian/libmount1-udeb/lib/
 	ln debian/libmount1/lib/*/libmount.so.1   debian/libmount1-udeb/lib/
 endif
+	# copy smartcols library and simlink into udeb
+	mkdir -p debian/libsmartcols1-udeb/lib/
+	ln debian/libsmartcols1/lib/*/libsmartcols.so.1.* \
+		debian/libsmartcols1-udeb/lib/
+	ln debian/libsmartcols1/lib/*/libsmartcols.so.1 \
+		debian/libsmartcols1-udeb/lib/
 	# copy blkid library and symlink into udeb
 	mkdir -p debian/libblkid1-udeb/lib/
 	ln debian/libblkid1/lib/*/libblkid.so.1.* debian/libblkid1-udeb/lib/
@@ -187,7 +193,9 @@ override_dh_installinit:
 	rm -f debian/uuid-runtime.uuidd.init
 
 override_dh_makeshlibs:
-	dh_makeshlibs -N libblkid1 -N libmount1 -N libuuid1
+	dh_makeshlibs -N libsmartcols1 -N libblkid1 -N libmount1 -N libuuid1
+	dh_makeshlibs -plibsmartcols1 -V \
+		--add-udeb=libsmartcols1-udeb
 	dh_makeshlibs -plibblkid1 -V \
 		--add-udeb=libblkid1-udeb
 	dh_makeshlibs -plibmount1 -V \

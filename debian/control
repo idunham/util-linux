@@ -204,6 +204,40 @@ Description: device mounting library - headers and static libraries
  .
  This package contains the development environment for the mount library.
 
+Package: libsmartcols1
+Section: libs
+Priority: required
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Architecture: any
+Multi-Arch: same
+Description: smart column output alignment library
+ The smart column output alignment library, used by fdisk utilities.
+
+Package: libsmartcols1-udeb
+XC-Package-Type: udeb
+Section: debian-installer
+Priority: optional
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Architecture: any
+Description: stripped down smart column output aligment library, for debian-installer
+ The smart column output alignment library, used by fdisk utilities.
+ .
+ This is a minimal package for debian-installer.
+
+Package: libsmartcols-dev
+Section: libdevel
+Priority: extra
+Depends: libc6-dev | libc-dev,
+         libsmartcols1 (= ${binary:Version}),
+         ${misc:Depends}
+Architecture: any
+Multi-Arch: same
+Description: smart column output alignment library - headers and static libraries
+ The smart column output alignment library, used by fdisk utilities.
+ .
+ This package contains the development environment for the mount library.
+
 Package: libuuid1
 Section: libs
 Depends: passwd, ${misc:Depends}, ${shlibs:Depends}
