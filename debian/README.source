@@ -57,19 +57,37 @@ Or, to create a new branch for a new upstream major.minor version,
 ie, when updating from v2.24.2 to v2.25,
 do:
 
+  # create new branches
   git branch --no-track debian-2.25 debian-2.24
   git branch upstream-2.25 v2.25
+
+  # update debian branch to be based on new upstream version
   git checkout debian-2.25
-  git rebase upstream-2.25
-  git-import-orig --upstream-vcs-tag=v2.25 ../tarballs/util-linux-v2.25.tar.xz
+  git rebase --onto upstream-2.25 upstream-2.24
+
+  # set up git-buildpackage to use new branches
+  sed -i 's/debian-2.24/debian-2.25/' debian/gbp.conf
+  sed -i 's/upstream-2.24/upstream-2.25/' debian/gbp.conf
+  git commit -m "Update branch names in debian/gbp.conf" debian/gbp.conf
+
+  # import orig tarball
+  git-import-orig --upstream-vcs-tag=v2.25 ../tarballs/util-linux-2.25.tar.xz
+
+  # rebase patch queue on top of new upstream version
+  git checkout debian-2.24
   gbp-pq import --force
-  git rebase debian-2.25
+  git branch -m patch-queue/debian-2.24 patch-queue/debian-2.25
+  git rebase -i --onto debian-2.25 debian-2.24
 
 Now resolve all the conflicts, skip obsolete patches, etc. When you are done, run
 
   gbp-pq export
 
 Note that our debian/gbp.conf disables patch numbers.
+
+Also, don't forget to commit your newly generated patches!
+
+  git commit -v debian/patches
 
 Cherry-picking upstream patches
 -------------------------------
