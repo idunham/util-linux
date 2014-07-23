@@ -16,6 +16,8 @@ Build-Depends: autoconf,
                pkg-config,
                po-debconf,
                systemd [linux-any],
+               libsystemd-daemon-dev [linux-any],
+               libsystemd-journal-dev [linux-any],
                zlib1g-dev
 Section: base
 Priority: required

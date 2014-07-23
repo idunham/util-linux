@@ -6,10 +6,13 @@ DEB_VERSION ?= $(shell dpkg-parsechangelog | awk '/^Version: /{print $$2}')
 
 CONFOPTS= --enable-raw --with-slang --enable-line
 CONFOPTS += --libdir=/lib/$(DEB_HOST_MULTIARCH) --libexecdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
+
 ifeq ($(DEB_HOST_ARCH_OS),linux)
-CONFOPTS += --with-selinux --enable-partx \
-		--enable-socket-activation
+CONFOPTS += --with-selinux
+CONFOPTS += --enable-partx
+CONFOPTS += --with-systemd
 endif
+
 CONFOPTS += --enable-tunelp
 CONFOPTS += --localstatedir=/run
 CONFOPTS += --disable-silent-rules
