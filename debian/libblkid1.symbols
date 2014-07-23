@@ -6,6 +6,7 @@ libblkid.so.1 libblkid1 #MINVER#
  BLKID_2.20@BLKID_2.20 2.20.1
  BLKID_2.21@BLKID_2.21 2.24.2
  BLKID_2.23@BLKID_2.23 2.24.2
+ BLKID_2.25@BLKID_2.25 2.25
  blkid_dev_devname@BLKID_1.0 2.16
  blkid_dev_has_tag@BLKID_1.0 2.16
  blkid_dev_iterate_begin@BLKID_1.0 2.16
@@ -51,6 +52,7 @@ libblkid.so.1 libblkid1 #MINVER#
  blkid_partition_is_primary@BLKID_2.17 2.17.2
  blkid_partlist_devno_to_partition@BLKID_2.18 2.19.1
  blkid_partlist_get_partition@BLKID_2.17 2.17.2
+ blkid_partlist_get_partition_by_partno@BLKID_2.25 2.25
  blkid_partlist_get_table@BLKID_2.18 2.19.1
  blkid_partlist_numof_partitions@BLKID_2.17 2.17.2
  blkid_parttable_get_id@BLKID_2.23 2.24.2

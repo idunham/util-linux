@@ -9,6 +9,7 @@ libmount.so.1 libmount1 #MINVER#
  mnt_cache_device_has_tag@MOUNT_2.19 2.19.1
  mnt_cache_find_tag_value@MOUNT_2.19 2.19.1
  mnt_cache_read_tags@MOUNT_2.19 2.19.1
+ mnt_cache_set_targets@MOUNT_2.25 2.25
  mnt_context_append_options@MOUNT_2.19 2.19.1
  mnt_context_apply_fstab@MOUNT_2.19 2.19.1
  mnt_context_disable_canonicalize@MOUNT_2.19 2.19.1
@@ -211,6 +212,7 @@ libmount.so.1 libmount1 #MINVER#
  mnt_resolve_path@MOUNT_2.19 2.19.1
  mnt_resolve_spec@MOUNT_2.19 2.19.1
  mnt_resolve_tag@MOUNT_2.19 2.19.1
+ mnt_resolve_target@MOUNT_2.25 2.25
  mnt_split_optstr@MOUNT_2.19 2.19.1
  mnt_tabdiff_next_change@MOUNT_2.20 2.20.1
  mnt_table_add_fs@MOUNT_2.19 2.19.1
@@ -251,6 +253,7 @@ libmount.so.1 libmount1 #MINVER#
  mnt_table_set_parser_errcb@MOUNT_2.19 2.19.1
  mnt_table_set_trailing_comment@MOUNT_2.24 2.24.2
  mnt_table_set_userdata@MOUNT_2.24 2.24.2
+ mnt_table_uniq_fs@MOUNT_2.25 2.25
  mnt_table_with_comments@MOUNT_2.24 2.24.2
  mnt_table_write_file@MOUNT_2.24 2.24.2
  mnt_tag_is_valid@MOUNT_2.25 2.24.2
