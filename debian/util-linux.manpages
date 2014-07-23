@@ -36,7 +36,6 @@ debian/tmp/usr/share/man/man8/blockdev.8
 debian/tmp/usr/share/man/man8/cfdisk.8
 debian/tmp/usr/share/man/man8/chcpu.8
 debian/tmp/usr/share/man/man8/ctrlaltdel.8
-debian/tmp/usr/share/man/man8/cytune.8
 debian/tmp/usr/share/man/man8/delpart.8
 debian/tmp/usr/share/man/man8/fdformat.8
 debian/tmp/usr/share/man/man8/fdisk.8

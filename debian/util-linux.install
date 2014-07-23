@@ -67,7 +67,6 @@ usr/bin/unshare
 usr/bin/utmpdump
 usr/bin/whereis
 usr/bin/x86_64
-usr/sbin/cytune
 usr/sbin/fdformat
 usr/sbin/ldattach
 usr/sbin/readprofile

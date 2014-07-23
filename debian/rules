@@ -38,7 +38,6 @@ override_dh_auto_install:
 	# XXX - push things to where debian has always(?) had them...
 ifeq ($(DEB_HOST_ARCH_OS),linux)
 	mv debian/tmp/usr/sbin/*part* debian/tmp/usr/bin
-	mv debian/tmp/usr/bin/cytune debian/tmp/usr/sbin
 endif
 	mv debian/tmp/usr/bin/tailf debian/tmp/bin
 	mv debian/tmp/usr/bin/isosize debian/tmp/sbin
