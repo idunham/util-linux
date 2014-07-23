@@ -1,4 +1,4 @@
-util-linux (2.25-1) UNRELEASED; urgency=medium
+util-linux (2.25-1) experimental; urgency=medium
 
   * Imported Upstream version 2.25
   * Rebase patch queue on top of new upstream release
@@ -26,7 +26,7 @@ util-linux (2.25-1) UNRELEASED; urgency=medium
   * Skip installing a whole bunch of utils on non-linux
   * Add WARNING about missing fsck on non-linux to util-linux.NEWS
 
- -- Andreas Henriksson <andreas@fatal.se>  Wed, 23 Jul 2014 13:15:04 +0200
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 23 Jul 2014 23:37:43 +0200
 
 util-linux (2.24.2-1) experimental; urgency=low
 

@@ -1,4 +1,4 @@
-util-linux (2.25-1) UNRELEASED; urgency=medium
+util-linux (2.25-1) experimental; urgency=medium
 
   * The cytune command is no longer available since it has
     been removed upstream.
