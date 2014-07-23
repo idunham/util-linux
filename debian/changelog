@@ -1,3 +1,28 @@
+util-linux (2.25-1) UNRELEASED; urgency=medium
+
+  * Imported Upstream version 2.25
+  * Rebase patch queue on top of new upstream release
+    + Drop debian/patches for unused and removed mount-deprecated
+      - tries-to-umount-proc-when-told-to-umount-some-dir-pr.patch
+      - mount-segfault-when-creating-mtab-and-cannot-determi.patch
+    + Update cfdisk.8 patch to modify new manpage file.
+    + Remaining changes are all trivial refreshes.
+  * Update debian/README.source instructions
+  * Fix PPC fdisk/ddisk rename in debian/rules
+  * Stop installing cytune which is no longer available
+  * Use new consolidated systemd configure option
+  * Add util-linux.NEWS entry
+  * Explicitly configure without python for now
+  * Only install i386 and x86_64 binaries on selected architectures
+  * Add new libsmartcols packages
+  * Update libblkid and libmount symbols/shlibs
+  * Drop unused and uninstallable libmount1-udeb (Closes: #723168)
+  * Update debian/copyright for upstream v2.25
+  * util-linux: Install new terminal-colors.d(5) manpage
+  * Explicitly disable unused utilities
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 23 Jul 2014 13:15:04 +0200
+
 util-linux (2.24.2-1) experimental; urgency=low
 
   [ LaMont Jones ]
