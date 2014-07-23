@@ -40,7 +40,6 @@ usr/bin/delpart
 usr/bin/fallocate
 usr/bin/flock
 usr/bin/getopt
-usr/bin/i386
 usr/bin/ionice
 usr/bin/ipcmk
 usr/bin/ipcrm
@@ -66,7 +65,6 @@ usr/bin/taskset
 usr/bin/unshare
 usr/bin/utmpdump
 usr/bin/whereis
-usr/bin/x86_64
 usr/sbin/fdformat
 usr/sbin/ldattach
 usr/sbin/readprofile
