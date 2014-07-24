@@ -188,7 +188,7 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
 	cp -a debian/util-linux.manpages debian/util-linux.manpages.backup
 	cat debian/util-linux.manpages.linux-only >> debian/util-linux.manpages
 endif
-	dh_installman
+	dh_installman --language=C
 ifeq ($(DEB_HOST_ARCH_OS),linux)
 	mv -f debian/util-linux.manpages.backup debian/util-linux.manpages
 endif
