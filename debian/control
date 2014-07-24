@@ -141,7 +141,6 @@ Section: debian-installer
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Architecture: any
-Multi-Arch: same
 Description: stripped down block device id library, for debian-installer
  The blkid library which allows system programs like fsck and
  mount to quickly and easily find block devices by filesystem UUID and
