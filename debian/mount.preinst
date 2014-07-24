@@ -22,7 +22,9 @@ case "$1" in
 
 	if [ Debian = "$DISTRO" ]; then
 	  if [ -f /proc/mounts ] && ! chrooted; then
-	      NFS_IN_USE=$(sed -n '/^[^ ]* [^ ]* nfs /p' /proc/mounts)
+	      # mount.nfs is assumed to be needed if there is currently a
+	      # non-root NFS mount.
+	      NFS_IN_USE=$(awk '/^[^ ]+ [^ ]+ nfs / && !/^[^ ]+ \/ nfs /' /proc/mounts)
 	  else
 	      NFS_IN_USE=""
 	  fi
