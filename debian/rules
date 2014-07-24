@@ -254,12 +254,3 @@ override_dh_makeshlibs:
 override_dh_fixperms:
 	dh_fixperms -i -s -Xusr/bin/wall -Xbin/mount -Xbin/umount
 
-override_dh_auto_test:
-	# Disable the tests for now.
-	# Except from requiring network access, the tests also prints:
-	# -------------------- util-linux regression tests --------------------
-	#
-	#                    For development purpose only.                    
-	#                 Don't execute on production system!                 
-	#
-
