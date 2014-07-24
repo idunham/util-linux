@@ -165,6 +165,21 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
 	dh_install --package=uuid-runtime --autodest \
 		debian/tmp/lib/systemd/system/uuidd.*
 endif
+	# Install bash-completions only for binaries we ship
+	for PACKAGE in util-linux uuid-runtime bsdutils mount; do \
+	for BINARY in debian/$$PACKAGE/bin/* debian/$$PACKAGE/sbin/* \
+			debian/$$PACKAGE/usr/bin/* \
+			debian/$$PACKAGE/usr/sbin/* ; \
+	do \
+		BASENAME=$$(basename $$BINARY); \
+		BCNAME=usr/share/bash-completion/completions/$$BASENAME ; \
+		if [ "$$BASENAME" != '*' ] && [ -e "debian/tmp/$$BCNAME" ]; \
+		then \
+			echo "$$PACKAGE: Installing $$BCNAME"; \
+			dh_install --package=$$PACKAGE --autodest $$BCNAME; \
+		fi; \
+	done; \
+	done
 	#
 	rm -rf debian/*-udeb/usr/share/doc
 
