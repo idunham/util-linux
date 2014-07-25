@@ -256,3 +256,6 @@ override_dh_makeshlibs:
 override_dh_fixperms:
 	dh_fixperms -i -s -Xusr/bin/wall -Xbin/mount -Xbin/umount
 
+override_dh_auto_test:
+	dh_auto_test || true
+
