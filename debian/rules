@@ -131,7 +131,7 @@ endif
 	        mv $$S cfdisk-udeb/usr/sbin/; fi; \
 	fi
 	if [ -d debian/cfdisk-udeb ]; then \
-		cd debian/util-linux-locales && find usr/share/locale -type f | while read x; do \
+		cd debian/util-linux-locales || cd debian/tmp && find usr/share/locale -type f | while read x; do \
 			mkdir -p ../cfdisk-udeb/$$(dirname $$x); \
 			ln $$x ../cfdisk-udeb/$$x; \
 		done \
