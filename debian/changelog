@@ -1,3 +1,27 @@
+util-linux (2.25-2) experimental; urgency=medium
+
+  [ Andreas Henriksson ]
+  * Add runuser pam configuration from Fedora
+  * Install bash-completion for selected utilities
+  * Prevent dh_installman from messing up rename.ul manpage (Closes: #755926)
+  * Drop misplaced Multi-Arch property on libblkid1-udeb
+
+  [ Aurelien Jarno ]
+  * Set system time directly from hw clock in udev rule (Closes: #751238)
+
+  [ Mike ]
+  * Don't require nfs-common on NFS-rooted system (Closes: #605439)
+
+  [ Benda Xu ]
+  * Fine-tune hwclock.sh init script LSB dependencies (Closes: #736400)
+
+  [ Andreas Henriksson ]
+  * Keep mandatory Required-Stop LSB header in hwclock.sh init script
+  * Revert "Disable tests for now"
+  * Fix binary-arch only builds (Closes: #755972)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 25 Jul 2014 02:09:39 +0200
+
 util-linux (2.25-1) experimental; urgency=medium
 
   * Imported Upstream version 2.25
