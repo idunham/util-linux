@@ -180,6 +180,9 @@ endif
 		fi; \
 	done; \
 	done
+	# Removed these conflicting ones for now, see Bug#755986
+	rm -f debian/util-linux/usr/share/bash-completion/completions/pgrep
+	rm -f debian/util-linux/usr/share/bash-completion/completions/dmesg
 	#
 	rm -rf debian/*-udeb/usr/share/doc
 
