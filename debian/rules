@@ -78,12 +78,11 @@ endif
 	rm -f debian/tmp/usr/bin/col* debian/tmp/usr/share/man/man1/col*.1
 	rm -f debian/tmp/usr/bin/ul debian/tmp/usr/share/man/man1/ul*.1
 	rm -f debian/tmp/usr/bin/cal debian/tmp/usr/share/man/man1/cal.1
-	# remove *.la files and empty directories which do not belong into util-linux
+	# remove *.la files
 	rm -f debian/tmp/usr/lib/*/*.la
 	# perl gets to do rename, not us.
 	mv debian/tmp/usr/bin/rename debian/tmp/usr/bin/rename.ul
 	mv debian/tmp/usr/share/man/man1/rename.1 debian/tmp/usr/share/man/man1/rename.ul.1
-	rm -f debian/tmp/usr/share/info/dir
 	#
 	#
 	if [ -f debian/tmp/sbin/hwclock ] ; then \
@@ -220,8 +219,8 @@ ifneq ($(DEB_HOST_ARCH_OS),linux)
 endif
 
 override_dh_gencontrol:
-	dh_gencontrol -Xbsdutils
-	dh_gencontrol -pbsdutils -u-v1:$(DEB_VERSION_UPSTREAM_REVISION)
+	dh_gencontrol --package=bsdutils -- -v1:$(DEB_VERSION_UPSTREAM_REVISION)
+	dh_gencontrol --remaining-packages
 
 override_dh_installinit:
 	# install /etc/init.d/hwclock.sh
