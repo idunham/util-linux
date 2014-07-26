@@ -138,7 +138,7 @@ endif
 	# Architecture specific installs...
 	#
 	# only install i386 on any-x86 and x86_64 on amd64.
-ifneq (,$(findstring $(DEB_HOST_ARCH),amd64 i386))
+ifneq (,$(filter $(DEB_HOST_ARCH),amd64 i386))
 	dh_install --package=util-linux --autodest \
 		debian/tmp/usr/bin/i386
 endif
@@ -147,7 +147,7 @@ ifeq ($(DEB_HOST_ARCH),amd64)
 		debian/tmp/usr/bin/x86_64
 endif
 	# Rename fdisk to ddisk on PowerPC
-ifneq (,$(findstring $(DEB_HOST_ARCH),powerpc ppc64 ppc64el))
+ifneq (,$(filter $(DEB_HOST_ARCH),powerpc powerpcspe ppc64 ppc64el))
 	mv -f debian/util-linux/sbin/fdisk debian/util-linux/sbin/ddisk
 endif
 	# Use agetty for getty, except on Hurd.
@@ -197,7 +197,7 @@ endif
 	# Architecture specific installs...
 	#
 	# only install i386 on any-x86 and x86_64 on amd64.
-ifneq (,$(findstring $(DEB_HOST_ARCH),amd64 i386))
+ifneq (,$(filter $(DEB_HOST_ARCH),amd64 i386))
 	dh_installman --package=util-linux \
 		debian/tmp/usr/share/man/man8/i386.8
 endif
@@ -206,7 +206,7 @@ ifeq ($(DEB_HOST_ARCH),amd64)
 		debian/tmp/usr/share/man/man8/x86_64.8
 endif
 	# Rename fdisk to ddisk on PowerPC
-ifneq (,$(findstring $(DEB_HOST_ARCH),powerpc ppc64 ppc64el))
+ifneq (,$(filter $(DEB_HOST_ARCH),powerpc powerpcspe ppc64 ppc64el))
 	cd debian/util-linux/usr/share/man/man8/ && mv fdisk.8 ddisk.8
 endif
 	# Use agetty for getty, except on Hurd.
