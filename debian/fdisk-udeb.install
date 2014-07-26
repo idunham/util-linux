@@ -1,0 +1,2 @@
+sbin/fdisk usr/sbin
+sbin/sfdisk usr/sbin

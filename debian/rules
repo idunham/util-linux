@@ -94,41 +94,11 @@ endif
 
 override_dh_install:
 	cat debian/util-linux.install debian/util-linux.install.linux-only > debian/util-linux.install.linux
-	dh_install
+	dh_install \
+		-Nfdisk-udeb -Ncfdisk-udeb -Nlibblkid1-udeb \
+		-Nlibsmartcols1-udeb -Nlibuuid1-udeb -Nutil-linux-udeb
+	dh_install --remaining-packages
 	rm debian/util-linux.install.linux
-	#
-	# Install files into udebs....
-	#
-	# copy smartcols library and simlink into udeb
-	mkdir -p debian/libsmartcols1-udeb/lib/
-	ln debian/libsmartcols1/lib/*/libsmartcols.so.1.* \
-		debian/libsmartcols1-udeb/lib/
-	ln debian/libsmartcols1/lib/*/libsmartcols.so.1 \
-		debian/libsmartcols1-udeb/lib/
-	# copy blkid library and symlink into udeb
-	mkdir -p debian/libblkid1-udeb/lib/
-	ln debian/libblkid1/lib/*/libblkid.so.1.* debian/libblkid1-udeb/lib/
-	ln debian/libblkid1/lib/*/libblkid.so.1   debian/libblkid1-udeb/lib/
-	mkdir -p debian/util-linux-udeb/sbin/
-	ln debian/util-linux/sbin/blkid debian/util-linux-udeb/sbin/
-	# copy uuid library and symlink into udeb
-	mkdir -p debian/libuuid1-udeb/lib/
-	ln debian/libuuid1/lib/*/libuuid.so.1.* debian/libuuid1-udeb/lib/
-	ln debian/libuuid1/lib/*/libuuid.so.1   debian/libuuid1-udeb/lib/
-	#
-	cd debian; if [ -f util-linux/sbin/fdisk ]; then \
-	    mkdir -p fdisk-udeb/usr/sbin/; \
-	    ln util-linux/sbin/*fdisk fdisk-udeb/usr/sbin/; \
-	    S=fdisk-udeb/usr/sbin/cfdisk; if [ -f $$S ]; then \
-	        mkdir -p cfdisk-udeb/usr/sbin; \
-	        mv $$S cfdisk-udeb/usr/sbin/; fi; \
-	fi
-	if [ -d debian/cfdisk-udeb ]; then \
-		cd debian/util-linux-locales || cd debian/tmp && find usr/share/locale -type f | while read x; do \
-			mkdir -p ../cfdisk-udeb/$$(dirname $$x); \
-			ln $$x ../cfdisk-udeb/$$x; \
-		done \
-	fi
 	#
 	# Architecture specific installs...
 	#
