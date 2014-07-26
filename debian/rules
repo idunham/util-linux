@@ -182,6 +182,7 @@ endif
 	done
 	# Removed these conflicting ones for now, see Bug#755986
 	rm -f debian/util-linux/usr/share/bash-completion/completions/dmesg
+	rm -f debian/bsdutils/usr/share/bash-completion/completions/renice
 	#
 	rm -rf debian/*-udeb/usr/share/doc
 
