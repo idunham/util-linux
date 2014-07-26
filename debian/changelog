@@ -1,3 +1,11 @@
+util-linux (2.25-3) experimental; urgency=medium
+
+  * Don't ship dmesg bash-completions for now (Closes: #755982)
+  * Add verbose-tests.patch to get more info from tests
+  * Make testsuite non-fatal for now (Closes: #755987)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 26 Jul 2014 01:58:53 +0200
+
 util-linux (2.25-2) experimental; urgency=medium
 
   [ Andreas Henriksson ]
