@@ -11,16 +11,18 @@
  	--parallel $(TS_OPTS)
 --- a/tests/functions.sh
 +++ b/tests/functions.sh
-@@ -94,6 +94,15 @@
+@@ -94,6 +94,17 @@
  		ts_report " $msg ($1)"
  	fi
  
 +	if [ "$TS_VERBOSE" = "yes" ]; then
 +		echo ========= script: $TS_SCRIPT =================
 +		echo ================= OUTPUT =====================
-+		cat $TS_OUTPUT
++		cat -n $TS_OUTPUT
 +		echo ================= EXPECTED ===================
-+		cat $TS_EXPECTED
++		cat -n $TS_EXPECTED
++		echo ================= O/E diff ===================
++		diff -u $TS_OUTPUT $TS_EXPECTED
 +		echo ==============================================
 +	fi
 +
