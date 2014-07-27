@@ -1,8 +1,7 @@
 #!/usr/bin/make -f
 
 include /usr/share/dpkg/architecture.mk
-
-DEB_VERSION ?= $(shell dpkg-parsechangelog | awk '/^Version: /{print $$2}')
+include /usr/share/dpkg/pkg-info.mk
 
 CONFOPTS = --with-slang
 CONFOPTS += --enable-line
@@ -226,7 +225,7 @@ ifeq ($(DEB_HOST_ARCH_OS),hurd)
 	echo util-linux:Conflicts=getty >> debian/util-linux.substvars
 endif
 	dh_gencontrol -Xbsdutils
-	dh_gencontrol -pbsdutils -u-v1:$(DEB_VERSION)
+	dh_gencontrol -pbsdutils -u-v1:$(DEB_VERSION_UPSTREAM_REVISION)
 
 override_dh_installinit:
 	# install /etc/init.d/hwclock.sh
