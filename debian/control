@@ -51,7 +51,7 @@ Replaces: e2fsprogs,
           schedutils,
           setterm,
           sparc-utils,
-          ${util-linux:Conflicts}
+          getty [hurd-any]
 Conflicts: console-tools (<< 1:0.2.3-21),
            fdisk,
            fstrim,
@@ -59,7 +59,7 @@ Conflicts: console-tools (<< 1:0.2.3-21),
            linux32,
            schedutils,
            setterm,
-           ${util-linux:Conflicts}
+           getty [hurd-any]
 Provides: linux32, schedutils
 Multi-Arch: foreign
 Description: Miscellaneous system utilities

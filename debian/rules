@@ -220,10 +220,6 @@ ifneq ($(DEB_HOST_ARCH_OS),linux)
 endif
 
 override_dh_gencontrol:
-	# FIXME: just use: Conflicts: getty [hurd-any]
-ifeq ($(DEB_HOST_ARCH_OS),hurd)
-	echo util-linux:Conflicts=getty >> debian/util-linux.substvars
-endif
 	dh_gencontrol -Xbsdutils
 	dh_gencontrol -pbsdutils -u-v1:$(DEB_VERSION_UPSTREAM_REVISION)
 
