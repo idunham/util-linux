@@ -1,7 +1,8 @@
-#!/bin/sh -e
+#!/bin/sh
+set -e
 
-if [ -L /usr/doc/libblkid-dev ] ; then
-    rm -f /usr/doc/libblkid-dev
+if [ -L /usr/doc/libblkid-dev ]; then
+	rm -f /usr/doc/libblkid-dev
 fi
 
 #DEBHELPER#
