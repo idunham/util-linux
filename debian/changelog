@@ -1,3 +1,18 @@
+util-linux (2.25-4) experimental; urgency=medium
+
+  * Minor improvements to verbose-tests.patch
+  * Drop renice bash completion for now (Closes: #756132)
+  * Include dpkg-dev's pkg-info.mk to get package version
+  * Stop creating unused /etc/fstab.d directory (Closes: #666163)
+  * Use proper getty [hurd-any] for Conflicts/Replaces
+  * Add patches cherry-picked from upstream git master
+    - debian/patches/tests-allow-non-inotify-tailf-to-keep-up.patch
+      fixes failing testcase on hurd/kfreebsd.
+    - debian/patches/fdisk-fix-l-device.patch (Closes: #756177)
+      fixes regression in fdisk listing partition.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 30 Jul 2014 17:24:49 +0200
+
 util-linux (2.25-3) experimental; urgency=medium
 
   * Don't ship dmesg bash-completions for now (Closes: #755982)
