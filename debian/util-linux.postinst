@@ -17,22 +17,6 @@ if [ "$(uname -s)" = "Linux" ]; then
     fi
 fi
 
-# Do a one-time migration of the local time setting to /etc/adjtime
-
-if [ -n "$2" ] && dpkg --compare-versions "$2" lt "2.20.1-5"; then
-    if [ -f /etc/default/rcS ]; then
-        . /etc/default/rcS
-    fi
-    if [ ! -e /etc/adjtime ]; then
-        printf "0.0 0 0.0\n0\nUTC" > /etc/adjtime
-    fi
-    if [ "$UTC" = "no" ]; then
-        sed -i -e 's:^UTC$:LOCAL:' /etc/adjtime
-    else
-        sed -i -e 's:^LOCAL$:UTC:' /etc/adjtime
-    fi
-fi
-
 if [ -L /usr/doc/util-linux ] ; then
     rm -f /usr/doc/util-linux
 fi
