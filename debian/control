@@ -229,7 +229,7 @@ Description: smart column output alignment library - headers and static librarie
 
 Package: libuuid1
 Section: libs
-Depends: passwd, ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: uuid-runtime
 Replaces: e2fsprogs (<< 1.34-1)
 Architecture: any
