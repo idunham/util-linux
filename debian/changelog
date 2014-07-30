@@ -1,3 +1,35 @@
+util-linux (2.25-5) experimental; urgency=medium
+
+  The "big maintainer-script cleanup" release
+
+  * Drop debian/uuid-runtime.prerm (and related lintian override)
+    - dh_installinit will automatically start and stop services as needed.
+  * Drop debian/libuuid1.postinst (user/group addition)
+  * uuid-runtime: improved user/group handling (Closes: #734544)
+    - pre-depend on new libuuid1 to make sure no old user handling is present
+    - add code to rename existing libuuid user/group to uuidd
+      and set nologin shell and new home directory.
+    - switch to adduser instead of opencoding it since uuid-runtime
+      is Priority: optional (as opposed to libuuid1 which is required)
+      and adduser --system should just do the right thing.
+    - change user/group addition to add uuidd instead of libuuid.
+    - stop making uuidd setuid, not needed and we don't want anyone to
+      be able to kill the daemon (via uuidd -k) for example.
+  * Drop d/p/Use-libuuid-user-group-in-sysvinit-script-systemd-un.patch
+  * util-linux: drop obsolete hwclock handling from maint-scripts
+  * util-linux: drop obsolete update-mime calls
+  * util-linux: drop obsolete 2.17 upgrade warning
+  * util-linux: drop obsolete /etc/default/rcS -> /etc/adjtime migration
+  * Reindent/cleanup all maintainer scripts
+  * Drop outdated debian/README.Debian.hwclock (Closes: #263116)
+  * Drop unused debian/rejected-upstream
+  * Drop outdated debian/uuid-dev.README.Debian
+  * Drop diffutils build-dependency
+  * Drop debian/*.dirs
+  * Attempt to avoid dumb term problem in "more: regexp" test
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 31 Jul 2014 00:55:15 +0200
+
 util-linux (2.25-4) experimental; urgency=medium
 
   * Minor improvements to verbose-tests.patch
