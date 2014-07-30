@@ -5,7 +5,6 @@ Disable-the-fallback-clause-in-hwclock-when-dev-rtc-.patch
 Report-correct-disk-size-on-GNU-kFreeBSD.-Thanks-Tuc.patch
 remaining-kFreeBSD-hackery-for-building.patch
 2.20.1-1.2.patch
-Use-libuuid-user-group-in-sysvinit-script-systemd-un.patch
 kFreeBSD-add-hacks-in-ipcrm-to-avoid-FTBFS.patch
 verbose-tests.patch
 tests-allow-non-inotify-tailf-to-keep-up.patch
