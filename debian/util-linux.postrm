@@ -11,9 +11,4 @@ case "$1" in
 		;;
 esac
 
-if [ -x /usr/sbin/update-mime ]; then
-	update-mime
-fi
-
-
 #DEBHELPER#
