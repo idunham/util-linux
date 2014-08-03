@@ -1,3 +1,28 @@
+util-linux (2.25-6) experimental; urgency=medium
+
+  The "Jonno was here" release.
+
+  [ Jon Severinsson ]
+  * Drop changelog file from the ancient mount source package.
+
+  [ Andreas Henriksson ]
+  * util-linux: Drop all (obsolete) Replaces/Conflicts
+
+  [ Jon Severinsson ]
+  * Add Replaces/Breaks bash-completion (<< 1:2.1-3).
+  * Multiple cleanups in debian/control.
+  * Minor cleanup of debian/rules.
+  * Use filter, not findstring, for arch matching
+  * Simplify linux-only install file handling
+  * Use debian/*-udeb.install files for udeb packages.
+  * Fix util-linux lintian override.
+
+  [ Andreas Henriksson ]
+  * Minor uuid-runtime.postinst cleanup
+  * Add d/p/cfdisk-reenable-cursor-when-quitting.patch (Closes: #755991)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 03 Aug 2014 23:58:41 +0200
+
 util-linux (2.25-5) experimental; urgency=medium
 
   The "big maintainer-script cleanup" release
