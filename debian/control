@@ -42,24 +42,6 @@ Depends: dpkg (>= 1.15.4) | install-info,
          ${misc:Depends}
 Pre-Depends: ${shlibs:Depends}
 Suggests: dosfstools, kbd | console-tools, util-linux-locales
-Replaces: e2fsprogs,
-          fdisk,
-          fstrim,
-          linux32,
-          miscutils,
-          schedutils,
-          setterm,
-          sparc-utils,
-          getty [hurd-any]
-Conflicts: console-tools (<< 1:0.2.3-21),
-           fdisk,
-           fstrim,
-           kbd (<< 1.05-3),
-           linux32,
-           schedutils,
-           setterm,
-           getty [hurd-any]
-Provides: linux32, schedutils
 Multi-Arch: foreign
 Description: Miscellaneous system utilities
  This package contains a number of important utilities, most of which
