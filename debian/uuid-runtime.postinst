@@ -15,7 +15,7 @@ if getent passwd libuuid >/dev/null && ! getent passwd uuidd >/dev/null ; then
 	usermod --login uuidd --home /run/uuidd libuuid
 
 	# attemp cleanup of old home directory.
-	rmdir /var/lib/libuuid > /dev/null 2>&1 || true
+	rmdir --ignore-fail-on-non-empty /var/lib/libuuid
 fi
 
 # add uuidd user/group if needed.
