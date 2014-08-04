@@ -94,6 +94,9 @@ endif
 
 override_dh_install:
 	cat debian/util-linux.install debian/util-linux.install.linux-only > debian/util-linux.install.linux
+ifeq ($(DEB_HOST_ARCH),sparc)
+	sed -i '/sfdisk/d' debian/*.install
+endif
 	dh_install \
 		-Nfdisk-udeb -Ncfdisk-udeb -Nlibblkid1-udeb \
 		-Nlibsmartcols1-udeb -Nlibuuid1-udeb -Nutil-linux-udeb
@@ -151,6 +154,9 @@ endif
 
 override_dh_installman:
 	cat debian/util-linux.manpages debian/util-linux.manpages.linux-only > debian/util-linux.manpages.linux
+ifeq ($(DEB_HOST_ARCH),sparc)
+	sed -i '/sfdisk/d' debian/*.manpages
+endif
 	dh_installman --language=C
 	rm debian/util-linux.manpages.linux
 	#
