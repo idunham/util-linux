@@ -31,6 +31,8 @@ CONFOPTS += --disable-su
 CONFOPTS += --disable-sulogin
 CONFOPTS += --disable-last
 CONFOPTS += --disable-mesg
+# => initscripts
+CONFOPTS += --disable-mountpoint
 # => procps
 CONFOPTS += --disable-kill
 # => eject
@@ -69,8 +71,6 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
 endif
 	mv debian/tmp/usr/bin/tailf debian/tmp/bin
 	mv debian/tmp/usr/bin/isosize debian/tmp/sbin
-	# initscripts delivers this
-	rm -f debian/tmp/bin/mountpoint debian/tmp/usr/share/man/man1/mountpoint.1*
 	# the version in bsdmainutils seems newer.
 	rm -f debian/tmp/usr/bin/look debian/tmp/usr/share/man/man1/look.1
 	rm -f debian/tmp/usr/bin/hexdump debian/tmp/usr/share/man/man1/hexdump.1
