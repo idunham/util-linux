@@ -31,16 +31,24 @@ debian/tmp/usr/share/man/man8/agetty.8
 debian/tmp/usr/share/man/man8/blkid.8
 debian/tmp/usr/share/man/man8/cfdisk.8
 debian/tmp/usr/share/man/man8/findfs.8
-#debian/tmp/usr/share/man/man8/fsck.8
+debian/tmp/usr/share/man/man8/fsck.8                            [linux-any]
 debian/tmp/usr/share/man/man8/fsck.cramfs.8
 debian/tmp/usr/share/man/man8/fsck.minix.8
 debian/tmp/usr/share/man/man8/hwclock.8
 debian/tmp/usr/share/man/man8/i386.8                            [amd64 i386]
 debian/tmp/usr/share/man/man8/isosize.8
+debian/tmp/usr/share/man/man8/mips.8                            [mips mipsel]
+debian/tmp/usr/share/man/man8/mips32.8                          [mips mipsel]
+debian/tmp/usr/share/man/man8/mips64.8                          [mips mipsel]
 debian/tmp/usr/share/man/man8/mkfs.8
 debian/tmp/usr/share/man/man8/mkfs.bfs.8
 debian/tmp/usr/share/man/man8/mkfs.cramfs.8
 debian/tmp/usr/share/man/man8/mkfs.minix.8
+debian/tmp/usr/share/man/man8/ppc.8                   [powerpc ppc64 ppc64el]
+debian/tmp/usr/share/man/man8/ppc32.8                 [powerpc ppc64 ppc64el]
+debian/tmp/usr/share/man/man8/ppc64.8                 [powerpc ppc64 ppc64el]
+debian/tmp/usr/share/man/man8/s390.8                            [s390x]
+debian/tmp/usr/share/man/man8/s390x.8                           [s390x]
 debian/tmp/usr/share/man/man8/sfdisk.8                          [!sparc]
 debian/tmp/usr/share/man/man8/swaplabel.8
 debian/tmp/usr/share/man/man8/wipefs.8
@@ -61,7 +69,6 @@ debian/tmp/usr/share/man/man8/chcpu.8                           [linux-any]
 debian/tmp/usr/share/man/man8/ctrlaltdel.8                      [linux-any]
 debian/tmp/usr/share/man/man8/delpart.8                         [linux-any]
 debian/tmp/usr/share/man/man8/fdformat.8                        [linux-any]
-debian/tmp/usr/share/man/man8/fsck.8                            [linux-any]
 debian/tmp/usr/share/man/man8/fsfreeze.8                        [linux-any]
 debian/tmp/usr/share/man/man8/fstrim.8                          [linux-any]
 debian/tmp/usr/share/man/man8/ldattach.8                        [linux-any]

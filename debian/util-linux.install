@@ -9,13 +9,12 @@ debian/tmp/usr/bin/rename => /usr/bin/rename.ul
 # Rename mkswap to mkswap.linux on non-linux.
 [linux-any] sbin/mkswap
 [!linux-any] debian/tmp/sbin/mkswap => /sbin/mkswap.linux
-#usr/bin/chkdupexe
 bin/more
 sbin/agetty
 sbin/blkid
 sbin/cfdisk
 sbin/findfs
-#sbin/fsck
+sbin/fsck                                                       [linux-any]
 sbin/fsck.cramfs
 sbin/fsck.minix
 sbin/hwclock
@@ -37,9 +36,17 @@ usr/bin/ipcs
 usr/bin/isosize sbin/
 usr/bin/line
 usr/bin/mcookie
+usr/bin/mips                                                    [mips mipsel]
+usr/bin/mips32                                                  [mips mipsel]
+usr/bin/mips64                                                  [mips mipsel]
 usr/bin/namei
 usr/bin/pg
+usr/bin/ppc                                          [powerpc ppc64 ppc64el]
+usr/bin/ppc32                                        [powerpc ppc64 ppc64el]
+usr/bin/ppc64                                        [powerpc ppc64 ppc64el]
 usr/bin/rev
+usr/bin/s390                                                    [s390x]
+usr/bin/s390x                                                   [s390x]
 usr/bin/setsid
 usr/bin/tailf bin/
 usr/bin/utmpdump
@@ -52,7 +59,6 @@ sbin/blkdiscard                                                 [linux-any]
 sbin/blockdev                                                   [linux-any]
 sbin/chcpu                                                      [linux-any]
 sbin/ctrlaltdel                                                 [linux-any]
-sbin/fsck                                                       [linux-any]
 sbin/fsfreeze                                                   [linux-any]
 sbin/fstrim                                                     [linux-any]
 sbin/pivot_root                                                 [linux-any]
