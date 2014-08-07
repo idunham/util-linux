@@ -1,3 +1,13 @@
+util-linux (2.25-7) experimental; urgency=medium
+
+  * Mangle installed files on sparc (sfdisk)
+  * Fix sparc install mangling
+  * Use --disable-mountpoint instead of rm
+  * Use dh-exec (>= 0.13)
+  * Install mips,ppc,s390 setarch symlinks and manpages
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 08 Aug 2014 00:01:38 +0200
+
 util-linux (2.25-6) experimental; urgency=medium
 
   The "Jonno was here" release.
