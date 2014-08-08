@@ -1,3 +1,11 @@
+util-linux (2.25-8) experimental; urgency=medium
+
+  * Only install linux32/64 manpages on linux-any
+  * Fix uuid-runtime.postinst to skip rmdir when not needed (Closes: #757432)
+  * fdisk-udeb: use dh-exec to skip sfdisk install on sparc
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 08 Aug 2014 09:38:18 +0200
+
 util-linux (2.25-7) experimental; urgency=medium
 
   * Mangle installed files on sparc (sfdisk)
