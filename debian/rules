@@ -132,7 +132,7 @@ override_dh_installinit:
 	# install uuidd sysvinit script
 	make misc-utils/uuidd.rc
 	ln -s ../misc-utils/uuidd.rc debian/uuid-runtime.uuidd.init
-	dh_installinit --name=uuidd
+	dh_installinit --name=uuidd --restart-after-upgrade
 	rm -f debian/uuid-runtime.uuidd.init
 
 override_dh_installpam:
