@@ -10,3 +10,4 @@ verbose-tests.patch
 tests-allow-non-inotify-tailf-to-keep-up.patch
 fdisk-fix-l-device.patch
 cfdisk-reenable-cursor-when-quitting.patch
+tests-fix-fdisk-bsd-for-the-two-possible-sectors-off.patch
