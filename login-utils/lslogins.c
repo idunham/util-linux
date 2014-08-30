@@ -285,7 +285,7 @@ static inline size_t err_columns_index(size_t arysz, size_t idx)
 {
 	if (idx >= arysz)
 		errx(EXIT_FAILURE, _("too many columns specified, "
-				     "the limit is %zu columns."),
+				     "the limit is %zu columns"),
 				arysz - 1);
 	return idx;
 }
@@ -349,7 +349,7 @@ static char *make_time(int mode, time_t time)
 		strftime(buf, sizeof(buf), "%Y-%m-%dT%H:%M:%S%z", &tm);
 		break;
 	default:
-		errx(EXIT_FAILURE, _("unssupported time type"));
+		errx(EXIT_FAILURE, _("unsupported time type"));
 	}
 	return xstrdup(buf);
 }
@@ -1187,7 +1187,7 @@ static void __attribute__((__noreturn__)) usage(FILE *out)
 	fputs(_(" -a, --acc-expiration     display info about passwords expiration\n"), out);
 	fputs(_(" -c, --colon-separate     display data in a format similar to /etc/passwd\n"), out);
 	fputs(_(" -e, --export             display in an export-able output format\n"), out);
-	fputs(_(" -f, --failed             display data about the last users' failed logins\n"), out);
+	fputs(_(" -f, --failed             display data about the users' last failed logins\n"), out);
 	fputs(_(" -G, --groups-info        display information about groups\n"), out);
 	fputs(_(" -g, --groups=<groups>    display users belonging to a group in <groups>\n"), out);
 	fputs(_(" -L, --last               show info about the users' last login sessions\n"), out);

@@ -206,7 +206,7 @@ static inline size_t err_columns_index(size_t arysz, size_t idx)
 {
 	if (idx >= arysz)
 		errx(EXIT_FAILURE, _("too many columns specified, "
-				     "the limit is %zu columns."),
+				     "the limit is %zu columns"),
 				arysz - 1);
 	return idx;
 }
@@ -1501,7 +1501,7 @@ static void __attribute__((__noreturn__)) help(FILE *out)
 	fputs(_(" -s, --inverse        inverse dependencies\n"), out);
 	fputs(_(" -S, --scsi           output info about SCSI devices\n"), out);
 	fputs(_(" -t, --topology       output info about topology\n"), out);
-	fputs(_(" -x, --sort <column>  sort output by <colum>\n"), out);
+	fputs(_(" -x, --sort <column>  sort output by <column>\n"), out);
 	fputs(USAGE_SEPARATOR, out);
 	fputs(USAGE_HELP, out);
 	fputs(USAGE_VERSION, out);
@@ -1708,7 +1708,7 @@ int main(int argc, char *argv[])
 		excludes[nexcludes++] = 1;	/* default: ignore RAM disks */
 
 	if (lsblk->sort_id >= 0 && column_id_to_number(lsblk->sort_id) < 0)
-		errx(EXIT_FAILURE, _("the sort column has to be between output columns."));
+		errx(EXIT_FAILURE, _("the sort column has to be among the output columns"));
 
 	mnt_init_debug(0);
 	scols_init_debug(0);
