@@ -80,7 +80,7 @@ usrsbin_execdir='${exec_prefix}/sbin'
 AC_SUBST([usrsbin_execdir])
 
 AS_CASE([$libdir],
- ['${exec_prefix}/'* | '${prefix}/'* | /usr/*],
+ ['${exec_prefix}/'* | '${prefix}/'* | /usr/* | "${prefix}"/* ],
    [usrlib_execdir=$libdir],
  [usrlib_execdir='${exec_prefix}'$libdir]
 )
@@ -1193,7 +1193,7 @@ AC_ARG_ENABLE([pivot_root],
   [], [UL_DEFAULT_ENABLE([pivot_root], [check])]
 )
 UL_BUILD_INIT([pivot_root])
-UL_REQUIRES_LINUX([switch_root])
+UL_REQUIRES_LINUX([pivot_root])
 UL_REQUIRES_SYSCALL_CHECK([pivot_root], [UL_CHECK_SYSCALL([pivot_root])])
 AM_CONDITIONAL([BUILD_PIVOT_ROOT], [test "x$build_pivot_root" = xyes])
 

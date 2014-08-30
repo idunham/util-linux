@@ -538,6 +538,9 @@ void list_disk_geometry(struct fdisk_context *cxt)
 void list_disklabel(struct fdisk_context *cxt)
 {
 	struct fdisk_table *tb = NULL;
+	struct fdisk_partition *pa = NULL;
+	struct fdisk_iter *itr;
+
 	char *str;
 
 	/* print label specific stuff by libfdisk FDISK_ASK_INFO API */
@@ -564,12 +567,19 @@ void list_disklabel(struct fdisk_context *cxt)
 		}
 	}
 
-	if (fdisk_table_wrong_order(tb)) {
-		fputc('\n', stdout);
+	fputc('\n', stdout);
+
+	itr = fdisk_new_iter(FDISK_ITER_FORWARD);
+
+	while (itr && fdisk_table_next_partition(tb, itr, &pa) == 0)
+		fdisk_warn_alignment(cxt, fdisk_partition_get_start(pa),
+					  fdisk_partition_get_partno(pa) + 1);
+
+	if (fdisk_table_wrong_order(tb))
 		fdisk_info(cxt, _("Partition table entries are not in disk order."));
-	}
 
 	fdisk_unref_table(tb);
+	fdisk_free_iter(itr);
 }
 
 static size_t skip_empty(const unsigned char *buf, size_t i, size_t sz)
@@ -670,16 +680,18 @@ static int is_ide_cdrom_or_tape(char *device)
 	return ret;
 }
 
-static void print_device_pt(struct fdisk_context *cxt, char *device)
+static void print_device_pt(struct fdisk_context *cxt, char *device, int warnme)
 {
-	if (fdisk_context_assign_device(cxt, device, 1) != 0)	/* read-only */
-		err(EXIT_FAILURE, _("cannot open %s"), device);
+	if (fdisk_context_assign_device(cxt, device, 1) != 0) {	/* read-only */
+		if (warnme || errno == EACCES)
+			warn(_("cannot open %s"), device);
+		return;
+	}
 
 	list_disk_geometry(cxt);
 
 	if (fdisk_dev_has_disklabel(cxt))
 		list_disklabel(cxt);
-	fputc('\n', stdout);
 }
 
 static void print_all_devices_pt(struct fdisk_context *cxt)
@@ -717,7 +729,7 @@ static void print_all_devices_pt(struct fdisk_context *cxt)
 		if (!cn)
 			continue;
 		if (!is_ide_cdrom_or_tape(cn))
-			print_device_pt(cxt, cn);
+			print_device_pt(cxt, cn, 0);
 		free(cn);
 	}
 	fclose(f);
@@ -912,7 +924,7 @@ int main(int argc, char **argv)
 		if (argc > optind) {
 			int k;
 			for (k = optind; k < argc; k++)
-				print_device_pt(cxt, argv[k]);
+				print_device_pt(cxt, argv[k], 1);
 		} else
 			print_all_devices_pt(cxt);
 		break;
@@ -958,7 +970,7 @@ int main(int argc, char **argv)
 
 		} else if (fdisk_is_disklabel(cxt, GPT) && fdisk_gpt_is_hybrid(cxt))
 			fdisk_warnx(cxt, _(
-				  "The hybrid GPT detected. You have to sync "
+				  "A hybrid GPT was detected. You have to sync "
 				  "the hybrid MBR manually (expert command 'M')."));
 
 		while (1)

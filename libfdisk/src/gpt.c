@@ -162,6 +162,7 @@ static struct fdisk_parttype gpt_parttypes[] =
 	DEF_GUID("AF9B60A0-1431-4F62-BC68-3311714A69AD", N_("Microsoft LDM data")),
 	DEF_GUID("DE94BBA4-06D1-4D40-A16A-BFD50179D6AC", N_("Windows recovery environment")),
 	DEF_GUID("37AFFC90-EF7D-4E96-91C3-2D7AE055B174", N_("IBM General Parallel Fs")),
+	DEF_GUID("E75CAF8F-F680-4CEE-AFA3-B001E56EFC2D", N_("Microsoft Storage Spaces")),
 
 	/* HP-UX */
 	DEF_GUID("75894C1E-3AEB-11D3-B7C1-7B03A0000000", N_("HP-UX data")),
@@ -514,7 +515,7 @@ static int gpt_mknew_header(struct fdisk_context *cxt,
 	header->size      = cpu_to_le32(sizeof(struct gpt_header));
 
 	/*
-	 * 128 partitions is the default. It can go behond this, however,
+	 * 128 partitions are the default. It can go beyond that, but
 	 * we're creating a de facto header here, so no funny business.
 	 */
 	header->npartition_entries     = cpu_to_le32(GPT_NPARTITIONS);
@@ -958,7 +959,7 @@ static uint32_t partition_start_after_end(struct gpt_header *header, struct gpt_
 }
 
 /*
- * Check if partition e1 overlaps with partition e2
+ * Check if partition e1 overlaps with partition e2.
  */
 static inline int partition_overlap(struct gpt_entry *e1, struct gpt_entry *e2)
 {
@@ -971,7 +972,7 @@ static inline int partition_overlap(struct gpt_entry *e1, struct gpt_entry *e2)
 }
 
 /*
- * Find any paritions that overlap.
+ * Find any partitions that overlap.
  */
 static uint32_t partition_check_overlaps(struct gpt_header *header, struct gpt_entry *e)
 {
@@ -2248,10 +2249,19 @@ static int gpt_toggle_partition_flag(
 			return rc;
 		bit = tmp;
 		break;
+	default:
+		/* already specified PT_FLAG_GUIDSPECIFIC bit */
+		if (flag >= 48 && flag <= 63) {
+			bit = flag;
+			flag = GPT_FLAG_GUIDSPECIFIC;
+		}
+		break;
 	}
 
-	if (bit < 0)
+	if (bit < 0) {
+		fdisk_warnx(cxt, _("failed to toggle unsupported bit %lu"), flag);
 		return -EINVAL;
+	}
 
 	if (!isset(bits, bit))
 		setbit(bits, bit);

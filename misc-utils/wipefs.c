@@ -358,7 +358,7 @@ static void rereadpt(int fd, const char *devname)
 
 	errno = 0;
 	ioctl(fd, BLKRRPART);
-	printf(_("%s: calling ioclt to re-read partition table: %m\n"), devname);
+	printf(_("%s: calling ioctl to re-read partition table: %m\n"), devname);
 #endif
 }
 
@@ -408,8 +408,8 @@ do_wipe(struct wipe_desc *wp, const char *devname, int flags)
 		if (!(flags & WP_FL_FORCE)
 		    && wp->is_parttable
 		    && !blkid_probe_is_wholedisk(pr)) {
-			warnx(_("%s: ignore nested \"%s\" partition "
-				"table on non-whole disk device."), devname, wp->type);
+			warnx(_("%s: ignoring nested \"%s\" partition table "
+				"on non-whole disk device"), devname, wp->type);
 			need_force = 1;
 			continue;
 		}
