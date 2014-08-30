@@ -1,3 +1,26 @@
+util-linux (2.25.1~rc1-1) UNRELEASED; urgency=medium
+
+  * Restart uuidd /after/ upgrade.
+    Thanks to Michael Biebl for the suggestion.
+  * Cherry-pick fdisk/bsd test fix from upstream.
+    Thanks to Aurélien Jarno for solving and submitting this upstream
+  * Imported Upstream version 2.25.1~rc1
+  * Rebase debian patch set on top of 2.25.1~rc1
+    - Drop patches for things fixed in new upstream release:
+      debian/patches/cfdisk-reenable-cursor-when-quitting.patch
+      debian/patches/fdisk-fix-l-device.patch
+      debian/patches/tests-allow-non-inotify-tailf-to-keep-up.patch
+      debian/patches/tests-fix-fdisk-bsd-for-the-two-possible-sectors-off.patch
+    - Refresh remaining patches.
+  * Mark libmount context symbols linux-any
+  * Add patches to make libmount build on kfreebsd
+  * Mark libmount1 as to be built everywhere
+  * Install fsck on every architecture
+  * Add NEWS entry about reinstating fsck on kFreeBSD.
+    Disclaimer: I, Andreas Henriksson, will *not* maintain the patches.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 30 Aug 2014 15:10:33 -0700
+
 util-linux (2.25-8) experimental; urgency=medium
 
   * Only install linux32/64 manpages on linux-any
