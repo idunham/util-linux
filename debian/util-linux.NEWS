@@ -1,3 +1,10 @@
+util-linux (2.25.1~rc1-1) UNRELEASED; urgency=medium
+
+  * This version adds a number of patches which again makes
+    fsck available on non-linux architectures like kfreebsd.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 23 Jul 2014 14:05:13 +0200
+
 util-linux (2.25-1) experimental; urgency=medium
 
   * The cytune command is no longer available since it has
