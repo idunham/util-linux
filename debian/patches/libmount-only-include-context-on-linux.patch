@@ -1,0 +1,45 @@
+From: Andreas Henriksson <andreas@fatal.se>
+Date: Mon, 4 Aug 2014 12:38:06 +0200
+Subject: libmount: only include context on linux
+
+This is part of an attempt to make libmount buildable on non-linux.
+
+The parts that need architecture specific porting is under
+the context*.c files and the rest of libmount is useful/used
+by for example fsck.
+
+Signed-off-by: Andreas Henriksson <andreas@fatal.se>
+---
+ libmount/src/Makemodule.am | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+
+diff --git a/libmount/src/Makemodule.am b/libmount/src/Makemodule.am
+index 54ab51d..fbd0e38 100644
+--- a/libmount/src/Makemodule.am
++++ b/libmount/src/Makemodule.am
+@@ -8,10 +8,6 @@ libmount_la_SOURCES = \
+ 	include/list.h \
+ 	\
+ 	libmount/src/cache.c \
+-	libmount/src/context.c \
+-	libmount/src/context_loopdev.c \
+-	libmount/src/context_mount.c \
+-	libmount/src/context_umount.c \
+ 	libmount/src/fs.c \
+ 	libmount/src/init.c \
+ 	libmount/src/iter.c \
+@@ -28,6 +24,14 @@ libmount_la_SOURCES = \
+ 	libmount/src/version.c \
+ 	$(nodist_mountinc_HEADERS)
+ 
++if LINUX
++libmount_la_SOURCES += \
++	libmount/src/context.c \
++	libmount/src/context_loopdev.c \
++	libmount/src/context_mount.c \
++	libmount/src/context_umount.c
++endif
++
+ nodist_libmount_la_SOURCES = libmount/src/mountP.h
+ 
+ libmount_la_LIBADD = libcommon.la libblkid.la $(SELINUX_LIBS)
