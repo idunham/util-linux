@@ -150,7 +150,7 @@ Description: block device id library - headers and static libraries
  This package contains the development environment for the blkid library.
 
 Package: libmount1
-Architecture: linux-any
+Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
