@@ -35,7 +35,7 @@ index 79b5aea..ff99c78 100644
  	 -e 's|@ADJTIME_PATH[@]|$(ADJTIME_PATH)|g' \
  	 -e 's|@LIBUUID_VERSION[@]|$(LIBUUID_VERSION)|g' \
 diff --git a/configure.ac b/configure.ac
-index db53dff..c6bb840 100644
+index 3eca73e..5a28ff5 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -71,7 +71,6 @@ AS_CASE([$prefix:$localstatedir],
@@ -48,7 +48,7 @@ index db53dff..c6bb840 100644
  AC_SUBST([usrbin_execdir])
 @@ -82,9 +81,10 @@ AC_SUBST([usrsbin_execdir])
  AS_CASE([$libdir],
-  ['${exec_prefix}/'* | '${prefix}/'* | /usr/*],
+  ['${exec_prefix}/'* | '${prefix}/'* | /usr/* | "${prefix}"/* ],
     [usrlib_execdir=$libdir],
 - [usrlib_execdir='${exec_prefix}'$libdir]
 + [usrlib_execdir='${libexecdir}']
