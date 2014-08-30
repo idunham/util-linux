@@ -14,7 +14,7 @@ sbin/agetty
 sbin/blkid
 sbin/cfdisk
 sbin/findfs
-sbin/fsck                                                       [linux-any]
+sbin/fsck
 sbin/fsck.cramfs
 sbin/fsck.minix
 sbin/hwclock

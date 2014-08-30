@@ -31,7 +31,7 @@ debian/tmp/usr/share/man/man8/agetty.8
 debian/tmp/usr/share/man/man8/blkid.8
 debian/tmp/usr/share/man/man8/cfdisk.8
 debian/tmp/usr/share/man/man8/findfs.8
-debian/tmp/usr/share/man/man8/fsck.8                            [linux-any]
+debian/tmp/usr/share/man/man8/fsck.8
 debian/tmp/usr/share/man/man8/fsck.cramfs.8
 debian/tmp/usr/share/man/man8/fsck.minix.8
 debian/tmp/usr/share/man/man8/hwclock.8
