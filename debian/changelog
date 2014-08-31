@@ -1,4 +1,4 @@
-util-linux (2.25.1~rc1-1) UNRELEASED; urgency=medium
+util-linux (2.25.1~rc1-1) experimental; urgency=medium
 
   * Restart uuidd /after/ upgrade.
     Thanks to Michael Biebl for the suggestion.
@@ -19,7 +19,7 @@ util-linux (2.25.1~rc1-1) UNRELEASED; urgency=medium
   * Add NEWS entry about reinstating fsck on kFreeBSD.
     Disclaimer: I, Andreas Henriksson, will *not* maintain the patches.
 
- -- Andreas Henriksson <andreas@fatal.se>  Sat, 30 Aug 2014 15:10:33 -0700
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 30 Aug 2014 18:32:25 -0700
 
 util-linux (2.25-8) experimental; urgency=medium
 
