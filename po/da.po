@@ -61,10 +61,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: util-linux-2.24-rc2\n"
+"Project-Id-Version: util-linux-2.25.1-rc1\n"
 "Report-Msgid-Bugs-To: util-linux@vger.kernel.org\n"
-"POT-Creation-Date: 2014-08-27 14:59+0200\n"
-"PO-Revision-Date: 2014-06-05 19:30+01:00\n"
+"POT-Creation-Date: 2014-09-03 12:17+0200\n"
+"PO-Revision-Date: 2014-08-30 19:30+01:00\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -311,9 +311,8 @@ msgid "Type"
 msgstr "Type"
 
 #: disk-utils/cfdisk.c:152
-#, fuzzy
 msgid "Change the partition type"
-msgstr "skift en partitionstype"
+msgstr "Ændr partitionstypen"
 
 #: disk-utils/cfdisk.c:153
 msgid "Help"
@@ -325,12 +324,11 @@ msgstr "Vis hjælpeskærm"
 
 #: disk-utils/cfdisk.c:154
 msgid "Sort"
-msgstr ""
+msgstr "Sorter"
 
 #: disk-utils/cfdisk.c:154
-#, fuzzy
 msgid "Fix partitions order"
-msgstr "ordn partitionsrækkefølgen"
+msgstr "Ordn partitionsrækkefølgen"
 
 #: disk-utils/cfdisk.c:155
 msgid "Write"
@@ -346,70 +344,65 @@ msgid "internal error: unsupported dialog type %d"
 msgstr "intern fejl: ej understøttet dialogtype %d"
 
 #: disk-utils/cfdisk.c:1282
-#, fuzzy, c-format
+#, c-format
 msgid "Disk: %s"
-msgstr "disk: %.*s"
+msgstr "Disk: %s"
 
 #: disk-utils/cfdisk.c:1284
-#, fuzzy, c-format
+#, c-format
 msgid "Size: %s, %ju bytes, %ju sectors"
-msgstr "Disk %s: %s, %llu byte, %llu sektorer"
+msgstr "Størrelse: %s, %ju byte, %ju sektorer"
 
 # Evt. kan vi omgå det lidt mystiske "identifikation" ved bare at bruge
 # forkortelsen id:
 # Disk-id: ...
 #: disk-utils/cfdisk.c:1287
-#, fuzzy, c-format
+#, c-format
 msgid "Label: %s, identifier: %s"
-msgstr "Diskidentifikation: %s"
+msgstr "Etikel: %s, identifikation: %s"
 
 #: disk-utils/cfdisk.c:1290
-#, fuzzy, c-format
+#, c-format
 msgid "Label: %s"
-msgstr "Etiket-id: %s"
+msgstr "Etiket: %s"
 
 #: disk-utils/cfdisk.c:1431
 msgid "May be followed by {M,B,G,T}iB (the \"iB\" is optional) or S for sectors."
-msgstr ""
+msgstr "Kan efterfølges af {M,B,G,T}iB (»iB« er valgfri) eller S for sektorer."
 
 #: disk-utils/cfdisk.c:1435
-#, fuzzy
 msgid "Please, specify size."
-msgstr "intet filnavn angivet."
+msgstr "Angiv venligst størrelse."
 
 #: disk-utils/cfdisk.c:1457
 #, c-format
 msgid "Minimal size is %ju"
-msgstr ""
+msgstr "Minimal størrelse er %ju"
 
 #: disk-utils/cfdisk.c:1466
-#, fuzzy, c-format
+#, c-format
 msgid "Maximal size is %ju bytes."
-msgstr "find størrelse i byte"
+msgstr "Maksmimal størrelse er %ju byte."
 
 #: disk-utils/cfdisk.c:1470
-#, fuzzy
 msgid "Failed to parse size."
-msgstr "kunne ikke fortolke pid"
+msgstr "Kunne ikke fortolke størrelse."
 
 #: disk-utils/cfdisk.c:1525
-#, fuzzy
 msgid "Select partition type"
-msgstr "Partition %d er valgt"
+msgstr "Vælg partitionstype"
 
 #: disk-utils/cfdisk.c:1588 disk-utils/fdisk.c:968
 msgid "Device does not contain a recognized partition table."
 msgstr "Enheden indeholder ikke en genkendt partitionstabel."
 
 #: disk-utils/cfdisk.c:1590
-#, fuzzy
 msgid "Please, select a type to create a new disk label."
-msgstr "Vil du oprette en BSD-disketiket?"
+msgstr "Vælg venligst en type for at oprette en ny disketiket."
 
 #: disk-utils/cfdisk.c:1595
-#, fuzzy
 msgid "Select label type"
-msgstr "Ugyldig type"
+msgstr "Vælg etikettype"
 
 #: disk-utils/cfdisk.c:1632
 msgid "Help Screen for cfdisk"
@@ -429,11 +422,11 @@ msgstr "harddisk."
 
 #: disk-utils/cfdisk.c:1638
 msgid "Copyright (C) 2014 Karel Zak <kzak@redhat.com> "
-msgstr ""
+msgstr "Ophavsret 2014 Karel Zak <kzak@redhat.com> "
 
 #: disk-utils/cfdisk.c:1639
 msgid "Based on the original cfdisk from Kevin E. Martin & aeb."
-msgstr ""
+msgstr "Baseret på den oprindelige cfdisk fra Kevin E. Martin & aeb."
 
 # se nedenfor
 #: disk-utils/cfdisk.c:1641
@@ -466,9 +459,8 @@ msgid "  q          Quit program without writing partition table"
 msgstr "  q          Afslut program uden at skrive partitionstabellen"
 
 #: disk-utils/cfdisk.c:1648
-#, fuzzy
 msgid "  t          Change the partition type"
-msgstr "  t          Skift filsystemtype"
+msgstr "  t          Skift partitionstype"
 
 #: disk-utils/cfdisk.c:1649
 msgid "  s          Fix partitions order (only when in disarray)"
@@ -499,14 +491,12 @@ msgid "Down Arrow   Move cursor to the next partition"
 msgstr "Pil ned      Flyt markøren til næste partition"
 
 #: disk-utils/cfdisk.c:1656
-#, fuzzy
 msgid "Left Arrow   Move cursor to the previous menu item"
-msgstr "Pil op       Flyt markøren til forrige partition"
+msgstr "Venstre pil  Flyt markøren til forrige menupunkt"
 
 #: disk-utils/cfdisk.c:1657
-#, fuzzy
 msgid "Right Arrow  Move cursor to the next menu item"
-msgstr "Pil ned      Flyt markøren til næste partition"
+msgstr "Højre pil    Flyt markøren til næste menupunkt"
 
 #: disk-utils/cfdisk.c:1660
 msgid "Note: All of the commands can be entered with either upper or lower"
@@ -518,54 +508,51 @@ msgstr "bogstaver (undtagen Writes)."
 
 #: disk-utils/cfdisk.c:1663
 msgid "Use lsblk(8) or partx(8) to see more details about the device."
-msgstr ""
+msgstr "Brug lsblk(8) eller partx(8) for at se flere detaljer om enheden."
 
 #: disk-utils/cfdisk.c:1670
-#, fuzzy
 msgid "Press a key to continue."
-msgstr "Tryk en tast for at fortsætte"
+msgstr "Tryk en tast for at fortsætte."
 
 #: disk-utils/cfdisk.c:1746
 msgid "Could not toggle the flag."
-msgstr ""
+msgstr "Kunne ikke skifte flaget."
 
 #: disk-utils/cfdisk.c:1756
-#, fuzzy, c-format
+#, c-format
 msgid "Could not delete partition %zu."
-msgstr "Kunne ikke slette partition %d"
+msgstr "Kunne ikke slette partition %zu."
 
 #: disk-utils/cfdisk.c:1758 disk-utils/fdisk-menu.c:504
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu has been deleted."
-msgstr "Partition %d er slettet."
+msgstr "Partition %zu er blevet slettet."
 
 #: disk-utils/cfdisk.c:1779
-#, fuzzy
 msgid "Partition size: "
-msgstr "partitioner: %d"
+msgstr "Partitionsstørrelse: "
 
 #: disk-utils/cfdisk.c:1810
-#, fuzzy, c-format
+#, c-format
 msgid "Changed type of partition %zu."
-msgstr "Ændrede systemtypen for partition »%s« til »%s«."
+msgstr "Ændrede systemtypen for partition %zu."
 
 #: disk-utils/cfdisk.c:1812
-#, fuzzy, c-format
+#, c-format
 msgid "The type of partition %zu is unchanged."
-msgstr "Systemtypen for partition %zu er uændret: %s"
+msgstr "Systemtypen for partition %zu er uændret."
 
 #: disk-utils/cfdisk.c:1827
 msgid "Device open in read-only mode"
-msgstr ""
+msgstr "Enhed åben i skrivebeskyttet tilstand"
 
 #: disk-utils/cfdisk.c:1832
-#, fuzzy
 msgid "Are you sure you want to write the partition table to disk? "
-msgstr "Er du sikker på, at du vil skrive partitionstabellen til disken? (ja eller nej): "
+msgstr "Er du sikker på, at du vil skrive partitionstabellen til disken? "
 
 #: disk-utils/cfdisk.c:1834
 msgid "Type \"yes\" or \"no\", or press ESC to leave this dialog."
-msgstr ""
+msgstr "Tast »ja« eller »nej«, eller tryk ESC for at forlade denne dialog."
 
 #: disk-utils/cfdisk.c:1839 login-utils/lslogins.c:209 sys-utils/lscpu.c:1249
 #: sys-utils/lscpu.c:1259
@@ -578,47 +565,41 @@ msgid "Did not write partition table to disk"
 msgstr "Skrev ikke partitionstabellen til disken"
 
 #: disk-utils/cfdisk.c:1845
-#, fuzzy
 msgid "Failed to write disklabel"
-msgstr "kunne ikke skrive disketiket"
+msgstr "Kunne ikke skrive disketiket"
 
 #: disk-utils/cfdisk.c:1848 disk-utils/fdisk-menu.c:459
 msgid "The partition table has been altered."
 msgstr "Partitionstabellen er ændret."
 
 #: disk-utils/cfdisk.c:1868
-#, fuzzy
 msgid "Note that partition table entries are not in disk order now."
-msgstr "Partitionstabellens indgange er ikke i diskrækkefølge."
+msgstr "Bemærk at partitionstabellens indgange ikke er i diskrækkefølge nu."
 
 #: disk-utils/cfdisk.c:1891
-#, fuzzy
 msgid "failed to create a new disklabel"
-msgstr "kunne ikke skrive disketiket"
+msgstr "kunne ikke oprette en ny disketiket"
 
 #: disk-utils/cfdisk.c:1899
-#, fuzzy
 msgid "failed to read partitions"
-msgstr "kunne ikke tilføje partition"
+msgstr "kunne ikke læse partitioner"
 
 #: disk-utils/cfdisk.c:1909 disk-utils/fdisk.c:960 disk-utils/fdisk-menu.c:451
 msgid "Device open in read-only mode."
-msgstr ""
+msgstr "Enhed åben i skrivebeskyttet tilstand."
 
 #: disk-utils/cfdisk.c:1980
-#, fuzzy, c-format
+#, c-format
 msgid " %1$s [options] <disk>\n"
-msgstr " %s [tilvalg] <enhed>\n"
+msgstr " %1$s [tilvalg] <disk>\n"
 
 #: disk-utils/cfdisk.c:1983
-#, fuzzy
 msgid " -L --color[=<when>]     colorize output (auto, always or never)\n"
-msgstr " -L[=<hvornår>]    farvelæg uddata (auto, altid eller aldrig)\n"
+msgstr " -L --color[=<hvornår>]  farvelæg uddata (auto, altid eller aldrig)\n"
 
 #: disk-utils/cfdisk.c:1984
-#, fuzzy
 msgid " -z --zero               start with zeroed partition table\n"
-msgstr " -z, --zero                start med nulstillet partitionstabel\n"
+msgstr " -z, --zero              start med nulstillet partitionstabel\n"
 
 #: disk-utils/cfdisk.c:2023 disk-utils/fdisk.c:880 misc-utils/cal.c:373
 #: sys-utils/dmesg.c:1295 text-utils/hexdump.c:114
@@ -765,9 +746,9 @@ msgstr ""
 "Vil du virkelig afslutte? "
 
 #: disk-utils/fdisk.c:108
-#, fuzzy, c-format
+#, c-format
 msgid "Select (default %c): "
-msgstr "%s (%s, standard %c): "
+msgstr "Vælg (standard %c): "
 
 #: disk-utils/fdisk.c:111
 #, c-format
@@ -784,9 +765,9 @@ msgid "%s (%s, default %c): "
 msgstr "%s (%s, standard %c): "
 
 #: disk-utils/fdisk.c:156 disk-utils/fdisk.c:222
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%s, default %ju): "
-msgstr "%s (%s, standard %jd): "
+msgstr "%s (%s, standard %ju): "
 
 #: disk-utils/fdisk.c:161
 #, c-format
@@ -794,9 +775,9 @@ msgid "%s (%c-%c, default %c): "
 msgstr "%s (%c-%c, standard %c): "
 
 #: disk-utils/fdisk.c:164 disk-utils/fdisk.c:224
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%ju-%ju, default %ju): "
-msgstr "%s (%jd-%jd, standard %jd): "
+msgstr "%s (%ju-%ju, standard %ju): "
 
 #: disk-utils/fdisk.c:167
 #, c-format
@@ -804,9 +785,9 @@ msgid "%s (%c-%c): "
 msgstr "%s (%c-%c): "
 
 #: disk-utils/fdisk.c:170 disk-utils/fdisk.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "%s (%ju-%ju): "
-msgstr "%s (%jd-%jd): "
+msgstr "%s (%ju-%ju): "
 
 #: disk-utils/fdisk.c:330
 msgid " [Y]es/[N]o: "
@@ -849,9 +830,9 @@ msgid "Type of partition %zu is unchanged: %s."
 msgstr "Systemtypen for partition %zu er uændret: %s"
 
 #: disk-utils/fdisk.c:509
-#, fuzzy, c-format
+#, c-format
 msgid "Disk %s: %s, %ju bytes, %ju sectors"
-msgstr "Disk %s: %s, %llu byte, %llu sektorer"
+msgstr "Disk %s: %s, %ju byte, %ju sektorer"
 
 #: disk-utils/fdisk.c:515
 #, c-format
@@ -923,62 +904,53 @@ msgid "BLKGETSIZE ioctl failed on %s"
 msgstr "BLKGETSIZE ioctl mislykkedes på %s"
 
 #: disk-utils/fdisk.c:757
-#, fuzzy, c-format
+#, c-format
 msgid ""
 " %1$s [options] <disk>      change partition table\n"
 " %1$s [options] -l [<disk>] list partition table(s)\n"
 msgstr ""
-" %1$s [tilvalg] <disk>    ændr partitionstabel\n"
-" %1$s [tilvalg] -l <disk> vis partitionstabel\n"
+" %1$s [tilvalg] <disk>      ændr partitionstabel\n"
+" %1$s [tilvalg] -l [<disk>] vis partitionstabeller\n"
 
 #: disk-utils/fdisk.c:762
-#, fuzzy
 msgid " -b, --sector-size <size>      physical and logical sector size\n"
-msgstr " -x, --sectors           vis sektorantal og størrelse\n"
+msgstr " -b, --sector-size <str>       fysisk og logisk sektorstørrelse\n"
 
 #: disk-utils/fdisk.c:763
 msgid " -c, --compatibility[=<mode>]  mode is 'dos' or 'nondos' (default)\n"
-msgstr ""
+msgstr " -c, --compatibility[=<tilstand>] tilstand er »dos« eller »nondos« (standard)\n"
 
 #: disk-utils/fdisk.c:764
-#, fuzzy
 msgid " -L, --color[=<when>]          colorize output (auto, always or never)\n"
-msgstr " -L[=<hvornår>]    farvelæg uddata (auto, altid eller aldrig)\n"
+msgstr " -L[, --color[=<hvornår>]      farvelæg uddata (auto, altid eller aldrig)\n"
 
 #: disk-utils/fdisk.c:765
-#, fuzzy
 msgid " -l, --list                    display partitions end exit\n"
-msgstr "     --help                 vis denne hjælpetekst og afslut\n"
+msgstr " -l, --list                    vis partitioner og afslut\n"
 
 #: disk-utils/fdisk.c:766
-#, fuzzy
 msgid " -t, --type <type>             recognize specified partition table type only\n"
-msgstr " -t <type>         fremtving at fdisk kun genkender specificeret partitionstabeltype\n"
+msgstr " -t, --type <type>             genkend kun specificeret partitionstabeltype\n"
 
 #: disk-utils/fdisk.c:767
-#, fuzzy
 msgid " -u, --units[=<unit>]          display units: 'cylinders' or 'sectors' (default)\n"
-msgstr " -u[=<enhed>]      vis enheder: »cylindere« eller »sektorer« (standard)\n"
+msgstr " -u, --units[=<enhed>]         vis enheder: »cylindere« eller »sektorer« (standard)\n"
 
 #: disk-utils/fdisk.c:768
-#, fuzzy
 msgid " -s, --getsz                   display device size in 512-byte sectors [DEPRECATED]\n"
-msgstr "  -h, --help                   Denne lille manual\n"
+msgstr " -s, --getsz                   vis enhedsstørrelse i 512-byte sektorer [FORÆLDET]\n"
 
 #: disk-utils/fdisk.c:771
-#, fuzzy
 msgid " -C, --cylinders <number>      specify the number of cylinders\n"
-msgstr " -C <antal>        angiv antallet af cylindre\n"
+msgstr " -C, --cylinders <antal>       angiv antallet af cylindre\n"
 
 #: disk-utils/fdisk.c:772
-#, fuzzy
 msgid " -H, --heads <number>          specify the number of heads\n"
-msgstr " -H <antal>        angiv hovedantal\n"
+msgstr " -H, --heads <antal>           angiv hovedantal\n"
 
 #: disk-utils/fdisk.c:773
-#, fuzzy
 msgid " -S, --sectors <number>        specify the number of sectors per track\n"
-msgstr " -S <antal>        angiv antallet af sektorer per spor\n"
+msgstr " -S, --sectors <antal>         angiv antallet af sektorer per spor\n"
 
 #: disk-utils/fdisk.c:830
 msgid "invalid sector size argument"
@@ -993,9 +965,9 @@ msgid "not found DOS label driver"
 msgstr "kunne ikke finde driver for DOS-etiket"
 
 #: disk-utils/fdisk.c:857
-#, fuzzy, c-format
+#, c-format
 msgid "unknown compatibility mode '%s'"
-msgstr "ukendt evne »%s«"
+msgstr "ukendt kompatibilitetstilstand »%s«"
 
 #: disk-utils/fdisk.c:866 disk-utils/sfdisk.c:2620
 msgid "invalid heads argument"
@@ -1029,7 +1001,7 @@ msgstr ""
 
 #: disk-utils/fdisk.c:973
 msgid "A hybrid GPT was detected. You have to sync the hybrid MBR manually (expert command 'M')."
-msgstr ""
+msgstr "En hybrid GPT blev detekteret. Du skal synkronisere den hybride MBR manuelt (ekspertkommando »M«)."
 
 #: disk-utils/fdisk-menu.c:95
 msgid "Generic"
@@ -1068,7 +1040,6 @@ msgid "print the raw data of the disklabel from the device"
 msgstr "vis rådataene fra disketiketten på enheden"
 
 #: disk-utils/fdisk-menu.c:105
-#, fuzzy
 msgid "fix partitions order"
 msgstr "ordn partitionsrækkefølgen"
 
@@ -1110,7 +1081,7 @@ msgstr "returner til hovedmenuen"
 
 #: disk-utils/fdisk-menu.c:118
 msgid "return from BSD to DOS"
-msgstr ""
+msgstr "returner fra BSD til DOS"
 
 #: disk-utils/fdisk-menu.c:129
 msgid "Create a new label"
@@ -1170,26 +1141,23 @@ msgstr "ændr partition-UUID"
 
 #: disk-utils/fdisk-menu.c:162
 msgid "enter protective/hybrid MBR"
-msgstr ""
+msgstr "gå til beskyttede/hybride MBR"
 
 #: disk-utils/fdisk-menu.c:165
-#, fuzzy
 msgid "toggle the legacy BIOS bootable flag"
-msgstr "skift et opstartsflag (bootable)"
+msgstr "skift det forældede BIOS-opstartsflag"
 
 #: disk-utils/fdisk-menu.c:166
-#, fuzzy
 msgid "toggle the no block IO protocol flag"
-msgstr "skift DOS-kompatilitetsflaget"
+msgstr "skift protokolflaget no block IO"
 
 #: disk-utils/fdisk-menu.c:167
-#, fuzzy
 msgid "toggle the required partition flag"
-msgstr "skift skrivebeskyttelsesflag"
+msgstr "skift det krævede partitionsflag"
 
 #: disk-utils/fdisk-menu.c:168
 msgid "toggle the GUID specific bits"
-msgstr ""
+msgstr "skift de GUID-specifikke dele"
 
 #: disk-utils/fdisk-menu.c:178
 msgid "Sun"
@@ -1269,7 +1237,7 @@ msgstr "skift diskidentifikationen"
 
 #: disk-utils/fdisk-menu.c:216
 msgid "return from protective/hybrid MBR to GPT"
-msgstr ""
+msgstr "returner fra beskyttet/hybrid MBR til GPT"
 
 #: disk-utils/fdisk-menu.c:226
 msgid "BSD"
@@ -1332,9 +1300,9 @@ msgid "failed to write disklabel"
 msgstr "kunne ikke skrive disketiket"
 
 #: disk-utils/fdisk-menu.c:502
-#, fuzzy, c-format
+#, c-format
 msgid "Could not delete partition %zu"
-msgstr "Kunne ikke slette partition %d"
+msgstr "Kunne ikke slette partition %zu"
 
 #: disk-utils/fdisk-menu.c:520
 msgid "Changing display/entry units to cylinders (DEPRECATED!)."
@@ -1349,9 +1317,8 @@ msgid "Leaving nested disklabel."
 msgstr "Efterlader indlejret disketiket."
 
 #: disk-utils/fdisk-menu.c:573
-#, fuzzy
 msgid "Entering protective/hybrid MBR disklabel."
-msgstr "Indtaster indlejret BSD-disketiket."
+msgstr "Går i beskyttet/hybrid MBR-disketiket."
 
 #: disk-utils/fdisk-menu.c:643
 msgid "Entering nested BSD disklabel."
@@ -1396,14 +1363,14 @@ msgid "parse error: %s"
 msgstr "fortolkningsfejl: %s"
 
 #: disk-utils/fsck.c:352
-#, fuzzy, c-format
+#, c-format
 msgid "cannot create directory %s"
-msgstr "kunne ikke ændre mappe til %s"
+msgstr "kan ikke oprette mappe %s"
 
 #: disk-utils/fsck.c:365
-#, fuzzy, c-format
+#, c-format
 msgid "Locking disk by %s ... "
-msgstr "Låser disk %s ... "
+msgstr "Låser disk efter %s ... "
 
 #: disk-utils/fsck.c:376
 #, c-format
@@ -1420,9 +1387,9 @@ msgid "failed"
 msgstr "mislykkedes"
 
 #: disk-utils/fsck.c:404
-#, fuzzy, c-format
+#, c-format
 msgid "Unlocking %s.\n"
-msgstr "Bruger %s.\n"
+msgstr "Låser %s op.\n"
 
 #: disk-utils/fsck.c:437
 #, c-format
@@ -1477,9 +1444,9 @@ msgid "Finished with %s (exit status %d)\n"
 msgstr "Afsluttede med %s (afslutningsstatus %d)\n"
 
 #: disk-utils/fsck.c:905
-#, fuzzy, c-format
+#, c-format
 msgid "error %d (%m) while executing fsck.%s for %s"
-msgstr "fejl %d under kørsel af fsck.%s for %s"
+msgstr "fejl %d (%m) under kørsel af fsck.%s for %s"
 
 #: disk-utils/fsck.c:971
 msgid ""
@@ -1620,9 +1587,9 @@ msgid "the -l option can be used with one device only -- ignore"
 msgstr "tilvalget -l kan kun bruges med en enhed - ignorer"
 
 #: disk-utils/fsck.cramfs.c:108 misc-utils/whereis.c:168
-#, fuzzy, c-format
+#, c-format
 msgid " %s [options] <file>\n"
-msgstr " %s [tilvalg] fil\n"
+msgstr " %s [tilvalg] <fil>\n"
 
 #: disk-utils/fsck.cramfs.c:110
 msgid " -a                       for compatibility only, ignored\n"
@@ -1638,11 +1605,11 @@ msgstr " -y                       kun for kompatibilitet, ignoreret\n"
 
 #: disk-utils/fsck.cramfs.c:113
 msgid " -b, --blocksize <size>   use this blocksize, defaults to page size\n"
-msgstr ""
+msgstr " -b, --blocksize <str>    brug denne blokstørrelse, standard er sidestørrelse\n"
 
 #: disk-utils/fsck.cramfs.c:114
 msgid "     --extract[=<dir>]    test uncompression, optionally extract into <dir>\n"
-msgstr ""
+msgstr "     --extract[=<mappe>]  test udpakning, udtræk valgfri til <mappe>\n"
 
 #: disk-utils/fsck.cramfs.c:151
 #, c-format
@@ -1702,14 +1669,12 @@ msgid "zero file count"
 msgstr "filtallet er nul"
 
 #: disk-utils/fsck.cramfs.c:198
-#, fuzzy
 msgid "file extends past end of filesystem"
-msgstr "advarsel: fil når ud over filsystemets slutning\n"
+msgstr "fil når ud over filsystemets slutning"
 
 #: disk-utils/fsck.cramfs.c:200
-#, fuzzy
 msgid "old cramfs format"
-msgstr "advarsel: gammelt cramfs-format\n"
+msgstr "gammelt cramfs-format"
 
 #: disk-utils/fsck.cramfs.c:209
 msgid "unable to test CRC: old cramfs format"
@@ -1863,14 +1828,14 @@ msgid "mknod failed: %s"
 msgstr "mknod mislykkedes: %s"
 
 #: disk-utils/fsck.cramfs.c:621
-#, fuzzy, c-format
+#, c-format
 msgid "directory data start (%lu) < sizeof(struct cramfs_super) + start (%zu)"
-msgstr "mappedatastart (%ld) < sizeof(struct cramfs_super) + start (%ld)"
+msgstr "mappedatastart (%lu) < sizeof(struct cramfs_super) + start (%zu)"
 
 #: disk-utils/fsck.cramfs.c:625
-#, fuzzy, c-format
+#, c-format
 msgid "directory data end (%lu) != file data start (%lu)"
-msgstr "mappedataslutning (%ld) != start på fildata (%ld)"
+msgstr "mappedataslutning (%lu) != start på fildata (%lu)"
 
 #: disk-utils/fsck.cramfs.c:630
 msgid "invalid file data offset"
@@ -3125,9 +3090,9 @@ msgid "Unable to set up swap-space: unreadable"
 msgstr "Kunne ikke klargøre swap-område: ulæseligt"
 
 #: disk-utils/mkswap.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "Setting up swapspace version %d, size = %llu KiB\n"
-msgstr "Klargør swap-område version 1, størrelse = %llu KiB\n"
+msgstr "Klargør swap-område version %d, størrelse = %llu KiB\n"
 
 #: disk-utils/mkswap.c:622
 #, c-format
@@ -3296,9 +3261,9 @@ msgid "%s: error updating partitions %d-%d"
 msgstr "%s: fejl under opdatering af partitionerne %d-%d"
 
 #: disk-utils/partx.c:455
-#, fuzzy, c-format
+#, c-format
 msgid "%s: no partition #%d"
-msgstr "%s: partition #%d tilføjet\n"
+msgstr "%s: ingen partition #%d"
 
 #: disk-utils/partx.c:476
 #, c-format
@@ -3323,11 +3288,9 @@ msgstr[1] "#%2d: %9ju-%9ju (%9ju sektorer, %6ju MB)\n"
 msgid "failed to add line to output"
 msgstr "kunne ikke tilføje linje til uddata"
 
-# måske udskrift
 #: disk-utils/partx.c:609
-#, fuzzy
 msgid "failed to add data to output table"
-msgstr "kunne ikke tilføje linje til uddata"
+msgstr "kunne ikke tilføje data til uddatatabel"
 
 #: disk-utils/partx.c:632 login-utils/lslogins.c:884 misc-utils/findmnt.c:1527
 #: misc-utils/lsblk.c:1720 misc-utils/lslocks.c:461 sys-utils/losetup.c:300
@@ -3816,15 +3779,14 @@ msgstr ""
 "I denne visning vil jeg gå ud fra denne geometri."
 
 #: disk-utils/sfdisk.c:1147
-#, fuzzy
 msgid "no partition table present"
-msgstr "der er ingen partitionstabel."
+msgstr "der er ingen partitionstabel"
 
 #: disk-utils/sfdisk.c:1149
-#, fuzzy, c-format
+#, c-format
 msgid "strange, only %d partition defined"
 msgid_plural "strange, only %d partitions defined"
-msgstr[0] "mærkeligt, kun %d partitioner er defineret."
+msgstr[0] "mærkeligt, kun %d partition er defineret."
 msgstr[1] "mærkeligt, kun %d partitioner er defineret."
 
 #: disk-utils/sfdisk.c:1159
@@ -4114,9 +4076,9 @@ msgstr ""
 "Du behøver normalt kun at angive <start> og <størr> (og måske <type>)."
 
 #: disk-utils/sfdisk.c:2350
-#, fuzzy, c-format
+#, c-format
 msgid " %s [options] <device>...\n"
-msgstr " %s [tilvalg] <enhed> [...]\n"
+msgstr " %s [tilvalg] <enhed> ...\n"
 
 #: disk-utils/sfdisk.c:2353
 msgid ""
@@ -4193,7 +4155,6 @@ msgstr ""
 " -G, --show-pt-gemometry   vis geometri gættet fra partitionstabellen\n"
 
 #: disk-utils/sfdisk.c:2382
-#, fuzzy
 msgid ""
 " -A, --activate[=<device>] activate the bootable flag\n"
 " -U, --unhide[=<device>]   set partition as unhidden\n"
@@ -4201,7 +4162,7 @@ msgid ""
 "                             or expect descriptors for them in the input\n"
 msgstr ""
 " -A, --activate[=<enhed>]  aktiver opstartsflag\n"
-" -U, --unhide[=<enh>]      angiv partition som ej skjult\n"
+" -U, --unhide[=<enhed>]    angiv partition som ej skjult\n"
 " -x, --show-extended       vis også udvidede partitioner i uddata,\n"
 "                             eller forvent beskrivelser for dem i inddata\n"
 
@@ -4210,6 +4171,8 @@ msgid ""
 "     --leave-last          do not allocate the last cylinder\n"
 "     --IBM                 same as --leave-last\n"
 msgstr ""
+"     --leave-last          alloker ikke den sidste cylinder\n"
+"     --IBM                 samme som --leave-last\n"
 
 #: disk-utils/sfdisk.c:2388
 msgid ""
@@ -4218,6 +4181,10 @@ msgid ""
 "     --inside-outer        all logicals inside outermost extended\n"
 "     --not-inside-outer    not all logicals inside outermost extended\n"
 msgstr ""
+"     --in-order            partitioner er i rækkefølge\n"
+"     --not-in-order        partitioner er ikke i rækkefølge\n"
+"     --inside-outer        alle logiske indeni yderste udvidet\n"
+"     --not-inside-outer    ikke alle logiske indeni yderste udvidet\n"
 
 #: disk-utils/sfdisk.c:2392
 msgid ""
@@ -4540,9 +4507,9 @@ msgid "write error"
 msgstr "skrivefejl"
 
 #: include/optutils.h:81
-#, fuzzy, c-format
+#, c-format
 msgid "%s: these options aremutually exclusive:"
-msgstr "udelukker hinanden"
+msgstr "%s: disse tilvalg udelukker hinanden:"
 
 #: include/pt-mbr-partnames.h:1
 msgid "Empty"
@@ -4957,9 +4924,9 @@ msgid "The kernel still uses the old table. The new table will be used at the ne
 msgstr "Denne kerne bruger stadig den gamle tabel. Den nye tabel vil blive brugt fra næste genstart, eller efter du kører partprobe(8) eller kpartx(8)."
 
 #: libfdisk/src/ask.c:342 libfdisk/src/ask.c:354
-#, fuzzy, c-format
+#, c-format
 msgid "Selected partition %ju"
-msgstr "Partition %d er valgt"
+msgstr "Valgt partition %ju"
 
 #: libfdisk/src/ask.c:345
 msgid "No partition is defined yet!"
@@ -5185,14 +5152,13 @@ msgid "Syncing disks."
 msgstr "Synkroniserer diske."
 
 #: libfdisk/src/bsd.c:800
-#, fuzzy
 msgid "BSD label is not nested within a DOS partition."
-msgstr "BSD-etiket er ikke indlejret i en DOS-partition"
+msgstr "BSD-etiket er ikke indlejret i en DOS-partition."
 
 #: libfdisk/src/bsd.c:829
-#, fuzzy, c-format
+#, c-format
 msgid "BSD partition '%c' linked to DOS partition %zu."
-msgstr "BSD-partition »%c« er lænket til DOS-partition %d."
+msgstr "BSD-partition »%c« er lænket til DOS-partition %zu."
 
 #: libfdisk/src/bsd.c:884
 msgid "Slice"
@@ -5224,20 +5190,17 @@ msgid "Size"
 msgstr "Størrelse"
 
 #: libfdisk/src/bsd.c:891
-#, fuzzy
 msgid "Fsize"
-msgstr "fstørrelse"
+msgstr "Fstørrelse"
 
 #: libfdisk/src/bsd.c:892
-#, fuzzy
 msgid "Bsize"
-msgstr "fstørrelse"
+msgstr "Bstørrelse"
 
 # står det for: Closed Process Group?
 #: libfdisk/src/bsd.c:893
-#, fuzzy
 msgid "Cpg"
-msgstr "cpg"
+msgstr "Cpg"
 
 #: libfdisk/src/context.c:230
 #, c-format
@@ -5266,9 +5229,9 @@ msgid "All primary partitions have been defined already."
 msgstr "Alle primære partitioner er allerede definerede."
 
 #: libfdisk/src/dos.c:254
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to read extended partition table (offset=%ju)"
-msgstr "Kunne ikke læse udvidet partitionstabel (forskydning=%jd)"
+msgstr "Kunne ikke læse udvidet partitionstabel (forskydning=%ju)"
 
 #: libfdisk/src/dos.c:317
 msgid "You can set geometry from the extra functions menu."
@@ -5287,33 +5250,33 @@ msgid "Cylinders as display units are deprecated."
 msgstr "Cylindere som visningsenhed er forældet."
 
 #: libfdisk/src/dos.c:337
-#, fuzzy, c-format
+#, c-format
 msgid "The size of this disk is %s (%ju bytes). DOS partition table format can not be used on drives for volumes larger than %lu bytes for %lu-byte sectors. Use GUID partition table format (GPT)."
-msgstr "Størrelsen på disken er %s (%llu byte). DOS-partitionstabelformat kan ikke bruges på drev for diskenheder større end (%llu byte) for %ld-byte sektorer. Brug GUID's partitionstabelformat (GPT)."
+msgstr "Størrelsen på disken er %s (%ju byte). DOS-partitionstabelformat kan ikke bruges på drev for diskenheder større end %lu byte for %lu-byte sektorer. Brug GUID's partitionstabelformat (GPT)."
 
 #: libfdisk/src/dos.c:485
 msgid "Bad offset in primary extended partition."
 msgstr "Ugyldig forskydning i primær udvidet partition."
 
 #: libfdisk/src/dos.c:501
-#, fuzzy, c-format
+#, c-format
 msgid "Omitting partitions after #%zu. They will be deleted if you save this partition table."
-msgstr "Udelader partitioner efter #%zd. De vil blive slettet, hvis du gemmer denne partitionstabel."
+msgstr "Udelader partitioner efter #%zu. De vil blive slettet, hvis du gemmer denne partitionstabel."
 
 #: libfdisk/src/dos.c:528
-#, fuzzy, c-format
+#, c-format
 msgid "Extra link pointer in partition table %zu."
-msgstr "Ekstra henvisningspeger (link pointer) i partitionstabel %zd."
+msgstr "Ekstra henvisningspeger (link pointer) i partitionstabel %zu."
 
 #: libfdisk/src/dos.c:536
-#, fuzzy, c-format
+#, c-format
 msgid "Ignoring extra data in partition table %zu."
-msgstr "Ignorerer ekstra data i partitionstabel %zd."
+msgstr "Ignorerer ekstra data i partitionstabel %zu."
 
 #: libfdisk/src/dos.c:591
-#, fuzzy, c-format
+#, c-format
 msgid "omitting empty partition (%zu)"
-msgstr "udelader tom partition (%zd)"
+msgstr "udelader tom partition (%zu)"
 
 #: libfdisk/src/dos.c:664
 msgid "Enter the new disk identifier"
@@ -5332,25 +5295,25 @@ msgid "Disk identifier changed from 0x%08x to 0x%08x."
 msgstr "Diskidentifikation ændret fra 0x%08x til 0x%08x."
 
 #: libfdisk/src/dos.c:773
-#, fuzzy, c-format
+#, c-format
 msgid "Ignoring extra extended partition %zu"
-msgstr "Ignorerer ekstra udvidet partition %zd"
+msgstr "Ignorerer ekstra udvidet partition %zu"
 
 #: libfdisk/src/dos.c:786
-#, fuzzy, c-format
+#, c-format
 msgid "Invalid flag 0x%02x%02x of EBR (for partition %zu) will be corrected by w(rite)."
-msgstr "Ugyldigt flag 0x%02x%02x for partitionstabel %zd vil blive rettet med »w« (forkortelse for write; dansk=skriv)"
+msgstr "Ugyldigt flag 0x%02x%02x for EBR (for partition %zu) vil blive rettet med »w« (forkortelse for write; dansk=skriv)"
 
 #: libfdisk/src/dos.c:917
-#, fuzzy, c-format
+#, c-format
 msgid "Start sector %ju out of range."
-msgstr "Værdi uden for området."
+msgstr "Startsektor %ju uden for området."
 
 #: libfdisk/src/dos.c:970 libfdisk/src/gpt.c:1799 libfdisk/src/sgi.c:787
 #: libfdisk/src/sun.c:502
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu is already defined.  Delete it before re-adding it."
-msgstr "Partition %zd er allerede defineret. Slet den før du tilføjer den igen."
+msgstr "Partition %zu er allerede defineret. Slet den før du tilføjer den igen."
 
 #: libfdisk/src/dos.c:1027
 #, c-format
@@ -5362,69 +5325,69 @@ msgid "No free sectors available."
 msgstr "Ingen tilgængelige frie sektorer."
 
 #: libfdisk/src/dos.c:1181
-#, fuzzy, c-format
+#, c-format
 msgid "Adding logical partition %zu"
-msgstr "Tilføjer logisk partition %zd"
+msgstr "Tilføjer logisk partition %zu"
 
 #: libfdisk/src/dos.c:1200
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: contains sector 0"
-msgstr "Partition %zd: indeholder sektor 0"
+msgstr "Partition %zu: indeholder sektor 0"
 
 #: libfdisk/src/dos.c:1202
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: head %d greater than maximum %d"
-msgstr "Partition %zd: hovedet %d er større end de maksimale %d"
+msgstr "Partition %zu: hovedet %d er større end de maksimale %d"
 
 #: libfdisk/src/dos.c:1205
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: sector %d greater than maximum %llu"
-msgstr "Partition %zd: sektor %d er større end de maksimale %llu"
+msgstr "Partition %zu: sektor %d er større end de maksimale %llu"
 
 #: libfdisk/src/dos.c:1208
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: cylinder %d greater than maximum %llu"
-msgstr "Partitionerne %zd: cylinder %d større end de maksimale %llu"
+msgstr "Partitionerne %zu: cylinder %d større end de maksimale %llu"
 
 #: libfdisk/src/dos.c:1214
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: previous sectors %u disagrees with total %u"
-msgstr "Partition %zd: forrige sektorer %d stemmer ikke med totalen %d"
+msgstr "Partition %zu: forrige sektorer %u stemmer ikke med totalen %u"
 
 #: libfdisk/src/dos.c:1267
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: different physical/logical beginnings (non-Linux?): phys=(%d, %d, %d), logical=(%d, %d, %d)"
-msgstr "Partition %zd har forskellig fysisk/logisk begyndelse (ikke-Linux?): fysik=(%d, %d, %d), logik=(%d, %d, %d)"
+msgstr "Partition %zu har forskellig fysisk/logisk begyndelse (ikke-Linux?): fysik=(%d, %d, %d), logik=(%d, %d, %d)"
 
 #: libfdisk/src/dos.c:1278
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: different physical/logical endings: phys=(%d, %d, %d), logical=(%d, %d, %d)"
-msgstr "Partition %zd har forskellig fysisk/logisk endelse: fysik=(%d, %d, %d), logik=(%d, %d, %d)"
+msgstr "Partition %zu har forskellig fysisk/logisk endelse: fysik=(%d, %d, %d), logik=(%d, %d, %d)"
 
 #: libfdisk/src/dos.c:1287
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: does not end on cylinder boundary."
-msgstr "Partition %zd slutter ikke på en cylindergrænse."
+msgstr "Partition %zu slutter ikke på en cylindergrænse."
 
 #: libfdisk/src/dos.c:1314
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: bad start-of-data."
-msgstr "Partition %zd ugyldig start på data."
+msgstr "Partition %zu ugyldig start på data."
 
 #: libfdisk/src/dos.c:1327
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: overlaps partition %zu."
-msgstr "Partition %zd: overlapper med partition %zd."
+msgstr "Partition %zu: overlapper med partition %zu."
 
 #: libfdisk/src/dos.c:1353
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: empty."
-msgstr "Partition %zd: tom."
+msgstr "Partition %zu: tom."
 
 #: libfdisk/src/dos.c:1358
-#, fuzzy, c-format
+#, c-format
 msgid "Logical partition %zu: not entirely in partition %zu."
-msgstr "Logisk partition %zd: ikke fuldstændigt inden for partition %zd."
+msgstr "Logisk partition %zu: ikke fuldstændigt inden for partition %zu."
 
 #: libfdisk/src/dos.c:1366
 #, c-format
@@ -5453,39 +5416,33 @@ msgid "All logical partitions are in use. Adding a primary partition."
 msgstr "Samtlige logiske partitioner er i brug. Tilføjer en primær partition."
 
 #: libfdisk/src/dos.c:1454
-#, fuzzy
 msgid "Partition type"
-msgstr "Partitionsnummer"
+msgstr "Partitionstype"
 
 #: libfdisk/src/dos.c:1458
 #, c-format
 msgid "%zu primary, %d extended, %zu free"
-msgstr ""
+msgstr "%zu primær, %d udvidet, %zu fri"
 
 #: libfdisk/src/dos.c:1463
-#, fuzzy
 msgid "primary"
-msgstr "Primær"
+msgstr "primær"
 
 #: libfdisk/src/dos.c:1465
-#, fuzzy
 msgid "extended"
-msgstr "Udvidet"
+msgstr "udvidet"
 
 #: libfdisk/src/dos.c:1465
-#, fuzzy
 msgid "container for logical partitions"
-msgstr "Ugyldig logisk partition"
+msgstr "container for logiske partitioner"
 
 #: libfdisk/src/dos.c:1467
-#, fuzzy
 msgid "logical"
-msgstr "Logisk"
+msgstr "logisk"
 
 #: libfdisk/src/dos.c:1467
-#, fuzzy
 msgid "numbered from 5"
-msgstr "   l   logisk (5 eller derover)"
+msgstr "nummereret fra 5"
 
 #: libfdisk/src/dos.c:1498
 #, c-format
@@ -5518,18 +5475,18 @@ msgid "Done."
 msgstr "Færdig."
 
 #: libfdisk/src/dos.c:1918
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: no data area."
-msgstr "Partition %d: intet dataområde."
+msgstr "Partition %zu: intet dataområde."
 
 #: libfdisk/src/dos.c:1948
 msgid "New beginning of data"
 msgstr "Ny begyndelse på data"
 
 #: libfdisk/src/dos.c:2004
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %zu: is an extended partition."
-msgstr "Partition %d: er en udvidet partition."
+msgstr "Partition %zu: er en udvidet partition."
 
 #: libfdisk/src/dos.c:2011
 #, fuzzy, c-format
@@ -5577,12 +5534,11 @@ msgstr "MBR-partitionsskema"
 
 #: libfdisk/src/gpt.c:153
 msgid "Intel Fast Flash"
-msgstr ""
+msgstr "Intel Fast Flash"
 
 #: libfdisk/src/gpt.c:156
-#, fuzzy
 msgid "BIOS boot"
-msgstr "FreeBSD-opstart"
+msgstr "BIOS-opstart"
 
 #: libfdisk/src/gpt.c:159
 msgid "Microsoft reserved"
@@ -5609,19 +5565,16 @@ msgid "IBM General Parallel Fs"
 msgstr "IBM generelt parallelt fs"
 
 #: libfdisk/src/gpt.c:165
-#, fuzzy
 msgid "Microsoft Storage Spaces"
-msgstr "Microsoft reserveret"
+msgstr "Microsoft Storage Spaces"
 
 #: libfdisk/src/gpt.c:168
-#, fuzzy
 msgid "HP-UX data"
-msgstr "HP-UX-datapartition"
+msgstr "HP-UX-data"
 
 #: libfdisk/src/gpt.c:169
-#, fuzzy
 msgid "HP-UX service"
-msgstr "HP-UX-tjenestepartition"
+msgstr "HP-UX-tjeneste"
 
 #: libfdisk/src/gpt.c:172 libfdisk/src/sgi.c:55 libfdisk/src/sun.c:46
 msgid "Linux swap"
@@ -5632,35 +5585,32 @@ msgid "Linux filesystem"
 msgstr "Linux-filsystem"
 
 #: libfdisk/src/gpt.c:174
-#, fuzzy
 msgid "Linux server data"
-msgstr "Linux-reserverede"
+msgstr "Linux-serverdata"
 
 #: libfdisk/src/gpt.c:175
 msgid "Linux root (x86)"
-msgstr ""
+msgstr "Linux root (x86)"
 
 #: libfdisk/src/gpt.c:176
 msgid "Linux root (x86-64)"
-msgstr ""
+msgstr "Linux root (x86-64)"
 
 #: libfdisk/src/gpt.c:177
 msgid "Linux reserved"
 msgstr "Linux-reserverede"
 
 #: libfdisk/src/gpt.c:178
-#, fuzzy
 msgid "Linux home"
-msgstr "Linux"
+msgstr "Linux home"
 
 #: libfdisk/src/gpt.c:179 libfdisk/src/sgi.c:58
 msgid "Linux RAID"
 msgstr "Linux RAID"
 
 #: libfdisk/src/gpt.c:180
-#, fuzzy
 msgid "Linux extended boot"
-msgstr "Linux udvidet"
+msgstr "Linux udvidet opstart"
 
 #: libfdisk/src/gpt.c:184
 msgid "FreeBSD data"
@@ -5827,9 +5777,8 @@ msgid "MidnightBSD Vinum"
 msgstr "MidnightBSD Vinum"
 
 #: libfdisk/src/gpt.c:451
-#, fuzzy
 msgid "failed to allocate GPT header"
-msgstr "kunne ikke allokere iterator"
+msgstr "kunne ikke allokere GPT-teksthoved"
 
 #: libfdisk/src/gpt.c:597
 #, c-format
@@ -5882,13 +5831,13 @@ msgid "Partitions entries LBA: %ju"
 msgstr "Partitionspunkter LBA: %ju"
 
 #: libfdisk/src/gpt.c:1398
-#, fuzzy, c-format
+#, c-format
 msgid "Allocated partition entries: %u"
-msgstr "Allokerede partitionspunkter: %ju"
+msgstr "Allokerede partitionspunkter: %u"
 
 #: libfdisk/src/gpt.c:1545
 msgid "The device contains hybrid MBR -- writing GPT only. You have to sync the MBR manually."
-msgstr ""
+msgstr "Enheden indeholder hybrid MBR - skriver kun GPT. Du skal synkronisere MBR'en manuelt."
 
 #: libfdisk/src/gpt.c:1580
 msgid "Disk does not contain a valid backup header."
@@ -5960,11 +5909,11 @@ msgid "Using %u out of %d partitions."
 msgstr "Bruger %u ud af %d partitioner."
 
 #: libfdisk/src/gpt.c:1669
-#, fuzzy, c-format
+#, c-format
 msgid "A total of %ju free sectors is available in %u segment."
 msgid_plural "A total of %ju free sectors is available in %u segments (the largest is %s)."
-msgstr[0] "Et antal af %ld frie sektorer er tilgængelige i %d segment."
-msgstr[1] "Et antal af %ld frie sektorer er tilgængelige i %d segmenter (største %ld)."
+msgstr[0] "Et antal af %ju frie sektorer er tilgængelige i %u segment."
+msgstr[1] "Et antal af %ju frie sektorer er tilgængelige i %u segmenter (den største er %s)."
 
 #: libfdisk/src/gpt.c:1677
 #, c-format
@@ -5983,9 +5932,9 @@ msgid "Sector %ju already used."
 msgstr "Sektor %ju er allerede brugt."
 
 #: libfdisk/src/gpt.c:1913
-#, fuzzy, c-format
+#, c-format
 msgid "Could not create partition %zu"
-msgstr "Kunne ikke oprette partition %zd"
+msgstr "Kunne ikke oprette partition %zu"
 
 #: libfdisk/src/gpt.c:1998
 #, c-format
@@ -6025,7 +5974,7 @@ msgstr "Partitionsnavn ændret fra »%s« til »%.*s«."
 
 #: libfdisk/src/gpt.c:2247
 msgid "Enter GUID specific bit"
-msgstr ""
+msgstr "Indtast GUID-specifik bit"
 
 #: libfdisk/src/gpt.c:2262
 #, fuzzy, c-format
@@ -6053,9 +6002,8 @@ msgid "The %s flag on partition %zu is disabled now."
 msgstr "Systemtypen for partition %zu er uændret: %s"
 
 #: libfdisk/src/gpt.c:2419
-#, fuzzy
 msgid "Type-UUID"
-msgstr "Type"
+msgstr "Type-UUID"
 
 #: libfdisk/src/gpt.c:2420
 msgid "UUID"
@@ -6067,10 +6015,9 @@ msgstr "Navn"
 
 #: libfdisk/src/label.c:104
 msgid "Incomplete geometry setting."
-msgstr ""
+msgstr "Ufuldstændig geometriindstilling."
 
 #: libfdisk/src/partition.c:336
-#, fuzzy
 msgid "Free space"
 msgstr "Frit område"
 
@@ -6140,9 +6087,8 @@ msgid "Linux native"
 msgstr "Linux' egen"
 
 #: libfdisk/src/sgi.c:143
-#, fuzzy
 msgid "SGI info created on second sector."
-msgstr "SGI-information oprettet på 2. sektor"
+msgstr "SGI-information oprettet på 2. sektor."
 
 #: libfdisk/src/sgi.c:243
 msgid "Detected an SGI disklabel with wrong checksum."
@@ -6809,7 +6755,6 @@ msgid " -t, --until <time>   display the lines until the specified time\n"
 msgstr " -t, --until <tid>    vis linjerne indtil den angivne tidspunkt\n"
 
 #: login-utils/last.c:567
-#, fuzzy
 msgid " -p, --present <time> display who were present at the specified time\n"
 msgstr " -p, --present <tid>  vis hvem som var til stede på det angivne tidspunkt\n"
 
@@ -7119,9 +7064,8 @@ msgid "user name"
 msgstr "brugernavn"
 
 #: login-utils/lslogins.c:217
-#, fuzzy
 msgid "Username"
-msgstr "brugernavn"
+msgstr "Brugernavn"
 
 #: login-utils/lslogins.c:218 sys-utils/renice.c:164
 msgid "user ID"
@@ -7129,153 +7073,131 @@ msgstr "bruger-id"
 
 #: login-utils/lslogins.c:219
 msgid "password not required"
-msgstr ""
+msgstr "adgangskode ikke krævet"
 
 #: login-utils/lslogins.c:219
 msgid "Password not required"
-msgstr ""
+msgstr "Adgangskode ikke krævet"
 
 #: login-utils/lslogins.c:220
-#, fuzzy
 msgid "login by password disabled"
-msgstr "%s: rodadgangskode ulæselig"
+msgstr "logind med adgangskode deaktiveret"
 
 #: login-utils/lslogins.c:220
-#, fuzzy
 msgid "Login by password disabled"
-msgstr "%s: rodadgangskode ulæselig"
+msgstr "Logind med adgangskode deaktiveret"
 
 #: login-utils/lslogins.c:221
 msgid "password defined, but locked"
-msgstr ""
+msgstr "adgangskode defineret, men låst"
 
 #: login-utils/lslogins.c:221
-#, fuzzy
 msgid "Password is locked"
-msgstr "Adgangskode: "
+msgstr "Adgangskoden er låst"
 
 #: login-utils/lslogins.c:222
 msgid "log in disabled by nologin(8) or pam_nologin(8)"
-msgstr ""
+msgstr "logind er deaktiveret af nologin(8) eller pam_nologin(8)"
 
 #: login-utils/lslogins.c:222
-#, fuzzy
 msgid "No login"
-msgstr "logind: "
+msgstr "Intet logind"
 
 #: login-utils/lslogins.c:223
-#, fuzzy
 msgid "primary group name"
-msgstr "gruppenavn"
+msgstr "primær gruppenavn"
 
 #: login-utils/lslogins.c:223
-#, fuzzy
 msgid "Primary group"
-msgstr "Primær"
+msgstr "Primær gruppe"
 
 #: login-utils/lslogins.c:224
-#, fuzzy
 msgid "primary group ID"
-msgstr "procesgruppe-id"
+msgstr "primær gruppe-id"
 
 #: login-utils/lslogins.c:225
-#, fuzzy
 msgid "supplementary group names"
-msgstr "Supplementære grupper: "
+msgstr "Supplementære gruppenavne"
 
 #: login-utils/lslogins.c:225
-#, fuzzy
 msgid "Supplementary groups"
-msgstr "Supplementære grupper: "
+msgstr "Supplementære grupper"
 
 #: login-utils/lslogins.c:226
-#, fuzzy
 msgid "supplementary group IDs"
-msgstr "Supplementære grupper: "
+msgstr "Supplementære gruppe-id'er"
 
 #: login-utils/lslogins.c:226
-#, fuzzy
 msgid "Supplementary group IDs"
-msgstr "Supplementære grupper: "
+msgstr "Supplementære gruppe-id'er"
 
 #: login-utils/lslogins.c:227
-#, fuzzy
 msgid "home directory"
-msgstr "%s: er ikke en mappe"
+msgstr "hjemmemappe"
 
 #: login-utils/lslogins.c:227
-#, fuzzy
 msgid "Home directory"
-msgstr "%s: er ikke en mappe"
+msgstr "Hjemmemappe"
 
 #: login-utils/lslogins.c:228
-#, fuzzy
 msgid "login shell"
-msgstr "ingen skal"
+msgstr "logindskal"
 
 #: login-utils/lslogins.c:228
-#, fuzzy
 msgid "Shell"
-msgstr "ingen skal"
+msgstr "Skal"
 
 #: login-utils/lslogins.c:229
-#, fuzzy
 msgid "full user name"
-msgstr "brugernavn"
+msgstr "fuld brugernavn"
 
 #: login-utils/lslogins.c:229
 msgid "Gecos field"
-msgstr ""
+msgstr "Gecos-felt"
 
 #: login-utils/lslogins.c:230
-#, fuzzy
 msgid "date of last login"
-msgstr "forbi første linje"
+msgstr "dato for første logind"
 
 #: login-utils/lslogins.c:230
-#, fuzzy
 msgid "Last login"
-msgstr "Sidste logind: %.*s "
+msgstr "Sidste logind"
 
 #: login-utils/lslogins.c:231
 msgid "last tty used"
-msgstr ""
+msgstr "sidste tty brugt"
 
 #: login-utils/lslogins.c:231
-#, fuzzy
 msgid "Last terminal"
-msgstr "FATALT: %s er ikke en terminal"
+msgstr "Sidste terminal"
 
 #: login-utils/lslogins.c:232
 msgid "hostname during the last session"
-msgstr ""
+msgstr "værtsnavn under den sidste session"
 
 #: login-utils/lslogins.c:232
 msgid "Last hostname"
-msgstr ""
+msgstr "Sidste værtsnavn"
 
 #: login-utils/lslogins.c:233
-#, fuzzy
 msgid "date of last failed login"
-msgstr "skrivning til lastlog mislykkedes"
+msgstr "dato for det sidst mislykkedes logind"
 
 #: login-utils/lslogins.c:233
 msgid "Failed login"
-msgstr ""
+msgstr "Mislykket logind"
 
 #: login-utils/lslogins.c:234
-#, fuzzy
 msgid "where did the login fail?"
-msgstr "skrivning til lastlog mislykkedes"
+msgstr "hvor mislykkedes logindet?"
 
 #: login-utils/lslogins.c:234
-#, fuzzy
 msgid "Failed login terminal"
-msgstr "kunne ikke angive den kontrollerende terminal"
+msgstr "Mislykket logind via terminal"
 
 #: login-utils/lslogins.c:235
 msgid "user's hush settings"
-msgstr ""
+msgstr "brugers hush-indstillinger"
 
 #: login-utils/lslogins.c:235
 msgid "Hushed"
@@ -7291,25 +7213,23 @@ msgstr ""
 
 #: login-utils/lslogins.c:237
 msgid "password expiration date"
-msgstr ""
+msgstr "adgangskodens udløbsdato"
 
 #: login-utils/lslogins.c:237
-#, fuzzy
 msgid "Password expiration"
-msgstr "Adgangskode: "
+msgstr "Adgangskodens udløb"
 
 #: login-utils/lslogins.c:238
 msgid "date of last password change"
-msgstr ""
+msgstr "dato for sidste ændring af adgangskode"
 
 #: login-utils/lslogins.c:238
-#, fuzzy
 msgid "Password changed"
-msgstr "Adgangskode: "
+msgstr "Adgangskode ændret"
 
 #: login-utils/lslogins.c:239
 msgid "number of days required between changes"
-msgstr ""
+msgstr "antallet af dage krævet mellem ændringer"
 
 #: login-utils/lslogins.c:239
 #, fuzzy
@@ -7359,21 +7279,21 @@ msgid "failed to get supplementary groups"
 msgstr "Supplementære grupper: "
 
 #: login-utils/lslogins.c:1033
-#, fuzzy
 msgid "internal error: unknown column"
-msgstr "intern fejl: for mange iov'er"
+msgstr "intern fejl: ukendt kolonne"
 
 #: login-utils/lslogins.c:1037
-#, fuzzy
 msgid "failed to set data"
-msgstr "kunne ikke angive STI"
+msgstr "kunne ikke angive data"
 
 #: login-utils/lslogins.c:1134
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "Last logs:\n"
-msgstr "Sidste logind: %.*s "
+msgstr ""
+"\n"
+"Sidste logge:\n"
 
 #: login-utils/lslogins.c:1184 login-utils/nologin.c:26
 #: misc-utils/lslocks.c:507 misc-utils/mcookie.c:82 misc-utils/uuidd.c:73
@@ -8560,7 +8480,7 @@ msgid "use of 'kill --pid' option as command name is deprecated"
 msgstr ""
 
 #: misc-utils/kill.c:512
-#, fuzzy, c-format
+#, c-format
 msgid "cannot find process \"%s\""
 msgstr "kan ikke finde proces »%s«"
 
@@ -8976,9 +8896,8 @@ msgid " -t, --topology       output info about topology\n"
 msgstr ""
 
 #: misc-utils/lsblk.c:1504
-#, fuzzy
 msgid " -x, --sort <column>  sort output by <column>\n"
-msgstr " -o, --output <vis>     resultatkolonne, der skal vises\n"
+msgstr ""
 
 #: misc-utils/lsblk.c:1509 misc-utils/lslocks.c:518 sys-utils/prlimit.c:193
 #, c-format
@@ -9111,7 +9030,7 @@ msgid "--max-size ignored when used without --file"
 msgstr ""
 
 #: misc-utils/mcookie.c:185
-#, fuzzy, c-format
+#, c-format
 msgid "Got %d byte from %s\n"
 msgid_plural "Got %d bytes from %s\n"
 msgstr[0] "Fik %d byte fra %s\n"
@@ -17052,40 +16971,6 @@ msgstr "ukendt undvigelsessekvens i inddata: %o, %o"
 msgid "Input line too long."
 msgstr "For lang inddatalinje."
 
-#, fuzzy
-#~ msgid "Type of the partition %zu is unchanged."
-#~ msgstr "Systemtypen for partition %zu er uændret: %s"
-
-#~ msgid "%s: options "
-#~ msgstr "%s: tilvalg "
-
-#~ msgid "are mutually exclusive."
-#~ msgstr "udelukker hinanden"
-
-#~ msgid "can only change local entries."
-#~ msgstr "kan kun ændre lokale indgange."
-
-#~ msgid "     --time-format <format>  show time stamp using format:\n"
-#~ msgstr "     --time-format <format>  vis tidsstempel med format:\n"
-
-#~ msgid "                               [notime|short|full|iso]\n"
-#~ msgstr "                               [notime|short|full|iso]\n"
-
-#~ msgid "COMMAND not specified."
-#~ msgstr "KOMMANDO er ikke angivet."
-
-#~ msgid " %s [options] pathname [pathname ...]\n"
-#~ msgstr " %s [tilvalg] stinavn [stinavn ...]\n"
-
-#~ msgid "no filename specified."
-#~ msgstr "intet filnavn angivet."
-
-#~ msgid "...back 1 page"
-#~ msgstr "...bak 1 side"
-
-#~ msgid "...skipping one line"
-#~ msgstr "...springer en linje over"
-
 #~ msgid "waidpid failed"
 #~ msgstr "waidpid mislykkedes"
 
@@ -17560,6 +17445,9 @@ msgstr "For lang inddatalinje."
 #~ msgid "\n"
 #~ msgstr "\n"
 
+#~ msgid "%s: options "
+#~ msgstr "%s: tilvalg "
+
 #~ msgid "#"
 #~ msgstr "#"
 
@@ -17632,12 +17520,24 @@ msgstr "For lang inddatalinje."
 #~ msgid "Flag"
 #~ msgstr "Flag"
 
+#~ msgid "can only change local entries."
+#~ msgstr "kan kun ændre lokale indgange."
+
+#~ msgid "                               [notime|short|full|iso]\n"
+#~ msgstr "                               [notime|short|full|iso]\n"
+
+#~ msgid "COMMAND not specified."
+#~ msgstr "KOMMANDO er ikke angivet."
+
 #~ msgid ""
 #~ " %1$s [options] LABEL=<label>\n"
 #~ " %1$s [options] UUID=<uuid>\n"
 #~ msgstr ""
 #~ " %1$s [tilvalg] LABEL=<etiket>\n"
 #~ " %1$s [tilvalg] UUID=<uuid>\n"
+
+#~ msgid " %s [options] pathname [pathname ...]\n"
+#~ msgstr " %s [tilvalg] stinavn [stinavn ...]\n"
 
 #~ msgid "Both --pid and --no-pid specified. Ignoring --no-pid."
 #~ msgstr "Både --pid og --no-pid angivet. Ignorerer --no-pid."
@@ -18424,6 +18324,12 @@ msgstr "For lang inddatalinje."
 #~ "Usage: %s [options] file...\n"
 #~ "\n"
 #~ msgstr "Brug: %s [tilvalg] enhed ...\n"
+
+#~ msgid "...back 1 page"
+#~ msgstr "...bak 1 side"
+
+#~ msgid "...skipping one line"
+#~ msgstr "...springer en linje over"
 
 #, fuzzy
 #~ msgid "line too long"
