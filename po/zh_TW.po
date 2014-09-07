@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: util-linux 2.23.1\n"
 "Report-Msgid-Bugs-To: util-linux@vger.kernel.org\n"
-"POT-Creation-Date: 2014-08-27 14:59+0200\n"
+"POT-Creation-Date: 2014-09-03 12:17+0200\n"
 "PO-Revision-Date: 2013-06-07 23:29+0800\n"
 "Last-Translator: Wei-Lun Chao <bluebat@member.fsf.org>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
@@ -264,7 +264,7 @@ msgstr "類型"
 #: disk-utils/cfdisk.c:152
 #, fuzzy
 msgid "Change the partition type"
-msgstr "變更分割系統識別號"
+msgstr "列印分割表"
 
 #: disk-utils/cfdisk.c:153
 msgid "Help"
@@ -302,11 +302,9 @@ msgid "Disk: %s"
 msgstr "磁碟：%.*s\n"
 
 #: disk-utils/cfdisk.c:1284
-#, fuzzy, c-format
+#, c-format
 msgid "Size: %s, %ju bytes, %ju sectors"
 msgstr ""
-"\n"
-"磁碟 %s: %lu 磁柱，%lu 磁頭，%lu 磁區/磁軌\n"
 
 #: disk-utils/cfdisk.c:1287
 #, fuzzy, c-format
@@ -353,9 +351,8 @@ msgid "Device does not contain a recognized partition table."
 msgstr "裝置不包含辨識的分割表\n"
 
 #: disk-utils/cfdisk.c:1590
-#, fuzzy
 msgid "Please, select a type to create a new disk label."
-msgstr "您要建立磁碟標籤嗎？(y/n) "
+msgstr ""
 
 #: disk-utils/cfdisk.c:1595
 #, fuzzy
@@ -420,9 +417,8 @@ msgid "  t          Change the partition type"
 msgstr "  t          變更檔案系統的類型"
 
 #: disk-utils/cfdisk.c:1649
-#, fuzzy
 msgid "  s          Fix partitions order (only when in disarray)"
-msgstr " -n, --noparity          設定同位到無\n"
+msgstr ""
 
 #: disk-utils/cfdisk.c:1650
 msgid "  W          Write partition table to disk (must enter upper case W)"
@@ -492,9 +488,7 @@ msgstr "分割 %d 被刪除\n"
 #: disk-utils/cfdisk.c:1779
 #, fuzzy
 msgid "Partition size: "
-msgstr ""
-"\n"
-"%d 分割區：\n"
+msgstr "分割區 (a-%c)："
 
 #: disk-utils/cfdisk.c:1810
 #, fuzzy, c-format
@@ -551,7 +545,7 @@ msgstr ""
 #: disk-utils/cfdisk.c:1891
 #, fuzzy
 msgid "failed to create a new disklabel"
-msgstr "%s：無法寫入標籤"
+msgstr "建立新的清空 Sun disklabel"
 
 #: disk-utils/cfdisk.c:1899
 #, fuzzy
@@ -568,9 +562,8 @@ msgid " %1$s [options] <disk>\n"
 msgstr " %s [選項] <device>\n"
 
 #: disk-utils/cfdisk.c:1983
-#, fuzzy
 msgid " -L --color[=<when>]     colorize output (auto, always or never)\n"
-msgstr " -Q, --queue              建立訊息佇列\n"
+msgstr ""
 
 #: disk-utils/cfdisk.c:1984
 #, fuzzy
@@ -766,7 +759,7 @@ msgstr "%s (%s)\n"
 #: disk-utils/fdisk.c:170 disk-utils/fdisk.c:226
 #, fuzzy, c-format
 msgid "%s (%ju-%ju): "
-msgstr "%s (%s)\n"
+msgstr "%s (%u-%u, 預設 %u)："
 
 #: disk-utils/fdisk.c:330
 msgid " [Y]es/[N]o: "
@@ -906,9 +899,8 @@ msgid " -c, --compatibility[=<mode>]  mode is 'dos' or 'nondos' (default)\n"
 msgstr ""
 
 #: disk-utils/fdisk.c:764
-#, fuzzy
 msgid " -L, --color[=<when>]          colorize output (auto, always or never)\n"
-msgstr " -Q, --queue              建立訊息佇列\n"
+msgstr ""
 
 #: disk-utils/fdisk.c:765
 #, fuzzy
@@ -932,7 +924,7 @@ msgstr " -G, --get-glush                    顯示預設清理逾時值\n"
 #: disk-utils/fdisk.c:771
 #, fuzzy
 msgid " -C, --cylinders <number>      specify the number of cylinders\n"
-msgstr "鍵入磁柱數: "
+msgstr "    -C# [或 --cylinders #]：設定要用的磁柱數量"
 
 #: disk-utils/fdisk.c:772
 #, fuzzy
@@ -942,7 +934,7 @@ msgstr "    -H# [或 --heads #]：   設定要用的磁頭數量"
 #: disk-utils/fdisk.c:773
 #, fuzzy
 msgid " -S, --sectors <number>        specify the number of sectors per track\n"
-msgstr "鍵入每一磁軌的磁區數: "
+msgstr "    -S# [或 --sectors #]： 設定要用的磁區數量"
 
 #: disk-utils/fdisk.c:830
 #, fuzzy
@@ -1186,7 +1178,7 @@ msgstr "切換 DOS 相容性旗標"
 #: disk-utils/fdisk-menu.c:167
 #, fuzzy
 msgid "toggle the required partition flag"
-msgstr "切換唯讀旗標"
+msgstr "切換 DOS 相容性旗標"
 
 #: disk-utils/fdisk-menu.c:168
 msgid "toggle the GUID specific bits"
@@ -1372,14 +1364,13 @@ msgid "Leaving nested disklabel."
 msgstr "編輯 bsd disklabel"
 
 #: disk-utils/fdisk-menu.c:573
-#, fuzzy
 msgid "Entering protective/hybrid MBR disklabel."
-msgstr "編輯 bsd disklabel"
+msgstr ""
 
 #: disk-utils/fdisk-menu.c:643
 #, fuzzy
 msgid "Entering nested BSD disklabel."
-msgstr "編輯 bsd disklabel"
+msgstr "建立新的 Sun disklabel。\n"
 
 #: disk-utils/fdisk-menu.c:829
 msgid "Number of cylinders"
@@ -4697,7 +4688,7 @@ msgstr "寫入錯誤"
 #: include/optutils.h:81
 #, fuzzy, c-format
 msgid "%s: these options aremutually exclusive:"
-msgstr "彼此互斥。"
+msgstr "--nr 和 <partition> 彼此互斥"
 
 #: include/pt-mbr-partnames.h:1
 msgid "Empty"
@@ -5593,7 +5584,7 @@ msgstr "分割區 %d 並非終於磁柱邊界。\n"
 #: libfdisk/src/dos.c:1314
 #, fuzzy, c-format
 msgid "Partition %zu: bad start-of-data."
-msgstr "分割區 %d 沒有資料區域\n"
+msgstr "分割區結尾小於磁區 0"
 
 #: libfdisk/src/dos.c:1327
 #, fuzzy, c-format
@@ -5603,7 +5594,7 @@ msgstr "警告：分割區 %d 與分割區 %d 重疊。\n"
 #: libfdisk/src/dos.c:1353
 #, fuzzy, c-format
 msgid "Partition %zu: empty."
-msgstr "警告：分割區 %d 是空的\n"
+msgstr "分割區 (a-%c)："
 
 #: libfdisk/src/dos.c:1358
 #, fuzzy, c-format
@@ -5746,7 +5737,7 @@ msgstr "分割區 %d 的系統類型未被變更：%x (%s)\n"
 #: libfdisk/src/dos.c:2012
 #, fuzzy, c-format
 msgid "The bootable flag on partition %zu is disabled now."
-msgstr "分割區 %d 的系統類型未被變更：%x (%s)\n"
+msgstr "切換目前分割區的屬性旗標"
 
 #: libfdisk/src/dos.c:2025 libfdisk/src/gpt.c:2411 libfdisk/src/sgi.c:1086
 #: libfdisk/src/sun.c:1000
@@ -5762,9 +5753,8 @@ msgid "Id"
 msgstr ""
 
 #: libfdisk/src/dos.c:2036
-#, fuzzy
 msgid "Start-C/H/S"
-msgstr "啟始"
+msgstr ""
 
 #: libfdisk/src/dos.c:2037
 msgid "End-C/H/S"
@@ -6269,9 +6259,9 @@ msgid "failed to toggle unsupported bit %lu"
 msgstr "掛載移動 %s 到 %s 時失敗"
 
 #: libfdisk/src/gpt.c:2276
-#, fuzzy, c-format
+#, c-format
 msgid "The GUID specific bit %d on partition %zu is enabled now."
-msgstr "分割區 %d 的系統類型未被變更：%x (%s)\n"
+msgstr ""
 
 #: libfdisk/src/gpt.c:2277
 #, c-format
@@ -6286,7 +6276,7 @@ msgstr "分割區 %d 的系統類型未被變更：%x (%s)\n"
 #: libfdisk/src/gpt.c:2283
 #, fuzzy, c-format
 msgid "The %s flag on partition %zu is disabled now."
-msgstr "分割區 %d 的系統類型未被變更：%x (%s)\n"
+msgstr "這個分割區無法使用"
 
 #: libfdisk/src/gpt.c:2419
 #, fuzzy
@@ -7140,9 +7130,8 @@ msgid " -t, --until <time>   display the lines until the specified time\n"
 msgstr " -h, --help     顯示這份說明然後離開\n"
 
 #: login-utils/last.c:567
-#, fuzzy
 msgid " -p, --present <time> display who were present at the specified time\n"
-msgstr " -h, --help     顯示這份說明然後離開\n"
+msgstr ""
 
 #: login-utils/last.c:568
 #, fuzzy
@@ -7468,14 +7457,12 @@ msgid "user ID"
 msgstr "使用者識別號"
 
 #: login-utils/lslogins.c:219
-#, fuzzy
 msgid "password not required"
-msgstr "密碼："
+msgstr ""
 
 #: login-utils/lslogins.c:219
-#, fuzzy
 msgid "Password not required"
-msgstr "密碼："
+msgstr ""
 
 #: login-utils/lslogins.c:220
 #, fuzzy
@@ -7660,9 +7647,8 @@ msgid "max number of days a password may remain unchanged"
 msgstr ""
 
 #: login-utils/lslogins.c:240
-#, fuzzy
 msgid "Maximum change time"
-msgstr "變更根時失敗"
+msgstr ""
 
 #: login-utils/lslogins.c:241
 msgid "the user's security context"
@@ -7757,9 +7743,8 @@ msgid " -L, --last               show info about the users' last login sessions\
 msgstr " -i, --info                列印只有資訊關於取樣步驟\n"
 
 #: login-utils/lslogins.c:1194
-#, fuzzy
 msgid " -l, --logins=<logins>    display only users from <logins>\n"
-msgstr " -Q, --queue              建立訊息佇列\n"
+msgstr ""
 
 #: login-utils/lslogins.c:1195
 #, fuzzy
@@ -7774,7 +7759,7 @@ msgstr " -V, --version                輸出版本資訊\n"
 #: login-utils/lslogins.c:1197
 #, fuzzy
 msgid "     --noheadings         don't print headings\n"
-msgstr " -u, --unquote                不引言輸出\n"
+msgstr " -f           不分割長列\n"
 
 #: login-utils/lslogins.c:1198
 #, fuzzy
@@ -8358,9 +8343,9 @@ msgid "illegal year value: use positive integer"
 msgstr "不合法的年分：使用 1-9999"
 
 #: misc-utils/cal.c:442 misc-utils/cal.c:455
-#, fuzzy, c-format
+#, c-format
 msgid "illegal week value: year %d doesn't have week %d"
-msgstr "不合法的年分：使用 1-9999"
+msgstr ""
 
 #: misc-utils/cal.c:601
 #, fuzzy, c-format
@@ -8373,7 +8358,7 @@ msgid "%d"
 msgstr ""
 
 #: misc-utils/cal.c:613
-#, fuzzy, c-format
+#, c-format
 msgid "%s %d"
 msgstr "%s %d"
 
@@ -8418,7 +8403,7 @@ msgstr " -V           輸出版本資訊然後離開\n"
 #: misc-utils/cal.c:934
 #, fuzzy
 msgid " -y, --year            show the whole year\n"
-msgstr " -c, --creator     顯示建立者和擁有者\n"
+msgstr " -v, --verbose            是更多詳細的\n"
 
 #: misc-utils/cal.c:935
 msgid " -w, --week[=<num>]    show US or ISO-8601 week numbers\n"
@@ -8731,7 +8716,7 @@ msgstr ""
 #: misc-utils/findmnt.c:1203
 #, fuzzy
 msgid " -n, --noheadings       don't print column headings\n"
-msgstr " -u, --unquote                不引言輸出\n"
+msgstr " -d, --debug             列印詳細的訊息到標準勘誤\n"
 
 #: misc-utils/findmnt.c:1204
 msgid " -O, --options <list>   limit the set of filesystems by mount options\n"
@@ -8776,7 +8761,7 @@ msgstr "   l   列出已知檔案系統類型"
 #: misc-utils/findmnt.c:1213
 #, fuzzy
 msgid " -U, --uniq             ignore filesystems with duplicate target\n"
-msgstr " -Q, --queue              建立訊息佇列\n"
+msgstr " -i, --info                列印只有資訊關於取樣步驟\n"
 
 #: misc-utils/findmnt.c:1214
 #, fuzzy
@@ -8786,7 +8771,7 @@ msgstr " -n, --noparity          設定同位到無\n"
 #: misc-utils/findmnt.c:1215
 #, fuzzy
 msgid " -v, --nofsroot         don't print [/dir] for bind or btrfs mounts\n"
-msgstr " -i, --info                列印只有資訊關於取樣步驟\n"
+msgstr " -d, --debug             列印詳細的訊息到標準勘誤\n"
 
 #: misc-utils/findmnt.c:1330
 #, c-format
@@ -9437,9 +9422,8 @@ msgid " -t, --topology       output info about topology\n"
 msgstr ""
 
 #: misc-utils/lsblk.c:1504
-#, fuzzy
 msgid " -x, --sort <column>  sort output by <column>\n"
-msgstr " -o, --options <optstring>    短選項為辨識的\n"
+msgstr ""
 
 #: misc-utils/lsblk.c:1509 misc-utils/lslocks.c:518 sys-utils/prlimit.c:193
 #, fuzzy, c-format
@@ -9561,7 +9545,7 @@ msgstr "無效的 PID 引數"
 #: misc-utils/mcookie.c:85
 #, fuzzy
 msgid " -f, --file <file>     use file as a cookie seed\n"
-msgstr " -f, --rtc <file>     特殊/dev/...檔案以使用以代替預設\n"
+msgstr " -h, --help     顯示這份說明然後離開\n"
 
 #: misc-utils/mcookie.c:86
 msgid " -m, --max-size <num>  limit how much is read from seed files\n"
@@ -10238,7 +10222,7 @@ msgstr ""
 #: schedutils/ionice.c:118
 #, fuzzy
 msgid " -t, --ignore           ignore failures\n"
-msgstr " -v, --verbose             列印詳細的資料\n"
+msgstr " -u  --unlock             移除鎖定\n"
 
 #: schedutils/ionice.c:119
 msgid " -u, --uid <uid>...     act on already running processes owned by these users\n"
@@ -11311,19 +11295,16 @@ msgid " -c, --collapse-range remove a range from the file\n"
 msgstr ""
 
 #: sys-utils/fallocate.c:82
-#, fuzzy
 msgid " -d, --dig-holes      detect zeroes and replace with holes\n"
-msgstr " -d, --debug             列印詳細的訊息到標準勘誤\n"
+msgstr ""
 
 #: sys-utils/fallocate.c:83
-#, fuzzy
 msgid " -l, --length <num>   length for range operations, in bytes\n"
-msgstr "    -C# [或 --cylinders #]：設定要用的磁柱數量"
+msgstr ""
 
 #: sys-utils/fallocate.c:84
-#, fuzzy
 msgid " -n, --keep-size      maintain the apparent size of the file\n"
-msgstr " -q, --stats                        顯示統計關於 tty\n"
+msgstr ""
 
 #: sys-utils/fallocate.c:85
 #, fuzzy
@@ -11523,9 +11504,8 @@ msgid " -o, --offset <num>  the offset in bytes to start discarding from\n"
 msgstr ""
 
 #: sys-utils/fstrim.c:234
-#, fuzzy
 msgid " -l, --length <num>  the number of bytes to discard\n"
-msgstr "    -C# [或 --cylinders #]：設定要用的磁柱數量"
+msgstr ""
 
 #: sys-utils/fstrim.c:235
 msgid " -m, --minimum <num> the minimum extent length to discard\n"
@@ -13258,9 +13238,8 @@ msgid " -a, --all                     list all used devices\n"
 msgstr " -a, --all      查詢所有原始裝置\n"
 
 #: sys-utils/losetup.c:373
-#, fuzzy
 msgid " -d, --detach <loopdev>...     detach one or more devices\n"
-msgstr " -a, --all      查詢所有原始裝置\n"
+msgstr ""
 
 #: sys-utils/losetup.c:374
 #, fuzzy
@@ -13270,7 +13249,7 @@ msgstr " -a, --all      查詢所有原始裝置\n"
 #: sys-utils/losetup.c:375
 #, fuzzy
 msgid " -f, --find                    find first unused device\n"
-msgstr " -p, --pid         顯示建立者和最後一筆計算 PIDs\n"
+msgstr " -h, --help                   這個小用法指導\n"
 
 #: sys-utils/losetup.c:376
 msgid " -c, --set-capacity <loopdev>  resize the device\n"
@@ -16902,7 +16881,7 @@ msgstr " -q, --stats                        顯示統計關於 tty\n"
 #: term-utils/setterm.c:408
 #, fuzzy
 msgid " --default                         use default terminal settings\n"
-msgstr " -a, --all      查詢所有原始裝置\n"
+msgstr " -q, --stats                        顯示統計關於 tty\n"
 
 #: term-utils/setterm.c:409
 #, fuzzy
@@ -16981,19 +16960,16 @@ msgid " --clear         [all|rest]        clear screen and set cursor position\n
 msgstr " -c           清空螢幕之前顯示\n"
 
 #: term-utils/setterm.c:426
-#, fuzzy
 msgid " --tabs          [<number>...]     set these tab stop positions, or show them\n"
-msgstr " -T, --test                   測試用於 getopt (1) 版本\n"
+msgstr ""
 
 #: term-utils/setterm.c:427
-#, fuzzy
 msgid " --clrtabs       [<number>...]     clear these tab stop positions, or all\n"
-msgstr " -T, --test                   測試用於 getopt (1) 版本\n"
+msgstr ""
 
 #: term-utils/setterm.c:428
-#, fuzzy
 msgid " --regtabs       [1-160]           set a regular tab stop interval\n"
-msgstr " -r, --reset                  重置通訊埠\n"
+msgstr ""
 
 #: term-utils/setterm.c:429
 msgid " --blank         [0-60|force|poke] set time of inactivity before screen blanks\n"
@@ -17008,9 +16984,8 @@ msgid " --append        [<number>]        append vcsa<number> console dump to fi
 msgstr ""
 
 #: term-utils/setterm.c:432
-#, fuzzy
 msgid " --file          <filename>        name of the dump file\n"
-msgstr " -h, --help     顯示這份說明然後離開\n"
+msgstr ""
 
 #: term-utils/setterm.c:433
 #, fuzzy
@@ -17127,7 +17102,7 @@ msgstr "過長的命令列引數"
 #: term-utils/ttymsg.c:108
 #, fuzzy, c-format
 msgid "open failed"
-msgstr "開啟失敗：%s"
+msgstr "openpty 失敗"
 
 #: term-utils/ttymsg.c:147
 #, fuzzy, c-format
@@ -17546,7 +17521,7 @@ msgstr ""
 #: text-utils/more.c:328
 #, fuzzy
 msgid " -<number>   the number of lines per screenful\n"
-msgstr "鍵入磁柱數: "
+msgstr " -number      列各頁面\n"
 
 #: text-utils/more.c:329
 msgid " +<number>   display file beginning from line number\n"
@@ -18056,101 +18031,64 @@ msgstr "不明的退出序列在中輸入：%o，%o"
 msgid "Input line too long."
 msgstr "輸入列太長。"
 
+#~ msgid "set blocksize"
+#~ msgstr "設定區塊大小"
+
+#~ msgid "usage:\n"
+#~ msgstr "用法：\n"
+
+#~ msgid "\tNOTE: elvtune only works with 2.4 kernels\n"
+#~ msgstr "\t註記：elvtune 只適用於 2.4 內核\n"
+
+#~ msgid "missing blockdevice, use -h for help\n"
+#~ msgstr "缺少區塊裝置，使用 -h 以獲得說明\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "elvtune is only useful on older kernels;\n"
+#~ "for 2.6 use IO scheduler sysfs tunables instead..\n"
+#~ msgstr ""
+#~ "\n"
+#~ " elvtune 只適用於舊的內核；\n"
+#~ "於 2.6 請使用 IO 排程程式 sysfs tunables 做為替代。\n"
+
+#~ msgid "failed to read: %s"
+#~ msgstr "讀取時失敗：%s"
+
 #, fuzzy
-#~ msgid "Type of the partition %zu is unchanged."
-#~ msgstr "分割區 %d 的系統類型未被變更：%x (%s)\n"
+#~ msgid "waidpid failed"
+#~ msgstr "waidpid 失敗"
 
 #, fuzzy
 #~ msgid " %s [options] file\n"
 #~ msgstr " %s [選項] 檔案\n"
 
 #, fuzzy
-#~ msgid "%s: options "
-#~ msgstr "%s：選項 "
-
-#, fuzzy
-#~ msgid "are mutually exclusive."
-#~ msgstr "彼此互斥。"
-
-#, fuzzy
-#~ msgid "can only change local entries."
-#~ msgstr "只能變更本地條目。"
-
-#, fuzzy
-#~ msgid "                               [notime|short|full|iso]\n"
-#~ msgstr "                                     「%s」)\n"
-
-#, fuzzy
-#~ msgid "COMMAND not specified."
-#~ msgstr "沒有 mountpoint 指定的。"
-
-#, fuzzy
-#~ msgid " %s [options] pathname [pathname ...]\n"
-#~ msgstr " %s [選項] 路徑名稱 [路徑名稱...]\n"
-
-#~ msgid "no filename specified."
-#~ msgstr "未指定任何檔名。"
-
-#~ msgid "...back 1 page"
-#~ msgstr "…倒退 1 頁"
-
-#~ msgid "...skipping one line"
-#~ msgstr "…跳過 1 列"
-
-#, fuzzy
-#~ msgid " %s [options] file...\n"
-#~ msgstr " %s [選項] [檔案]\n"
-
-#, fuzzy
-#~ msgid " -n, --no-argument       option does not use argument\n"
-#~ msgstr " -r, --reset                  重置通訊埠\n"
-
-#, fuzzy
-#~ msgid " -r, --required <arg>    option requires an argument\n"
-#~ msgstr "%s：選項需要一個引數 -- %s\n"
-
-#, fuzzy
-#~ msgid " -z                      no long option\n"
-#~ msgstr " -T, --test                   測試用於 getopt (1) 版本\n"
-
-#, fuzzy
-#~ msgid "     --xyzzy             a long option only\n"
-#~ msgstr " -f           不分割長列\n"
-
-#, fuzzy
-#~ msgid "                         use next line for description when needed\n"
-#~ msgstr "                                     「%s」)\n"
-
-#, fuzzy
-#~ msgid "                           description on two, or multiple lines, where the\n"
-#~ msgstr "                                     「%s」)\n"
-
-#, fuzzy
-#~ msgid "                           consecutive lines are intended by two spaces\n"
-#~ msgstr "                                     「%s」)\n"
-
-#, fuzzy
-#~ msgid " -f, --foobar            next option description resets indent\n"
-#~ msgstr " -r, --reset                  重置通訊埠\n"
-
-#, fuzzy
-#~ msgid " -h                print this help text\n"
-#~ msgstr " -h           顯示這份說明然後離開\n"
-
-#, fuzzy
-#~ msgid " -v                print program version\n"
-#~ msgstr " -a, --all      查詢所有原始裝置\n"
-
-#, fuzzy
-#~ msgid " --version\n"
-#~ msgstr "[ --help ] [ --version ]\n"
-
-#, fuzzy
 #~ msgid " -x, --destination <dir>  extract into directory\n"
 #~ msgstr " -x, --destination <dir>  抽出進入目錄\n"
 
+#~ msgid "read failed: %s"
+#~ msgstr "讀取失敗：%s"
+
 #~ msgid "compiled without -x support"
 #~ msgstr "編譯時不具 -x 支援"
+
+#~ msgid "open failed: %s"
+#~ msgstr "開啟失敗：%s"
+
+#, fuzzy
+#~ msgid "edition number argument failed"
+#~ msgstr "編輯數字引數失敗"
+
+#~ msgid "one bad block\n"
+#~ msgstr "一個不良區塊\n"
+
+#~ msgid "fsync failed"
+#~ msgstr "fsync 失敗"
+
+#, fuzzy
+#~ msgid "partition type hex or uuid"
+#~ msgstr "分割區類型十六進位或 uuid"
 
 #~ msgid "%s: Out of memory!\n"
 #~ msgstr "%s：記憶體不足！\n"
@@ -18159,26 +18097,11 @@ msgstr "輸入列太長。"
 #~ msgid "Unusable"
 #~ msgstr "無法使用"
 
-#, fuzzy
-#~ msgid "write failed\n"
-#~ msgstr "寫入失敗"
-
 #~ msgid "Disk has been changed.\n"
 #~ msgstr "磁碟已變更。\n"
 
 #~ msgid "Reboot the system to ensure the partition table is correctly updated.\n"
 #~ msgstr "系統重新開機以確保分割表正確地被更新。\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "WARNING: If you have created or modified any\n"
-#~ "DOS 6.x partitions, please see the cfdisk manual\n"
-#~ "page for additional information.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "警告：如果您已建立或修改任何\n"
-#~ "DOS 6.x 分割區，請參看 cfdisk 手冊\n"
-#~ "以獲得額外的資訊。\n"
 
 #~ msgid "FATAL ERROR"
 #~ msgstr "嚴重錯誤"
@@ -18552,9 +18475,6 @@ msgstr "輸入列太長。"
 #~ msgid "Cannot maximize this partition"
 #~ msgstr "無法將這個分割區最大化"
 
-#~ msgid "This partition is unusable"
-#~ msgstr "這個分割區無法使用"
-
 #~ msgid "This partition is already in use"
 #~ msgstr "這個分割區已在使用中"
 
@@ -18567,29 +18487,38 @@ msgstr "輸入列太長。"
 #~ msgid "Copyright (C) 1994-2002 Kevin E. Martin & aeb\n"
 #~ msgstr "版權©1994-2002 Kevin E. Martin & aeb\n"
 
-#, fuzzy
-#~ msgid " -h, --heads <number>      set the number of heads to use\n"
-#~ msgstr "    -H# [或 --heads #]：   設定要用的磁頭數量"
-
-#, fuzzy
-#~ msgid " -s, --sectors <number>    set the number of sectors to use\n"
-#~ msgstr "    -S# [或 --sectors #]： 設定要用的磁區數量"
-
-#, fuzzy
-#~ msgid " -g, --guess               guess a geometry from partition table\n"
-#~ msgstr " -s, --status                 查詢印表機狀態\n"
-
-#, fuzzy
-#~ msgid " -P, --print <r|s|t>       print partition table in specified format\n"
-#~ msgstr "  p          顯示分割表於螢幕或輸出至檔案"
-
-#, fuzzy
-#~ msgid " -a, --arrow               use arrow for highlighting the current partition\n"
-#~ msgstr "  d          刪除目前的分割區"
-
-#, fuzzy
-#~ msgid "     --help     display this help and exit\n"
-#~ msgstr " -h, --help     顯示這份說明然後離開\n"
+#~ msgid ""
+#~ "\n"
+#~ "Usage:\n"
+#~ "Print version:\n"
+#~ "        %s -v\n"
+#~ "Print partition table:\n"
+#~ "        %s -P {r|s|t} [options] device\n"
+#~ "Interactive use:\n"
+#~ "        %s [options] device\n"
+#~ "\n"
+#~ "Options:\n"
+#~ "-a: Use arrow instead of highlighting;\n"
+#~ "-z: Start with a zero partition table, instead of reading the pt from disk;\n"
+#~ "-c C -h H -s S: Override the kernel's idea of the number of cylinders,\n"
+#~ "                the number of heads and the number of sectors/track.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "用法：\n"
+#~ "印出版本：\n"
+#~ "       %s -v\n"
+#~ "印出分割表：\n"
+#~ "       %s -P {r|s|t} [選項] 裝置\n"
+#~ "互動式使用：\n"
+#~ "       %s [選項] 裝置\n"
+#~ "\n"
+#~ "選項：\n"
+#~ "-a: 使用箭頭以代替高亮度顯示；\n"
+#~ "-z: 以零分割表開始，以代替從磁碟讀取分割表；\n"
+#~ "-c C -h H -s S:強制變更內核認為的磁柱數量、\n"
+#~ "               磁頭數量和每一磁軌的磁區數量。\n"
+#~ "\n"
 
 #, fuzzy
 #~ msgid "cannot parse number of cylinders"
@@ -18603,20 +18532,218 @@ msgstr "輸入列太長。"
 #~ msgid "cannot parse number of sectors"
 #~ msgstr "無法剖析磁區數量"
 
+#~ msgid "Writing disklabel to %s.\n"
+#~ msgstr "將磁碟標籤寫入 %s。\n"
+
+#~ msgid "Last %s or +size or +sizeM or +sizeK"
+#~ msgstr "最後 %s 或 +size 或 +sizeM 或 +sizeK"
+
+#~ msgid "Reading disklabel of %s at sector %d.\n"
+#~ msgstr "於磁區 %2$d 讀取 %1$s 的磁碟標籤。\n"
+
+#~ msgid "BSD disklabel command (m for help): "
+#~ msgstr "BSD 磁碟標籤命令 (m 以獲得說明)："
+
+#~ msgid "drivedata: "
+#~ msgstr "磁碟資料："
+
+#~ msgid "#       start       end      size     fstype   [fsize bsize   cpg]\n"
+#~ msgstr "#       開始       結束      大小 檔案系統類型 [fsize bsize   cpg]\n"
+
+#~ msgid "Must be <= sectors/track * tracks/cylinder (default).\n"
+#~ msgstr "必須 <= 磁區/磁軌 * 磁軌/磁柱 (預設)。\n"
+
+#~ msgid "This partition already exists.\n"
+#~ msgstr "這個分割區已經存在。\n"
+
+#~ msgid "Warning: too many partitions (%d, maximum is %d).\n"
+#~ msgstr "警告：太多分割區 (%d, 最大值為 %d)。\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "Syncing disks.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "同步磁碟。\n"
+
 #, fuzzy
 #~ msgid "list extended partitions"
 #~ msgstr "清單進階分割區"
 
 #, fuzzy
-#~ msgid "\n"
-#~ msgstr "\n"
+#~ msgid ""
+#~ "Usage:\n"
+#~ " %1$s [options] <disk>    change partition table\n"
+#~ " %1$s [options] -l <disk> list partition table(s)\n"
+#~ " %1$s -s <partition>      give partition size(s) in blocks\n"
+#~ "\n"
+#~ "Options:\n"
+#~ " -b <size>             sector size (512, 1024, 2048 or 4096)\n"
+#~ " -c[=<mode>]           compatible mode: 'dos' or 'nondos' (default)\n"
+#~ " -h                    print this help text\n"
+#~ " -u[=<unit>]           display units: 'cylinders' or 'sectors' (default)\n"
+#~ " -v                    print program version\n"
+#~ " -C <number>           specify the number of cylinders\n"
+#~ " -H <number>           specify the number of heads\n"
+#~ " -S <number>           specify the number of sectors per track\n"
+#~ "\n"
+#~ msgstr ""
+#~ "用法：\n"
+#~ " %1$s [選項] <disk>    變更分割表\n"
+#~ " %1$s [選項] -l<磁碟>清單分割表\n"
+#~ " %1$s -s<分割>     給出分割區大小在中區塊\n"
+#~ "\n"
+#~ "選項：\n"
+#~ " -b<大小>            磁區大小 (512,- 1024, 2048 或 4096)\n"
+#~ " -c[=< 模式>]           相容模式：'dos' 或 'nondos' (預設)\n"
+#~ " -h                    印出這份說明文字\n"
+#~ " -u[=< 單位>]           顯示單位：'cylinders' 或 'sectors' (預設)\n"
+#~ " -v                    列印程式版本\n"
+#~ " -C<數字>          指定磁柱數量\n"
+#~ " -H<數字>          指定前端數量\n"
+#~ " -S<數字>          指定磁區數量各軌段\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid "unable to read %s"
+#~ msgstr "無法讀取 %s"
+
+#, fuzzy
+#~ msgid "unable to seek on %s"
+#~ msgstr "無法尋指於 %s"
+
+#, fuzzy
+#~ msgid "unable to write %s"
+#~ msgstr "無法寫入 %s"
+
+#, fuzzy
+#~ msgid "fatal error"
+#~ msgstr "嚴重錯誤"
+
+#~ msgid "Command action"
+#~ msgstr "命令動作"
+
+#~ msgid "You must set"
+#~ msgstr "您必須設定"
+
+#~ msgid "heads"
+#~ msgstr "磁頭"
+
+#~ msgid " and "
+#~ msgstr " 和 "
+
+#~ msgid "Unsupported suffix: '%s'.\n"
+#~ msgstr "不受支援的字尾：「%s」。\n"
+
+#~ msgid ""
+#~ "Supported: 10^N: KB (KiloByte), MB (MegaByte), GB (GigaByte)\n"
+#~ "            2^N: K  (KibiByte), M  (MebiByte), G  (GibiByte)\n"
+#~ msgstr ""
+#~ "支援的單位: 10^N: KB (KiloByte), MB (MegaByte), GB (GigaByte)\n"
+#~ "             2^N: K  (KibiByte), M  (MebiByte), G  (GibiByte)\n"
+
+#~ msgid "Using default value %u\n"
+#~ msgstr "使用預設值 %u\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "Disk %s: %ld MB, %lld bytes"
+#~ msgstr ""
+#~ "\n"
+#~ "磁碟 %s：%ld MB，%lld 位元組"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "Disk %s: %ld.%ld GB, %llu bytes"
+#~ msgstr ""
+#~ "\n"
+#~ "磁碟 %s：%ld.%ld GB，%llu 位元組"
+
+#, fuzzy
+#~ msgid ", %llu sectors\n"
+#~ msgstr "，%llu 磁區\n"
+
+#, fuzzy
+#~ msgid "cannot write disk label"
+#~ msgstr "無法寫入磁碟標貼"
+
+#~ msgid ""
+#~ "\n"
+#~ "Error closing file\n"
+#~ msgstr ""
+#~ "\n"
+#~ "關閉檔案發生錯誤\n"
+
+#, fuzzy
+#~ msgid "Warning: setting sector offset for DOS compatibility\n"
+#~ msgstr "警告：設定磁區偏移用於 DOS 相容性\n"
+
+#~ msgid "Detected an OSF/1 disklabel on %s, entering disklabel mode.\n"
+#~ msgstr "於 %s 偵測到 OSF/1 磁碟標籤，進入磁碟標籤模式。\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "WARNING: DOS-compatible mode is deprecated. It's strongly recommended to\n"
+#~ "         switch off the mode (with command 'c')."
+#~ msgstr ""
+#~ "\n"
+#~ "警告：不宜再使用 DOS 相容模式。強烈建議\n"
+#~ "      關掉此模式 (利用命令「c」)。"
+
+#~ msgid ""
+#~ "\n"
+#~ "WARNING: cylinders as display units are deprecated. Use command 'u' to\n"
+#~ "         change units to sectors.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "警告：不宜再用磁柱做為顯示單位。使用命令「u」以\n"
+#~ "      變更單位為磁區。\n"
+
+#, fuzzy
+#~ msgid "Building a new DOS disklabel with disk identifier 0x%08x.\n"
+#~ msgstr "建立新的 DOS disklabel 與磁碟識別碼 0x%08x。\n"
+
+#~ msgid "New disk identifier (current 0x%08x): "
+#~ msgstr "新磁碟識別碼 (目前為 0x%08x)："
+
+#~ msgid "Partition %d is already defined.  Delete it before re-adding it.\n"
+#~ msgstr "分割區 %d 已經定義。 在重新加入之前刪除它。\n"
+
+#~ msgid "No free sectors available\n"
+#~ msgstr "沒有可用的磁區存在\n"
+
+#~ msgid "Last %1$s, +%2$s or +size{K,M,G}"
+#~ msgstr "最後 %1$s, +%2$s 或 +大小{K,M,G}"
+
+#~ msgid "     phys=(%d, %d, %d) "
+#~ msgstr "     實體=(%d, %d, %d) "
+
+#~ msgid "logical=(%d, %d, %d)\n"
+#~ msgstr "邏輯=(%d, %d, %d)\n"
+
+#, fuzzy
+#~ msgid "Warning: bad start-of-data in partition %zd\n"
+#~ msgstr "警告：在分割區 %d 中不當的資料起始\n"
+
+#, fuzzy
+#~ msgid "Warning: partition %zd overlaps partition %zd.\n"
+#~ msgstr "警告：分割區 %d 與分割區 %d 重疊。\n"
+
+#, fuzzy
+#~ msgid "Warning: partition %zd is empty\n"
+#~ msgstr "警告：分割區 %d 是空的\n"
+
+#~ msgid "Adding a primary partition\n"
+#~ msgstr "加入一個主要分割區\n"
 
 #, fuzzy
 #~ msgid ""
 #~ "Partition type:\n"
 #~ "   p   primary (%zd primary, %d extended, %zd free)\n"
 #~ "%s\n"
-#~ "Select (default %c)"
+#~ "Select (default %c): "
 #~ msgstr ""
 #~ "分割區類型：\n"
 #~ "   p   主要 (%d 主要，%d 進階，%d 自由)\n"
@@ -18628,39 +18755,269 @@ msgstr "輸入列太長。"
 #~ msgstr "   e   進階"
 
 #, fuzzy
-#~ msgid "Nr"
-#~ msgstr "N"
+#~ msgid ""
+#~ "\n"
+#~ "WARNING: If you have created or modified any DOS 6.xpartitions, please see the fdisk manual page for additionalinformation.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "警告：如果您已建立或修改任何 DOS 6.x\n"
+#~ "分割區，請參看 fdisk 線上手冊以獲得額外\n"
+#~ "資訊。\n"
 
-#, fuzzy
-#~ msgid "Sec"
-#~ msgstr "設定"
-
-#, fuzzy
-#~ msgid "This doesn't look like a partition table. Probably you selected the wrong device."
+#~ msgid ""
+#~ "This doesn't look like a partition table\n"
+#~ "Probably you selected the wrong device.\n"
+#~ "\n"
 #~ msgstr ""
 #~ "這看起來不像是一個分割表\n"
 #~ "您大概選了錯誤的裝置。\n"
 #~ "\n"
 
+#~ msgid "%*s Boot      Start         End      Blocks   Id  System\n"
+#~ msgstr "%*s 開機      開始         結束      區塊   識別號  系統\n"
+
 #, fuzzy
-#~ msgid "Blocks "
-#~ msgstr "區塊"
+#~ msgid ""
+#~ "\n"
+#~ "Disk %s: %d heads, %llu sectors, %llu cylinders\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "磁碟 %s：%d 前端，%llu 磁區，%llu 磁柱\n"
+#~ "\n"
+
+#~ msgid "Nr AF  Hd Sec  Cyl  Hd Sec  Cyl     Start      Size ID\n"
+#~ msgstr "Nr AF 磁頭 磁區 磁柱 磁頭 磁區 磁柱   開始       大小 ID\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "\tThere is a valid Mac label on this disk.\n"
+#~ "\tUnfortunately fdisk(1) cannot handle these disks.\n"
+#~ "\tUse either pdisk or parted to modify the partition table.\n"
+#~ "\tNevertheless some advice:\n"
+#~ "\t1. fdisk will destroy its contents on write.\n"
+#~ "\t2. Be sure that this disk is NOT a still vital\n"
+#~ "\t   part of a volume group. (Otherwise you may\n"
+#~ "\t   erase the other disks as well, if unmirrored.)\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\t有效的 Mac 標籤位於這個磁碟。\n"
+#~ "\t不幸地 fdisk(1) 無法處理這些磁碟。\n"
+#~ "\t必須使用 pdisk 或 parted 以修改分割表。\n"
+#~ "\t不論如何還是有些建言：\n"
+#~ "\t1.fdisk 將於寫入時銷毀它的內容。\n"
+#~ "\t2.確認這個磁碟並非仍是\n"
+#~ "\t  卷冊群的現用部分。(否則如果沒有鏡像備份的話，\n"
+#~ "\t  您也許同樣會清除其他磁碟。)\n"
+
+#~ msgid ""
+#~ "\tSorry - this fdisk cannot handle Mac disk labels.\n"
+#~ "\tIf you want to add DOS-type partitions, create\n"
+#~ "\ta new empty DOS partition table first. (Use o.)\n"
+#~ "\tWARNING: This will destroy the present disk contents.\n"
+#~ msgstr ""
+#~ "\t抱歉 - fdisk 無法處理 Mac 磁碟標籤。\n"
+#~ "\t如果您要加入 DOS 類型分割區，請先建立\n"
+#~ "\t新的空 DOS 分割表。(使用 o.)\n"
+#~ "\t警告：這將銷毀現有磁碟內容。\n"
+
+#~ msgid "According to MIPS Computer Systems, Inc the Label must not contain more than 512 bytes\n"
+#~ msgstr "根據 MIPS 電腦系統公司，標籤必須包含不超過 512 位元組\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "Disk %s (SGI disk label): %d heads, %llu sectors, %llu cylinders\n"
+#~ "Units = %s of %d * %ld bytes\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "磁碟 %s (SGI 磁碟標貼)：%d 前端，%llu 磁區，%llu 磁柱\n"
+#~ "單位=%s 的 %d * %ld 位元組\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "----- partitions -----\n"
+#~ "Pt# %*s  Info     Start       End   Sectors  Id  System\n"
+#~ msgstr ""
+#~ "----- 分割區 -----\n"
+#~ "Pt# %*s  資訊     開始       結束   磁區  識別號  系統\n"
+
+#~ msgid ""
+#~ "----- Bootinfo -----\n"
+#~ "Bootfile: %s\n"
+#~ "----- Directory Entries -----\n"
+#~ msgstr ""
+#~ "----- 開機資訊 -----\n"
+#~ "開機檔案：%s\n"
+#~ "----- 目錄項目 -----\n"
+
+#, fuzzy
+#~ msgid "%2zd: %-10s sector%5u size%8u\n"
+#~ msgstr "%2d: %-10s 磁區%5u 大小%8u\n"
+
+#~ msgid "No partitions defined\n"
+#~ msgstr "無已定義分割區\n"
+
+#~ msgid ""
+#~ "The entire disk partition is only %d diskblock large,\n"
+#~ "but the disk is %d diskblocks long.\n"
+#~ msgstr ""
+#~ "整個磁碟分割區大小只有 %d 磁碟區塊，\n"
+#~ "但是這個磁碟大小為 %d 磁碟區塊。\n"
+
+#~ msgid "Partition %d does not start on cylinder boundary.\n"
+#~ msgstr "分割區 %d 並非始於磁柱邊界。\n"
+
+#~ msgid "Partition %d does not end on cylinder boundary.\n"
+#~ msgstr "分割區 %d 並非終於磁柱邊界。\n"
+
+#, fuzzy
+#~ msgid "Partition %zd is already defined.  Delete it before re-adding it.\n"
+#~ msgstr "分割區 %d 已經定義。 在重新加入之前刪除它。\n"
+
+#~ msgid "You will get a partition overlap on the disk. Fix it first!\n"
+#~ msgstr "您的磁碟上將會有重疊的分割區，請先修正它！\n"
+
+#~ msgid " Last %s"
+#~ msgstr " 最後一筆 %s"
+
+#, fuzzy
+#~ msgid "Building a new SGI disklabel.\n"
+#~ msgstr "建立新的 SGI disklabel。\n"
+
+#, fuzzy
+#~ msgid "HDIO_GETGEO ioctl failed on %s"
+#~ msgstr "HDIO_GETGEO ioctl 失敗的於 %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Warning:  BLKGETSIZE ioctl failed on %s.  Using geometry cylinder value of %llu.\n"
+#~ "This value may be truncated for devices > 33.8 GB.\n"
+#~ msgstr ""
+#~ "警告： BLKGETSIZE ioctl 失敗的於 %s。 使用幾何位置磁柱值的 %llu。\n"
+#~ "這個值也許會被截斷用於裝置>33.8 GB。\n"
+
+#~ msgid "ID=%02x\tSTART=%d\tLENGTH=%d\n"
+#~ msgstr "識別號=%02x\t開始=%d\t長度=%d\n"
+
+#, fuzzy
+#~ msgid "Trying to keep parameters of partitions already set.\n"
+#~ msgstr "嘗試保持參數的分割區已經設定。\n"
+
+#~ msgid "YES\n"
+#~ msgstr "YES\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "Disk %s (Sun disk label): %u heads, %llu sectors, %d rpm\n"
+#~ "%llu cylinders, %d alternate cylinders, %d physical cylinders\n"
+#~ "%d extra sects/cyl, interleave %d:1\n"
+#~ "Label ID: %s\n"
+#~ "Volume ID: %s\n"
+#~ "Units = %s of %d * 512 bytes\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "磁碟 %s (Sun 磁碟標貼)：%u 前端，%llu 磁區，%d rpm\n"
+#~ "%llu 磁柱，%d 交替磁柱，%d 實體磁柱\n"
+#~ "%d 額外 sects/cyl，交插 %d:1\n"
+#~ "標貼識別號：%s\n"
+#~ "音量識別號：%s\n"
+#~ "單位=%s 的 %d * 512 位元組\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "Disk %s (Sun disk label): %u heads, %llu sectors, %llu cylinders\n"
+#~ "Units = %s of %d * 512 bytes\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "磁碟 %s (Sun 磁碟標貼)：%u 前端，%llu 磁區，%llu 磁柱\n"
+#~ "單位=%s 的 %d * 512 位元組\n"
+#~ "\n"
+
+#~ msgid "%*s Flag    Start       End    Blocks   Id  System\n"
+#~ msgstr "%*s 旗標    開始       結束    區塊   識別號  系統\n"
+
+#~ msgid "Usage:"
+#~ msgstr "用法："
+
+#~ msgid "%s -An device\t activate partition n, inactivate the other ones\n"
+#~ msgstr "%s -An 裝置\t 啟用分割區 n, 停用另外一個\n"
+
+#~ msgid ""
+#~ "Done\n"
+#~ "\n"
+#~ msgstr ""
+#~ "完成\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid "\n"
+#~ msgstr "\n"
+
+#, fuzzy
+#~ msgid "%s: options "
+#~ msgstr "%s：選項 "
 
 #, fuzzy
 #~ msgid "BIOS boot partition"
 #~ msgstr "選取可開機的分割"
 
 #, fuzzy
-#~ msgid "Sector"
-#~ msgstr "磁區"
+#~ msgid "Partition %zd is already defined. Delete it before re-adding it."
+#~ msgstr "分割區 %d 已經定義。 在重新加入之前刪除它。\n"
 
 #, fuzzy
-#~ msgid "You will get a partition overlap on the disk. Fix it first!"
-#~ msgstr "您的磁碟上將會有重疊的分割區，請先修正它！\n"
+#~ msgid "Created partition %zd\n"
+#~ msgstr "已選分割區 %d\n"
 
 #, fuzzy
-#~ msgid "Flag"
-#~ msgstr "屬性旗標"
+#~ msgid "can only change local entries."
+#~ msgstr "只能變更本地條目。"
+
+#, fuzzy
+#~ msgid " %s [options] -u <USER> COMMAND\n"
+#~ msgstr " %s [選項] 命令\n"
+
+#, fuzzy
+#~ msgid " %s [options] [-] [USER [arg]...]\n"
+#~ msgstr " %s [選項] [-] [使用者 [arg]...]\n"
+
+#, fuzzy
+#~ msgid "                                 and do not create a new session\n"
+#~ msgstr "                                     「%s」)\n"
+
+#, fuzzy
+#~ msgid "COMMAND not specified."
+#~ msgstr "沒有 mountpoint 指定的。"
+
+#, fuzzy
+#~ msgid ""
+#~ " -1, --one        show only current month (default)\n"
+#~ " -3, --three      show previous, current and next month\n"
+#~ " -s, --sunday     Sunday as first day of week\n"
+#~ " -m, --monday     Monday as first day of week\n"
+#~ " -j, --julian     output Julian dates\n"
+#~ " -y, --year       show whole current year\n"
+#~ " -V, --version    display version information and exit\n"
+#~ " -h, --help       display this help text and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ " -1, --one        只顯示當月 (預設)\n"
+#~ " -3, --three      顯示前一個、目前的和次月\n"
+#~ " -s, --sunday     週日做為先週中某日\n"
+#~ " -m, --monday     週一做為先週中某日\n"
+#~ " -j, --julian     輸出儒略曆約會\n"
+#~ " -y, --year       顯示整個目前的年\n"
+#~ " -V, --version    顯示版本資訊然後離開\n"
+#~ " -h, --help       顯示這份說明文字然後離開\n"
+#~ "\n"
 
 #, fuzzy
 #~ msgid ""
@@ -18722,6 +19079,42 @@ msgstr "輸入列太長。"
 
 #, fuzzy
 #~ msgid ""
+#~ " -d, --udp             use UDP only\n"
+#~ " -i, --id              log the process ID too\n"
+#~ " -f, --file <file>     log the contents of this file\n"
+#~ " -h, --help            display this help text and exit\n"
+#~ msgstr ""
+#~ " -d, --udp             使用 UDP (TCP 是預設)\n"
+#~ " -i, --id              記錄檔處理識別號太\n"
+#~ " -f, --file <file>     記錄檔內容的這個檔案\n"
+#~ " -h, --help            顯示這份說明文字然後離開\n"
+
+#, fuzzy
+#~ msgid ""
+#~ " -n, --server <name>   write to this remote syslog server\n"
+#~ " -P, --port <number>   use this UDP port\n"
+#~ " -p, --priority <prio> mark given message with this priority\n"
+#~ " -s, --stderr          output message to standard error as well\n"
+#~ msgstr ""
+#~ " -n, --server <name>   寫入這個遠端 syslog 伺服器\n"
+#~ " -P, --port<數字>  使用這個 UDP 通訊埠\n"
+#~ " -p, --priority<prio>標記給定的訊息與這個優先權\n"
+#~ " -s, --stderr          輸出訊息到標準錯誤同樣\n"
+
+#, fuzzy
+#~ msgid ""
+#~ " -t, --tag <tag>       mark every line with this tag\n"
+#~ " -u, --socket <socket> write to this Unix socket\n"
+#~ " -V, --version         output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ " -t, --tag <tag>       標記每列與這個標籤\n"
+#~ " -u, --socket<通訊端>寫入這個 Unix 通訊端\n"
+#~ " -V, --version         輸出版本資訊然後離開\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
 #~ " -f, --file <file> use file as a cookie seed\n"
 #~ " -v, --verbose     explain what is being done\n"
 #~ " -V, --version     output version information and exit\n"
@@ -18735,7 +19128,22 @@ msgstr "輸入列太長。"
 #~ "\n"
 
 #, fuzzy
-#~ msgid "Both --pid and --no-pid specified. Ignoring --no-pid."
+#~ msgid " %s [options] pathname [pathname ...]\n"
+#~ msgstr " %s [選項] 路徑名稱 [路徑名稱...]\n"
+
+#, fuzzy
+#~ msgid "Failed to open/create %s: %m\n"
+#~ msgstr "開啟時失敗/建立 %s：%m\n"
+
+#, fuzzy
+#~ msgid "Failed to lock %s: %m\n"
+#~ msgstr "鎖定 %s 時失敗：%m\n"
+
+#~ msgid "Bad number: %s\n"
+#~ msgstr "不當的數字：%s\n"
+
+#, fuzzy
+#~ msgid "Both --pid and --no-pid specified. Ignoring --no-pid.\n"
 #~ msgstr "兩者 --pid 和 --no-pid 指定的。忽略 --no-pid。\n"
 
 #~ msgid "warning: error reading %s: %s"
@@ -18869,9 +19277,6 @@ msgstr "輸入列太長。"
 #~ "       使用 -t <type> 以明確指定檔案系統型態或\n"
 #~ "       使用 wipefs(8) 以清理裝置。\n"
 
-#~ msgid "mount failed"
-#~ msgstr "掛載失敗"
-
 #~ msgid "mount: only root can mount %s on %s"
 #~ msgstr "mount：只有 root 可以將 %s 掛載到 %s"
 
@@ -18898,7 +19303,7 @@ msgstr "輸入列太長。"
 #~ msgstr "mount：根據 mtab %s 已被當做環路而掛載於 %s"
 
 #, fuzzy
-#~ msgid "mount: failed to initialize loopdev context"
+#~ msgid "mount: tailed to initialize loopdev context"
 #~ msgstr "初始化 loopcxt 時失敗"
 
 #, fuzzy
@@ -19445,10 +19850,6 @@ msgstr "輸入列太長。"
 #~ msgstr "無效的間隔值：%d"
 
 #, fuzzy
-#~ msgid "Invalid set value"
-#~ msgstr "無效的設定值"
-
-#, fuzzy
 #~ msgid "Invalid set value: %d"
 #~ msgstr "無效的設定值：%d"
 
@@ -19491,6 +19892,10 @@ msgstr "輸入列太長。"
 #~ msgstr "%s：%ld 為預設臨界值以及 %ld 為預設逾時值\n"
 
 #, fuzzy
+#~ msgid "--notime can't be used together with --ctime or --reltime"
+#~ msgstr "--notime 無法使用的一起與 --ctime 或 --reltime"
+
+#, fuzzy
 #~ msgid ""
 #~ " -n, --keep-size     don't modify the length of the file\n"
 #~ " -p, --punch-hole    punch holes in the file\n"
@@ -19522,8 +19927,40 @@ msgstr "輸入列太長。"
 #~ "多延遲一點以達到新的時間。\n"
 
 #, fuzzy
+#~ msgid ""
+#~ " -a, --all                     list all used devices\n"
+#~ " -d, --detach <loopdev> [...]  detach one or more devices\n"
+#~ " -D, --detach-all              detach all used devices\n"
+#~ " -f, --find                    find first unused device\n"
+#~ " -c, --set-capacity <loopdev>  resize device\n"
+#~ " -j, --associated <file>       list all devices associated with <file>\n"
+#~ msgstr ""
+#~ " -a, --all                     列出所有使用的裝置\n"
+#~ " -d, --detach <loopdev> [...]  卸離一或多個裝置\n"
+#~ " -D, --detach-all              卸離所有使用的裝置\n"
+#~ " -f, --find                    尋找先未使用的裝置\n"
+#~ " -c, --set-capacity<loopdev> 調整大小裝置\n"
+#~ " -j, --associated<檔案>      列出所有裝置關聯的與<檔案>\n"
+
+#, fuzzy
+#~ msgid "find unused loop device failed"
+#~ msgstr "尋找未使用的迴圈裝置失敗"
+
+#, fuzzy
 #~ msgid "%s: failed to determine source"
 #~ msgstr "%s：無法讀取速度"
+
+#, fuzzy
+#~ msgid ""
+#~ " -v, --verbose      explain what is being done\n"
+#~ " -V, --version      output version information and exit\n"
+#~ " -h, --help         output help screen and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ " -v, --verbose      解釋什麼正在是已完成\n"
+#~ " -V, --version      輸出版本資訊然後離開\n"
+#~ " -h, --help         輸出說明畫面然後離開\n"
+#~ "\n"
 
 #, fuzzy
 #~ msgid " -term <terminal_name>\n"
@@ -19647,675 +20084,6 @@ msgstr "輸入列太長。"
 
 #, fuzzy
 #~ msgid ""
-#~ "Usage: %s [options] file...\n"
-#~ "\n"
-#~ msgstr ""
-#~ "用法：%s [選項] 檔案…\n"
-#~ "\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "Options:\n"
-#~ "  -d        display help instead of ring bell\n"
-#~ "  -f        count logical, rather than screen lines\n"
-#~ "  -l        suppress pause after form feed\n"
-#~ "  -p        do not scroll, clean screen and display text\n"
-#~ "  -c        do not scroll, display text and clean line ends\n"
-#~ "  -u        suppress underlining\n"
-#~ "  -s        squeeze multiple blank lines into one\n"
-#~ "  -NUM      specify the number of lines per screenful\n"
-#~ "  +NUM      display file beginning from line number NUM\n"
-#~ "  +/STRING  display file beginning from search string match\n"
-#~ "  -V        output version information and exit\n"
-#~ msgstr ""
-#~ "選項：\n"
-#~ "  -d        顯示說明以代替環響鈴\n"
-#~ "  -f        計數邏輯的，而非螢幕列\n"
-#~ "  -l        抑制暫停之後表格饋送\n"
-#~ "  -p        抑制捲動，清除螢幕和顯示文字\n"
-#~ "  -c        抑制捲動，顯示文字和清除列結束\n"
-#~ "  -u        抑制底線\n"
-#~ "  -s        squeeze 多重空列進入一個\n"
-#~ "  -NUM      指定列號的各全螢幕\n"
-#~ " +NUM      顯示檔案起始部分從列號 NUM\n"
-#~ " +/字串  顯示檔案起始部分從搜尋字串匹配\n"
-#~ "  -V        輸出版本資訊然後離開\n"
-
-#~ msgid "line too long"
-#~ msgstr "列的長度過長"
-
-#, fuzzy
-#~ msgid "waidpid failed"
-#~ msgstr "waidpid 失敗"
-
-#, fuzzy
-#~ msgid "Partition %d is already defined.  Delete it before re-adding it."
-#~ msgstr "分割區 %d 已經定義。 在重新加入之前刪除它。\n"
-
-#, fuzzy
-#~ msgid "Partition %zd is already defined. Delete it before re-adding it."
-#~ msgstr "分割區 %d 已經定義。 在重新加入之前刪除它。\n"
-
-#, fuzzy
-#~ msgid "Warning:  BLKGETSIZE ioctl failed on %s. Using geometry cylinder value of %llu. This value may be truncated for devices > 33.8 GB."
-#~ msgstr ""
-#~ "警告： BLKGETSIZE ioctl 失敗的於 %s。 使用幾何位置磁柱值的 %llu。\n"
-#~ "這個值也許會被截斷用於裝置>33.8 GB。\n"
-
-#~ msgid "set blocksize"
-#~ msgstr "設定區塊大小"
-
-#~ msgid "failed to read: %s"
-#~ msgstr "讀取時失敗：%s"
-
-#~ msgid "read failed: %s"
-#~ msgstr "讀取失敗：%s"
-
-#~ msgid "one bad block\n"
-#~ msgstr "一個不良區塊\n"
-
-#, fuzzy
-#~ msgid "partition type hex or uuid"
-#~ msgstr "分割區類型十六進位或 uuid"
-
-#, fuzzy
-#~ msgid " %s [options] device\n"
-#~ msgstr " %s [選項] <device>\n"
-
-#, fuzzy
-#~ msgid "read failed %s"
-#~ msgstr "讀取失敗：%s"
-
-#, fuzzy
-#~ msgid "seek failed %s"
-#~ msgstr "搜尋失敗"
-
-#, fuzzy
-#~ msgid "seek failed: %d"
-#~ msgstr "搜尋失敗"
-
-#, fuzzy
-#~ msgid "write failed: %d"
-#~ msgstr "寫入失敗：%s"
-
-#, fuzzy
-#~ msgid "No partitions defined"
-#~ msgstr "無已定義分割區\n"
-
-#, fuzzy
-#~ msgid ""
-#~ " -a, --all                     list all used devices\n"
-#~ " -d, --detach <loopdev> [...]  detach one or more devices\n"
-#~ " -D, --detach-all              detach all used devices\n"
-#~ " -f, --find                    find first unused device\n"
-#~ " -c, --set-capacity <loopdev>  resize device\n"
-#~ " -j, --associated <file>       list all devices associated with <file>\n"
-#~ msgstr ""
-#~ " -a, --all                     列出所有使用的裝置\n"
-#~ " -d, --detach <loopdev> [...]  卸離一或多個裝置\n"
-#~ " -D, --detach-all              卸離所有使用的裝置\n"
-#~ " -f, --find                    尋找先未使用的裝置\n"
-#~ " -c, --set-capacity<loopdev> 調整大小裝置\n"
-#~ " -j, --associated<檔案>      列出所有裝置關聯的與<檔案>\n"
-
-#, fuzzy
-#~ msgid "%s: failed to set up loop device, offset is not 512-byte aligned."
-#~ msgstr "%s：無法設定迴圈裝置"
-
-#, fuzzy
-#~ msgid "unssuported --local-line mode argument"
-#~ msgstr "不受支援的引數：%s"
-
-#~ msgid "usage:\n"
-#~ msgstr "用法：\n"
-
-#~ msgid "\tNOTE: elvtune only works with 2.4 kernels\n"
-#~ msgstr "\t註記：elvtune 只適用於 2.4 內核\n"
-
-#~ msgid "missing blockdevice, use -h for help\n"
-#~ msgstr "缺少區塊裝置，使用 -h 以獲得說明\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "elvtune is only useful on older kernels;\n"
-#~ "for 2.6 use IO scheduler sysfs tunables instead..\n"
-#~ msgstr ""
-#~ "\n"
-#~ " elvtune 只適用於舊的內核；\n"
-#~ "於 2.6 請使用 IO 排程程式 sysfs tunables 做為替代。\n"
-
-#, fuzzy
-#~ msgid "edition number argument failed"
-#~ msgstr "編輯數字引數失敗"
-
-#~ msgid "fsync failed"
-#~ msgstr "fsync 失敗"
-
-#~ msgid ""
-#~ "\n"
-#~ "Usage:\n"
-#~ "Print version:\n"
-#~ "        %s -v\n"
-#~ "Print partition table:\n"
-#~ "        %s -P {r|s|t} [options] device\n"
-#~ "Interactive use:\n"
-#~ "        %s [options] device\n"
-#~ "\n"
-#~ "Options:\n"
-#~ "-a: Use arrow instead of highlighting;\n"
-#~ "-z: Start with a zero partition table, instead of reading the pt from disk;\n"
-#~ "-c C -h H -s S: Override the kernel's idea of the number of cylinders,\n"
-#~ "                the number of heads and the number of sectors/track.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "用法：\n"
-#~ "印出版本：\n"
-#~ "       %s -v\n"
-#~ "印出分割表：\n"
-#~ "       %s -P {r|s|t} [選項] 裝置\n"
-#~ "互動式使用：\n"
-#~ "       %s [選項] 裝置\n"
-#~ "\n"
-#~ "選項：\n"
-#~ "-a: 使用箭頭以代替高亮度顯示；\n"
-#~ "-z: 以零分割表開始，以代替從磁碟讀取分割表；\n"
-#~ "-c C -h H -s S:強制變更內核認為的磁柱數量、\n"
-#~ "               磁頭數量和每一磁軌的磁區數量。\n"
-#~ "\n"
-
-#~ msgid "Writing disklabel to %s.\n"
-#~ msgstr "將磁碟標籤寫入 %s。\n"
-
-#~ msgid "Last %s or +size or +sizeM or +sizeK"
-#~ msgstr "最後 %s 或 +size 或 +sizeM 或 +sizeK"
-
-#~ msgid "Reading disklabel of %s at sector %d.\n"
-#~ msgstr "於磁區 %2$d 讀取 %1$s 的磁碟標籤。\n"
-
-#~ msgid "BSD disklabel command (m for help): "
-#~ msgstr "BSD 磁碟標籤命令 (m 以獲得說明)："
-
-#~ msgid "drivedata: "
-#~ msgstr "磁碟資料："
-
-#~ msgid "#       start       end      size     fstype   [fsize bsize   cpg]\n"
-#~ msgstr "#       開始       結束      大小 檔案系統類型 [fsize bsize   cpg]\n"
-
-#~ msgid "Must be <= sectors/track * tracks/cylinder (default).\n"
-#~ msgstr "必須 <= 磁區/磁軌 * 磁軌/磁柱 (預設)。\n"
-
-#~ msgid "Partition (a-%c): "
-#~ msgstr "分割區 (a-%c)："
-
-#~ msgid "This partition already exists.\n"
-#~ msgstr "這個分割區已經存在。\n"
-
-#~ msgid "Warning: too many partitions (%d, maximum is %d).\n"
-#~ msgstr "警告：太多分割區 (%d, 最大值為 %d)。\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "Syncing disks.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "同步磁碟。\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "Usage:\n"
-#~ " %1$s [options] <disk>    change partition table\n"
-#~ " %1$s [options] -l <disk> list partition table(s)\n"
-#~ " %1$s -s <partition>      give partition size(s) in blocks\n"
-#~ "\n"
-#~ "Options:\n"
-#~ " -b <size>             sector size (512, 1024, 2048 or 4096)\n"
-#~ " -c[=<mode>]           compatible mode: 'dos' or 'nondos' (default)\n"
-#~ " -h                    print this help text\n"
-#~ " -u[=<unit>]           display units: 'cylinders' or 'sectors' (default)\n"
-#~ " -v                    print program version\n"
-#~ " -C <number>           specify the number of cylinders\n"
-#~ " -H <number>           specify the number of heads\n"
-#~ " -S <number>           specify the number of sectors per track\n"
-#~ "\n"
-#~ msgstr ""
-#~ "用法：\n"
-#~ " %1$s [選項] <disk>    變更分割表\n"
-#~ " %1$s [選項] -l<磁碟>清單分割表\n"
-#~ " %1$s -s<分割>     給出分割區大小在中區塊\n"
-#~ "\n"
-#~ "選項：\n"
-#~ " -b<大小>            磁區大小 (512,- 1024, 2048 或 4096)\n"
-#~ " -c[=< 模式>]           相容模式：'dos' 或 'nondos' (預設)\n"
-#~ " -h                    印出這份說明文字\n"
-#~ " -u[=< 單位>]           顯示單位：'cylinders' 或 'sectors' (預設)\n"
-#~ " -v                    列印程式版本\n"
-#~ " -C<數字>          指定磁柱數量\n"
-#~ " -H<數字>          指定前端數量\n"
-#~ " -S<數字>          指定磁區數量各軌段\n"
-#~ "\n"
-
-#, fuzzy
-#~ msgid "unable to read %s"
-#~ msgstr "無法讀取 %s"
-
-#, fuzzy
-#~ msgid "unable to seek on %s"
-#~ msgstr "無法尋指於 %s"
-
-#, fuzzy
-#~ msgid "unable to write %s"
-#~ msgstr "無法寫入 %s"
-
-#, fuzzy
-#~ msgid "fatal error"
-#~ msgstr "嚴重錯誤"
-
-#~ msgid "Command action"
-#~ msgstr "命令動作"
-
-#~ msgid "You must set"
-#~ msgstr "您必須設定"
-
-#~ msgid "heads"
-#~ msgstr "磁頭"
-
-#~ msgid " and "
-#~ msgstr " 和 "
-
-#~ msgid "Unsupported suffix: '%s'.\n"
-#~ msgstr "不受支援的字尾：「%s」。\n"
-
-#~ msgid ""
-#~ "Supported: 10^N: KB (KiloByte), MB (MegaByte), GB (GigaByte)\n"
-#~ "            2^N: K  (KibiByte), M  (MebiByte), G  (GibiByte)\n"
-#~ msgstr ""
-#~ "支援的單位: 10^N: KB (KiloByte), MB (MegaByte), GB (GigaByte)\n"
-#~ "             2^N: K  (KibiByte), M  (MebiByte), G  (GibiByte)\n"
-
-#~ msgid "Using default value %u\n"
-#~ msgstr "使用預設值 %u\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "Disk %s: %ld MB, %lld bytes"
-#~ msgstr ""
-#~ "\n"
-#~ "磁碟 %s：%ld MB，%lld 位元組"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "Disk %s: %ld.%ld GB, %llu bytes"
-#~ msgstr ""
-#~ "\n"
-#~ "磁碟 %s：%ld.%ld GB，%llu 位元組"
-
-#, fuzzy
-#~ msgid ", %llu sectors\n"
-#~ msgstr "，%llu 磁區\n"
-
-#, fuzzy
-#~ msgid "cannot write disk label"
-#~ msgstr "無法寫入磁碟標貼"
-
-#~ msgid ""
-#~ "\n"
-#~ "Error closing file\n"
-#~ msgstr ""
-#~ "\n"
-#~ "關閉檔案發生錯誤\n"
-
-#, fuzzy
-#~ msgid "Warning: setting sector offset for DOS compatibility\n"
-#~ msgstr "警告：設定磁區偏移用於 DOS 相容性\n"
-
-#~ msgid "Detected an OSF/1 disklabel on %s, entering disklabel mode.\n"
-#~ msgstr "於 %s 偵測到 OSF/1 磁碟標籤，進入磁碟標籤模式。\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "WARNING: DOS-compatible mode is deprecated. It's strongly recommended to\n"
-#~ "         switch off the mode (with command 'c')."
-#~ msgstr ""
-#~ "\n"
-#~ "警告：不宜再使用 DOS 相容模式。強烈建議\n"
-#~ "      關掉此模式 (利用命令「c」)。"
-
-#~ msgid ""
-#~ "\n"
-#~ "WARNING: cylinders as display units are deprecated. Use command 'u' to\n"
-#~ "         change units to sectors.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "警告：不宜再用磁柱做為顯示單位。使用命令「u」以\n"
-#~ "      變更單位為磁區。\n"
-
-#, fuzzy
-#~ msgid "Building a new DOS disklabel with disk identifier 0x%08x.\n"
-#~ msgstr "建立新的 DOS disklabel 與磁碟識別碼 0x%08x。\n"
-
-#~ msgid "New disk identifier (current 0x%08x): "
-#~ msgstr "新磁碟識別碼 (目前為 0x%08x)："
-
-#~ msgid "No free sectors available\n"
-#~ msgstr "沒有可用的磁區存在\n"
-
-#~ msgid "Last %1$s, +%2$s or +size{K,M,G}"
-#~ msgstr "最後 %1$s, +%2$s 或 +大小{K,M,G}"
-
-#~ msgid "     phys=(%d, %d, %d) "
-#~ msgstr "     實體=(%d, %d, %d) "
-
-#~ msgid "logical=(%d, %d, %d)\n"
-#~ msgstr "邏輯=(%d, %d, %d)\n"
-
-#, fuzzy
-#~ msgid "Warning: bad start-of-data in partition %zd\n"
-#~ msgstr "警告：在分割區 %d 中不當的資料起始\n"
-
-#~ msgid "Adding a primary partition\n"
-#~ msgstr "加入一個主要分割區\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "WARNING: If you have created or modified any DOS 6.xpartitions, please see the fdisk manual page for additionalinformation.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "警告：如果您已建立或修改任何 DOS 6.x\n"
-#~ "分割區，請參看 fdisk 線上手冊以獲得額外\n"
-#~ "資訊。\n"
-
-#~ msgid "%*s Boot      Start         End      Blocks   Id  System\n"
-#~ msgstr "%*s 開機      開始         結束      區塊   識別號  系統\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "Disk %s: %d heads, %llu sectors, %llu cylinders\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "磁碟 %s：%d 前端，%llu 磁區，%llu 磁柱\n"
-#~ "\n"
-
-#~ msgid "Nr AF  Hd Sec  Cyl  Hd Sec  Cyl     Start      Size ID\n"
-#~ msgstr "Nr AF 磁頭 磁區 磁柱 磁頭 磁區 磁柱   開始       大小 ID\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "\tThere is a valid Mac label on this disk.\n"
-#~ "\tUnfortunately fdisk(1) cannot handle these disks.\n"
-#~ "\tUse either pdisk or parted to modify the partition table.\n"
-#~ "\tNevertheless some advice:\n"
-#~ "\t1. fdisk will destroy its contents on write.\n"
-#~ "\t2. Be sure that this disk is NOT a still vital\n"
-#~ "\t   part of a volume group. (Otherwise you may\n"
-#~ "\t   erase the other disks as well, if unmirrored.)\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\t有效的 Mac 標籤位於這個磁碟。\n"
-#~ "\t不幸地 fdisk(1) 無法處理這些磁碟。\n"
-#~ "\t必須使用 pdisk 或 parted 以修改分割表。\n"
-#~ "\t不論如何還是有些建言：\n"
-#~ "\t1.fdisk 將於寫入時銷毀它的內容。\n"
-#~ "\t2.確認這個磁碟並非仍是\n"
-#~ "\t  卷冊群的現用部分。(否則如果沒有鏡像備份的話，\n"
-#~ "\t  您也許同樣會清除其他磁碟。)\n"
-
-#~ msgid ""
-#~ "\tSorry - this fdisk cannot handle Mac disk labels.\n"
-#~ "\tIf you want to add DOS-type partitions, create\n"
-#~ "\ta new empty DOS partition table first. (Use o.)\n"
-#~ "\tWARNING: This will destroy the present disk contents.\n"
-#~ msgstr ""
-#~ "\t抱歉 - fdisk 無法處理 Mac 磁碟標籤。\n"
-#~ "\t如果您要加入 DOS 類型分割區，請先建立\n"
-#~ "\t新的空 DOS 分割表。(使用 o.)\n"
-#~ "\t警告：這將銷毀現有磁碟內容。\n"
-
-#~ msgid "According to MIPS Computer Systems, Inc the Label must not contain more than 512 bytes\n"
-#~ msgstr "根據 MIPS 電腦系統公司，標籤必須包含不超過 512 位元組\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "Disk %s (SGI disk label): %d heads, %llu sectors, %llu cylinders\n"
-#~ "Units = %s of %d * %ld bytes\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "磁碟 %s (SGI 磁碟標貼)：%d 前端，%llu 磁區，%llu 磁柱\n"
-#~ "單位=%s 的 %d * %ld 位元組\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "----- partitions -----\n"
-#~ "Pt# %*s  Info     Start       End   Sectors  Id  System\n"
-#~ msgstr ""
-#~ "----- 分割區 -----\n"
-#~ "Pt# %*s  資訊     開始       結束   磁區  識別號  系統\n"
-
-#~ msgid ""
-#~ "----- Bootinfo -----\n"
-#~ "Bootfile: %s\n"
-#~ "----- Directory Entries -----\n"
-#~ msgstr ""
-#~ "----- 開機資訊 -----\n"
-#~ "開機檔案：%s\n"
-#~ "----- 目錄項目 -----\n"
-
-#, fuzzy
-#~ msgid "%2zd: %-10s sector%5u size%8u\n"
-#~ msgstr "%2d: %-10s 磁區%5u 大小%8u\n"
-
-#~ msgid "No partitions defined\n"
-#~ msgstr "無已定義分割區\n"
-
-#~ msgid ""
-#~ "The entire disk partition is only %d diskblock large,\n"
-#~ "but the disk is %d diskblocks long.\n"
-#~ msgstr ""
-#~ "整個磁碟分割區大小只有 %d 磁碟區塊，\n"
-#~ "但是這個磁碟大小為 %d 磁碟區塊。\n"
-
-#~ msgid "Partition %d does not start on cylinder boundary.\n"
-#~ msgstr "分割區 %d 並非始於磁柱邊界。\n"
-
-#~ msgid "Partition %d does not end on cylinder boundary.\n"
-#~ msgstr "分割區 %d 並非終於磁柱邊界。\n"
-
-#, fuzzy
-#~ msgid "Partition %zd is already defined.  Delete it before re-adding it.\n"
-#~ msgstr "分割區 %d 已經定義。 在重新加入之前刪除它。\n"
-
-#~ msgid " Last %s"
-#~ msgstr " 最後一筆 %s"
-
-#, fuzzy
-#~ msgid "Building a new SGI disklabel.\n"
-#~ msgstr "建立新的 SGI disklabel。\n"
-
-#, fuzzy
-#~ msgid "HDIO_GETGEO ioctl failed on %s"
-#~ msgstr "HDIO_GETGEO ioctl 失敗的於 %s"
-
-#, fuzzy
-#~ msgid ""
-#~ "Warning:  BLKGETSIZE ioctl failed on %s.  Using geometry cylinder value of %llu.\n"
-#~ "This value may be truncated for devices > 33.8 GB.\n"
-#~ msgstr ""
-#~ "警告： BLKGETSIZE ioctl 失敗的於 %s。 使用幾何位置磁柱值的 %llu。\n"
-#~ "這個值也許會被截斷用於裝置>33.8 GB。\n"
-
-#~ msgid "ID=%02x\tSTART=%d\tLENGTH=%d\n"
-#~ msgstr "識別號=%02x\t開始=%d\t長度=%d\n"
-
-#, fuzzy
-#~ msgid "Trying to keep parameters of partitions already set.\n"
-#~ msgstr "嘗試保持參數的分割區已經設定。\n"
-
-#~ msgid "YES\n"
-#~ msgstr "YES\n"
-
-#, fuzzy
-#~ msgid "Building a new Sun disklabel."
-#~ msgstr "建立新的 Sun disklabel。\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "Disk %s (Sun disk label): %u heads, %llu sectors, %d rpm\n"
-#~ "%llu cylinders, %d alternate cylinders, %d physical cylinders\n"
-#~ "%d extra sects/cyl, interleave %d:1\n"
-#~ "Label ID: %s\n"
-#~ "Volume ID: %s\n"
-#~ "Units = %s of %d * 512 bytes\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "磁碟 %s (Sun 磁碟標貼)：%u 前端，%llu 磁區，%d rpm\n"
-#~ "%llu 磁柱，%d 交替磁柱，%d 實體磁柱\n"
-#~ "%d 額外 sects/cyl，交插 %d:1\n"
-#~ "標貼識別號：%s\n"
-#~ "音量識別號：%s\n"
-#~ "單位=%s 的 %d * 512 位元組\n"
-#~ "\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "\n"
-#~ "Disk %s (Sun disk label): %u heads, %llu sectors, %llu cylinders\n"
-#~ "Units = %s of %d * 512 bytes\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "磁碟 %s (Sun 磁碟標貼)：%u 前端，%llu 磁區，%llu 磁柱\n"
-#~ "單位=%s 的 %d * 512 位元組\n"
-#~ "\n"
-
-#~ msgid "%*s Flag    Start       End    Blocks   Id  System\n"
-#~ msgstr "%*s 旗標    開始       結束    區塊   識別號  系統\n"
-
-#~ msgid "Usage:"
-#~ msgstr "用法："
-
-#~ msgid "%s -An device\t activate partition n, inactivate the other ones\n"
-#~ msgstr "%s -An 裝置\t 啟用分割區 n, 停用另外一個\n"
-
-#~ msgid ""
-#~ "Done\n"
-#~ "\n"
-#~ msgstr ""
-#~ "完成\n"
-#~ "\n"
-
-#, fuzzy
-#~ msgid "Created partition %zd\n"
-#~ msgstr "已選分割區 %d\n"
-
-#, fuzzy
-#~ msgid " %s [options] -u <USER> COMMAND\n"
-#~ msgstr " %s [選項] 命令\n"
-
-#, fuzzy
-#~ msgid " %s [options] [-] [USER [arg]...]\n"
-#~ msgstr " %s [選項] [-] [使用者 [arg]...]\n"
-
-#, fuzzy
-#~ msgid ""
-#~ " -1, --one        show only current month (default)\n"
-#~ " -3, --three      show previous, current and next month\n"
-#~ " -s, --sunday     Sunday as first day of week\n"
-#~ " -m, --monday     Monday as first day of week\n"
-#~ " -j, --julian     output Julian dates\n"
-#~ " -y, --year       show whole current year\n"
-#~ " -V, --version    display version information and exit\n"
-#~ " -h, --help       display this help text and exit\n"
-#~ "\n"
-#~ msgstr ""
-#~ " -1, --one        只顯示當月 (預設)\n"
-#~ " -3, --three      顯示前一個、目前的和次月\n"
-#~ " -s, --sunday     週日做為先週中某日\n"
-#~ " -m, --monday     週一做為先週中某日\n"
-#~ " -j, --julian     輸出儒略曆約會\n"
-#~ " -y, --year       顯示整個目前的年\n"
-#~ " -V, --version    顯示版本資訊然後離開\n"
-#~ " -h, --help       顯示這份說明文字然後離開\n"
-#~ "\n"
-
-#, fuzzy
-#~ msgid ""
-#~ " -d, --udp             use UDP only\n"
-#~ " -i, --id              log the process ID too\n"
-#~ " -f, --file <file>     log the contents of this file\n"
-#~ " -h, --help            display this help text and exit\n"
-#~ msgstr ""
-#~ " -d, --udp             使用 UDP (TCP 是預設)\n"
-#~ " -i, --id              記錄檔處理識別號太\n"
-#~ " -f, --file <file>     記錄檔內容的這個檔案\n"
-#~ " -h, --help            顯示這份說明文字然後離開\n"
-
-#, fuzzy
-#~ msgid ""
-#~ " -n, --server <name>   write to this remote syslog server\n"
-#~ " -P, --port <number>   use this UDP port\n"
-#~ " -p, --priority <prio> mark given message with this priority\n"
-#~ " -s, --stderr          output message to standard error as well\n"
-#~ msgstr ""
-#~ " -n, --server <name>   寫入這個遠端 syslog 伺服器\n"
-#~ " -P, --port<數字>  使用這個 UDP 通訊埠\n"
-#~ " -p, --priority<prio>標記給定的訊息與這個優先權\n"
-#~ " -s, --stderr          輸出訊息到標準錯誤同樣\n"
-
-#, fuzzy
-#~ msgid ""
-#~ " -t, --tag <tag>       mark every line with this tag\n"
-#~ " -u, --socket <socket> write to this Unix socket\n"
-#~ " -V, --version         output version information and exit\n"
-#~ "\n"
-#~ msgstr ""
-#~ " -t, --tag <tag>       標記每列與這個標籤\n"
-#~ " -u, --socket<通訊端>寫入這個 Unix 通訊端\n"
-#~ " -V, --version         輸出版本資訊然後離開\n"
-#~ "\n"
-
-#, fuzzy
-#~ msgid "Failed to open/create %s: %m\n"
-#~ msgstr "開啟時失敗/建立 %s：%m\n"
-
-#, fuzzy
-#~ msgid "Failed to lock %s: %m\n"
-#~ msgstr "鎖定 %s 時失敗：%m\n"
-
-#~ msgid "Bad number: %s\n"
-#~ msgstr "不當的數字：%s\n"
-
-#, fuzzy
-#~ msgid "--notime can't be used together with --ctime or --reltime"
-#~ msgstr "--notime 無法使用的一起與 --ctime 或 --reltime"
-
-#, fuzzy
-#~ msgid "find unused loop device failed"
-#~ msgstr "尋找未使用的迴圈裝置失敗"
-
-#, fuzzy
-#~ msgid ""
-#~ " -v, --verbose      explain what is being done\n"
-#~ " -V, --version      output version information and exit\n"
-#~ " -h, --help         output help screen and exit\n"
-#~ "\n"
-#~ msgstr ""
-#~ " -v, --verbose      解釋什麼正在是已完成\n"
-#~ " -V, --version      輸出版本資訊然後離開\n"
-#~ " -h, --help         輸出說明畫面然後離開\n"
-#~ "\n"
-
-#, fuzzy
-#~ msgid ""
 #~ " -n, --nobanner          do not print banner, works only for root\n"
 #~ " -t, --timeout <timeout> write timeout in seconds\n"
 #~ " -V, --version           output version information and exit\n"
@@ -20327,6 +20095,10 @@ msgstr "輸入列太長。"
 #~ " -V, --version           輸出版本資訊然後離開\n"
 #~ " -h, --help              顯示這份說明然後離開\n"
 #~ "\n"
+
+#, fuzzy
+#~ msgid " %s [options] [file ...]\n"
+#~ msgstr " %s [選項] [檔案]\n"
 
 #, fuzzy
 #~ msgid ""
@@ -20371,6 +20143,51 @@ msgstr "輸入列太長。"
 #~ " -v              顯示而無需 squeezing 類似的列\n"
 #~ " -V              輸出版本資訊然後離開\n"
 #~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [options] file...\n"
+#~ "\n"
+#~ msgstr ""
+#~ "用法：%s [選項] 檔案…\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Options:\n"
+#~ "  -d        display help instead of ring bell\n"
+#~ "  -f        count logical, rather than screen lines\n"
+#~ "  -l        suppress pause after form feed\n"
+#~ "  -p        do not scroll, clean screen and display text\n"
+#~ "  -c        do not scroll, display text and clean line ends\n"
+#~ "  -u        suppress underlining\n"
+#~ "  -s        squeeze multiple blank lines into one\n"
+#~ "  -NUM      specify the number of lines per screenful\n"
+#~ "  +NUM      display file beginning from line number NUM\n"
+#~ "  +/STRING  display file beginning from search string match\n"
+#~ "  -V        output version information and exit\n"
+#~ msgstr ""
+#~ "選項：\n"
+#~ "  -d        顯示說明以代替環響鈴\n"
+#~ "  -f        計數邏輯的，而非螢幕列\n"
+#~ "  -l        抑制暫停之後表格饋送\n"
+#~ "  -p        抑制捲動，清除螢幕和顯示文字\n"
+#~ "  -c        抑制捲動，顯示文字和清除列結束\n"
+#~ "  -u        抑制底線\n"
+#~ "  -s        squeeze 多重空列進入一個\n"
+#~ "  -NUM      指定列號的各全螢幕\n"
+#~ " +NUM      顯示檔案起始部分從列號 NUM\n"
+#~ " +/字串  顯示檔案起始部分從搜尋字串匹配\n"
+#~ "  -V        輸出版本資訊然後離開\n"
+
+#~ msgid "...back 1 page"
+#~ msgstr "…倒退 1 頁"
+
+#~ msgid "...skipping one line"
+#~ msgstr "…跳過 1 列"
+
+#~ msgid "line too long"
+#~ msgstr "列的長度過長"
 
 #, fuzzy
 #~ msgid ""
@@ -20469,7 +20286,6 @@ msgstr "輸入列太長。"
 #~ msgstr "        於整個磁碟。"
 
 #, fuzzy
-#~| msgid "%s: does not support swapspace version %d.\n"
 #~ msgid "does not support swapspace version %d."
 #~ msgstr "不支援 swapspace 版本 %d。"
 
@@ -20567,7 +20383,6 @@ msgstr "輸入列太長。"
 #~ "\n"
 
 #, fuzzy
-#~| msgid "Note: sector size is %d (not %d)\n"
 #~ msgid "Note: sector size is %ld (not %d)\n"
 #~ msgstr "註記：磁區大小是 %ld (無法 %d)\n"
 
@@ -20607,12 +20422,10 @@ msgstr "輸入列太長。"
 #~ " -s, --shell<命令殼>         運行命令殼如果/etc/命令殼允許它\n"
 
 #, fuzzy
-#~| msgid "%s: lseek failed"
 #~ msgid "%s: exec failed"
 #~ msgstr "%s：exec 失敗"
 
 #, fuzzy
-#~| msgid "TIOCSCTTY failed: %m"
 #~ msgid "TIOCSCTTY: ioctl failed"
 #~ msgstr "TIOCSCTTY：ioctl 失敗"
 
@@ -20643,17 +20456,14 @@ msgstr "輸入列太長。"
 #~ msgstr "       %s -l [ signal ]\n"
 
 #, fuzzy
-#~| msgid "connect: %s.\n"
 #~ msgid "connect %s"
 #~ msgstr "連接 %s"
 
 #, fuzzy
-#~| msgid "unexpected number of arguments"
 #~ msgid "invalid port number argument"
 #~ msgstr "無效的埠號引數"
 
 #, fuzzy
-#~| msgid "Usage: %s [options] device ...\n"
 #~ msgid ""
 #~ "\n"
 #~ "Usage:\n"
@@ -20750,7 +20560,6 @@ msgstr "輸入列太長。"
 #~ msgstr "參看如何使用檔案和 dirs 引數從位置 (1) 手動。\n"
 
 #, fuzzy
-#~| msgid "Couldn't lock into memory, exiting.\n"
 #~ msgid "mount: couldn't lock into memory"
 #~ msgstr "掛載：無法鎖定進入記憶體"
 
@@ -20764,7 +20573,6 @@ msgstr "輸入列太長。"
 #~ msgstr "執行 %s 時失敗"
 
 #, fuzzy
-#~| msgid "unshare failed"
 #~ msgid "uname failed"
 #~ msgstr "uname 失敗"
 
@@ -20817,15 +20625,10 @@ msgstr "輸入列太長。"
 #~ " -x, --decode                解碼機能和等級到 readable 字串\n"
 
 #, fuzzy
-#~| msgid "cannot set user id"
 #~ msgid "eject: cannot set user id"
 #~ msgstr "退出：無法設定使用者識別號"
 
 #, fuzzy
-#~| msgid ""
-#~| " -h, --help          this help\n"
-#~| " -f, --freeze        freeze the filesystem\n"
-#~| " -u, --unfreeze      unfreeze the filesystem\n"
 #~ msgid ""
 #~ " -h, --help        this help\n"
 #~ " -f, --freeze      freeze the filesystem\n"
@@ -20861,18 +20664,6 @@ msgstr "輸入列太長。"
 #~ msgstr "semctl 失敗"
 
 #, fuzzy
-#~| msgid ""
-#~| "\n"
-#~| "Options:\n"
-#~| " -e | --encryption <type> enable data encryption with specified <name/num>\n"
-#~| " -h | --help              this help\n"
-#~| " -o | --offset <num>      start at offset <num> into file\n"
-#~| "      --sizelimit <num>   loop limited to only <num> bytes of the file\n"
-#~| " -p | --pass-fd <num>     read passphrase from file descriptor <num>\n"
-#~| " -r | --read-only         setup read-only loop device\n"
-#~| "      --show              print device name (with -f <file>)\n"
-#~| " -v | --verbose           verbose mode\n"
-#~| "\n"
 #~ msgid ""
 #~ " -e, --encryption <type>       enable encryption with specified <name/num>\n"
 #~ " -o, --offset <num>            start at offset <num> into file\n"
@@ -20897,17 +20688,14 @@ msgstr "輸入列太長。"
 #~ msgstr "無效的密語檔案描述符號"
 
 #, fuzzy
-#~| msgid "%s: unable to probe device"
 #~ msgid "%s failed to use device"
 #~ msgstr "%s 無法使用裝置"
 
 #, fuzzy
-#~| msgid "Couldn't lock into memory, exiting.\n"
 #~ msgid "couldn't lock into memory"
 #~ msgstr "無法鎖定進入記憶體"
 
 #, fuzzy
-#~| msgid "failed to allocate outbuffer"
 #~ msgid "failed to allocate memory"
 #~ msgstr "配置記憶體時失敗"
 
@@ -20941,17 +20729,6 @@ msgstr "輸入列太長。"
 #~ msgstr "renice 自 %s\n"
 
 #, fuzzy
-#~| msgid ""
-#~| "usage: %s [options]\n"
-#~| "    -d | --device <device>    select rtc device (rtc0|rtc1|...)\n"
-#~| "    -n | --dry-run            does everything, but suspend\n"
-#~| "    -l | --local              RTC uses local timezone\n"
-#~| "    -m | --mode               standby|mem|... sleep mode\n"
-#~| "    -s | --seconds <seconds>  seconds to sleep\n"
-#~| "    -t | --time <time_t>      time to wake\n"
-#~| "    -u | --utc                RTC uses UTC\n"
-#~| "    -v | --verbose            verbose messages\n"
-#~| "    -V | --version            show version\n"
 #~ msgid ""
 #~ " -d, --device <device>    select rtc device (rtc0|rtc1|...)\n"
 #~ " -n, --dry-run            does everything, but suspend\n"
@@ -20972,25 +20749,10 @@ msgstr "輸入列太長。"
 #~ " -v, --verbose            詳細的訊息\n"
 
 #, fuzzy
-#~| msgid "failed to execute %s"
 #~ msgid "unable to execute %s"
 #~ msgstr "無法執行 %s"
 
 #, fuzzy
-#~| msgid ""
-#~| " -h, --help               displays this help text\n"
-#~| " -v, --verbose            says what options are being switched on\n"
-#~| " -R, --addr-no-randomize  disables randomization of the virtual address space\n"
-#~| " -F, --fdpic-funcptrs     makes function pointers point to descriptors\n"
-#~| " -Z, --mmap-page-zero     turns on MMAP_PAGE_ZERO\n"
-#~| " -L, --addr-compat-layout changes the way virtual memory is allocated\n"
-#~| " -X, --read-implies-exec  turns on READ_IMPLIES_EXEC\n"
-#~| " -B, --32bit              turns on ADDR_LIMIT_32BIT\n"
-#~| " -I, --short-inode        turns on SHORT_INODE\n"
-#~| " -S, --whole-seconds      turns on WHOLE_SECONDS\n"
-#~| " -T, --sticky-timeouts    turns on STICKY_TIMEOUTS\n"
-#~| " -3, --3gb                limits the used address space to a maximum of 3 GB\n"
-#~| "     --4gb                ignored (for backward compatibility only)\n"
 #~ msgid ""
 #~ " -v, --verbose            says what options are being switched on\n"
 #~ " -R, --addr-no-randomize  disables randomization of the virtual address space\n"
@@ -21021,7 +20783,6 @@ msgstr "輸入列太長。"
 #~ "     --uname-2.6          打開 UNAME26\n"
 
 #, fuzzy
-#~| msgid "execv failed"
 #~ msgid "execvp failed"
 #~ msgstr "execvp 失敗"
 
@@ -21065,14 +20826,6 @@ msgstr "輸入列太長。"
 #~ " -v, --verbose           表示什麼正在是已完成\n"
 
 #, fuzzy
-#~| msgid ""
-#~| "Run program with some namespaces unshared from parent\n"
-#~| "\n"
-#~| "  -h, --help        usage information (this)\n"
-#~| "  -m, --mount       unshare mounts namespace\n"
-#~| "  -u, --uts         unshare UTS namespace (hostname etc)\n"
-#~| "  -i, --ipc         unshare System V IPC namespace\n"
-#~| "  -n, --net         unshare network namespace\n"
 #~ msgid ""
 #~ " -m, --mount       unshare mounts namespace\n"
 #~ " -u, --uts         unshare UTS namespace (hostname etc)\n"
@@ -21085,7 +20838,6 @@ msgstr "輸入列太長。"
 #~ " -n, --net         unshare 網路命名空間\n"
 
 #, fuzzy
-#~| msgid "%s: version %s\n"
 #~ msgid "%-15s%s [version %x]\n"
 #~ msgstr "%-15s%s [版本 %x]\n"
 
@@ -21236,12 +20988,10 @@ msgstr "輸入列太長。"
 #~ msgstr "太多 iov's (變更 wall/ttymsg.c 中的編碼)"
 
 #, fuzzy
-#~| msgid "col: write error.\n"
 #~ msgid "write error."
 #~ msgstr "寫入錯誤。"
 
 #, fuzzy
-#~| msgid "Usage: %s [options] device ...\n"
 #~ msgid ""
 #~ "\n"
 #~ "Usage: %s [options] [file ...]\n"
@@ -21266,10 +21016,6 @@ msgstr "輸入列太長。"
 #~ " -x, --fillrows           填充列之前欄位\n"
 
 #, fuzzy
-#~| msgid ""
-#~| "\n"
-#~| "For more information see ipcmk(1).\n"
-#~| "\n"
 #~ msgid ""
 #~ "\n"
 #~ "For more information see column(1).\n"
@@ -21278,12 +21024,10 @@ msgstr "輸入列太長。"
 #~ "要獲得更多資訊請參看欄 (1)。\n"
 
 #, fuzzy
-#~| msgid "mkfs (%s)\n"
 #~ msgid "more (%s)\n"
 #~ msgstr "更多 (%s)\n"
 
 #, fuzzy
-#~| msgid "Usage: %s [options] device ...\n"
 #~ msgid ""
 #~ "\n"
 #~ "Usage:\n"
@@ -21760,6 +21504,9 @@ msgstr "輸入列太長。"
 
 #~ msgid "Usage: %s [ -f full-name ] [ -o office ] "
 #~ msgstr "用法：%s [ -f full-name ] [ -o office ] "
+
+#~ msgid "[ --help ] [ --version ]\n"
+#~ msgstr "[ --help ] [ --version ]\n"
 
 #~ msgid ""
 #~ "Usage: %s [ -s shell ] [ --list-shells ] [ --help ] [ --version ]\n"
