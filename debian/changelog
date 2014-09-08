@@ -1,3 +1,11 @@
+util-linux (2.25.1-1) experimental; urgency=medium
+
+  * Rename libuuid user to uuidd in libuuidd1 postinst as well
+  * Imported Upstream version 2.25.1
+  * Drop duplicated BSD-3-clause license text from debian/copyright
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 08 Sep 2014 01:50:26 +0200
+
 util-linux (2.25.1~rc1-1) experimental; urgency=medium
 
   * Restart uuidd /after/ upgrade.
