@@ -164,7 +164,6 @@ Section: libdevel
 Priority: optional
 Depends: libc6-dev | libc-dev,
          libmount1 (= ${binary:Version}),
-         uuid-dev,
          libblkid-dev,
          ${misc:Depends}
 Multi-Arch: same
