@@ -1,6 +1,8 @@
 util-linux (2.25.1-2) UNRELEASED; urgency=medium
 
   * Make libmount-dev depend on libblkid-dev (LP: #1096581)
+  * Drop uuid-dev dependency in libmount-dev package
+  * Drop explicit disabling of pivot_root on non-linux
 
  -- Andreas Henriksson <andreas@fatal.se>  Thu, 25 Sep 2014 21:06:48 +0200
 
