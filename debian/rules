@@ -14,8 +14,6 @@ CONFOPTS += --with-selinux
 CONFOPTS += --enable-partx
 CONFOPTS += --with-systemd
 CONFOPTS += --enable-tunelp
-else
-CONFOPTS += --disable-pivot_root
 endif
 
 CONFOPTS += --localstatedir=/run
