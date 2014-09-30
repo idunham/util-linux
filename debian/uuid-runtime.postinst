@@ -11,6 +11,9 @@ if getent passwd libuuid >/dev/null && ! getent passwd uuidd >/dev/null ; then
 		chsh -s /bin/false libuuid
 	fi
 
+	# attempt to stop potentially running uuidd, otherwise usermod will fail.
+	invoke-rc.d uuidd stop || true
+
 	# rename user and set new homedir.
 	usermod --login uuidd --home /run/uuidd libuuid
 
