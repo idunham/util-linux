@@ -8,6 +8,10 @@ if [ -e /run/systemd/system ] ; then
     exit 0
 fi
 
+if [ -e /run/udev/hwclock-set ]; then
+    exit 0
+fi
+
 if [ -f /etc/default/rcS ] ; then
     . /etc/default/rcS
 fi
@@ -26,3 +30,5 @@ if [ yes = "$BADYEAR" ] ; then
 else
     /sbin/hwclock --rtc=$dev --hctosys
 fi
+
+touch /run/udev/hwclock-set
