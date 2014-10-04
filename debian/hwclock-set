@@ -31,4 +31,5 @@ else
     /sbin/hwclock --rtc=$dev --hctosys
 fi
 
-touch /run/udev/hwclock-set
+# Note 'touch' may not be available in initramfs
+> /run/udev/hwclock-set
