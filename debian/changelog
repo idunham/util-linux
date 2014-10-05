@@ -1,3 +1,18 @@
+util-linux (2.25.1-3) UNRELEASED; urgency=medium
+
+  [ Ben Hutchings ]
+  * hwclock-set: Don't use 'touch' to create stamp file, as it may not be
+    included in an initramfs (Really closes: #763823)
+
+  [ Andreas Henriksson ]
+  * Put uuid-runtime in Section utils.
+    Thanks to Ben Finney for the suggestion (Closes: #764039)
+  * Cherry-pick upstream commit 8026fa9bc752
+    "build-sys: use -lutil for BSD only"
+    debian/patches/build-sys-use-lutil-for-BSD-only.patch
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 04 Oct 2014 17:43:55 +0200
+
 util-linux (2.25.1-2) experimental; urgency=medium
 
   [ Andreas Henriksson ]
@@ -8,7 +23,8 @@ util-linux (2.25.1-2) experimental; urgency=medium
   * Change build-dep to new unified libsystemd-dev (Closes: #763808)
 
   [ Ben Hutchings ]
-  * Only set up system clock once (Closes: #763823)
+  * hwclock-set: Use stamp file in /run/udev to ensure we set the clock
+    only once if installed in the initramfs (Closes: #763823)
 
  -- Andreas Henriksson <andreas@fatal.se>  Fri, 03 Oct 2014 10:40:53 +0200
 
