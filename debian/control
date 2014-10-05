@@ -224,7 +224,7 @@ Description: Universally Unique ID library
 
 Package: uuid-runtime
 Architecture: any
-Section: libs
+Section: utils
 Priority: optional
 Pre-Depends: libuuid1 (>= 2.25-5~), ${misc:Pre-Depends}
 Depends: adduser, passwd, ${misc:Depends}, ${shlibs:Depends}
