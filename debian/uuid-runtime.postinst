@@ -9,13 +9,8 @@ if getent passwd libuuid >/dev/null && ! getent passwd uuidd >/dev/null ; then
 	# attempt to stop potentially running uuidd, otherwise usermod will fail.
 	invoke-rc.d uuidd stop || true
 
-	# switch existing libuuid user to not have a login shell.
-	if [ "$(getent passwd libuuid | cut -d: -f7)" = "/bin/sh" ]; then
-		usermod -s /bin/false libuuid
-	fi
-
-	# rename user and set new homedir.
-	usermod --login uuidd --home /run/uuidd libuuid
+	# rename user, change shell and set new homedir.
+	usermod --login uuidd --shell /bin/false --home /run/uuidd libuuid
 
 	# attemp cleanup of old home directory.
 	[ -d /var/lib/libuuid ] && \
