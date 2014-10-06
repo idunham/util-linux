@@ -6,13 +6,13 @@ if getent group libuuid >/dev/null && ! getent group uuidd >/dev/null ; then
 	groupmod --new-name uuidd libuuid
 fi
 if getent passwd libuuid >/dev/null && ! getent passwd uuidd >/dev/null ; then
-	# switch existing libuuid user to not have a login shell.
-	if [ "$(getent passwd libuuid | cut -d: -f7)" = "/bin/sh" ]; then
-		chsh -s /bin/false libuuid
-	fi
-
 	# attempt to stop potentially running uuidd, otherwise usermod will fail.
 	invoke-rc.d uuidd stop || true
+
+	# switch existing libuuid user to not have a login shell.
+	if [ "$(getent passwd libuuid | cut -d: -f7)" = "/bin/sh" ]; then
+		usermod -s /bin/false libuuid
+	fi
 
 	# rename user and set new homedir.
 	usermod --login uuidd --home /run/uuidd libuuid
