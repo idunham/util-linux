@@ -11,3 +11,4 @@ libmount-only-invoke-loopcxt-on-linux.patch
 libmount-only-include-context-on-linux.patch
 build-sys-build-libmount-everywhere.patch
 build-sys-use-lutil-for-BSD-only.patch
+libmount-fix-mnt_is_readonly-ifdef.patch
