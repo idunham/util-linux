@@ -16,7 +16,7 @@ if getent group libuuid >/dev/null && ! getent group uuidd >/dev/null ; then
 fi
 if getent passwd libuuid >/dev/null && ! getent passwd uuidd >/dev/null ; then
 	# attempt to stop potentially running uuidd, otherwise usermod will fail.
-	invoke-rc.d uuidd stop || true
+	invoke-rc.d --quiet uuidd stop || true
 
 	# rename user, change shell and set new homedir.
 	usermod --login uuidd --shell /bin/false --home /run/uuidd libuuid
