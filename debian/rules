@@ -41,7 +41,7 @@ CONFOPTS += --disable-chfn-chsh
 ifeq ($(DEB_BUILD_GNU_TYPE),$(DEB_HOST_GNU_TYPE))
 	CROSS :=
 else
-	CROSS := CC=$(DEB_HOST_GNU_TYPE)-gcc
+	CROSS := CC="$(DEB_HOST_GNU_TYPE)-gcc -std=gnu99"
 endif
 
 %:
