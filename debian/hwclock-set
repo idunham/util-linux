@@ -26,8 +26,10 @@ if [ -f /etc/default/hwclock ] ; then
 fi
 
 if [ yes = "$BADYEAR" ] ; then
+    /sbin/hwclock --rtc=$dev --systz --badyear
     /sbin/hwclock --rtc=$dev --hctosys --badyear
 else
+    /sbin/hwclock --rtc=$dev --systz
     /sbin/hwclock --rtc=$dev --hctosys
 fi
 
