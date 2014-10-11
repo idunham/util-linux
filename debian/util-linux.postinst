@@ -21,4 +21,10 @@ if [ -L /usr/doc/util-linux ]; then
 	rm -f /usr/doc/util-linux
 fi
 
+# (hwclock-related) parts of this package are being pulled into initramfs,
+# so trigger an update of the initramfs.
+if [ -x /usr/sbin/update-initramfs ]; then
+	/usr/sbin/update-initramfs -u
+fi
+
 #DEBHELPER#
