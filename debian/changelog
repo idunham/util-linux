@@ -1,3 +1,30 @@
+util-linux (2.25.1-4) unstable; urgency=medium
+
+  [ Sebastian Ramacher ]
+  * Use usermod instead of chsh in postinst user migration (Closes: #764244)
+
+  [ Andreas Henriksson ]
+  * Use a single usermod call in postinst user migration
+  * Silence the attempt to stop uuidd before migration (Closes: #764159)
+
+  [ Helmut Grohne ]
+  * Pass -std=gnu99 to CC when cross-building. (Closes: #764392)
+
+  [ Andreas Henriksson ]
+  * Add debian/patches/libmount-fix-mnt_is_readonly-ifdef.patch
+    - Cherry-picked from upstream commit 473c5fb86c43eed
+      "libmount: fix mnt_is_readonly() #ifdef"
+    - Fixes Hurd build failure.
+    Thanks to Pino Toscano for fixing this upstream! (Closes: #764418)
+  * hwclock-set: use both systz and hctosys.
+    Thanks to Ben Hutchings for debugging this. (Closes: #764552)
+  * Add debian/patches/flock-zero-timeout-is-valid.patch
+    - Cherry-picked from upstream commit c4604c38b503c8c46e
+      "flock: zero timeout is valid" (Closes: #764660)
+  * Trigger update of initramfs on upgrades
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 11 Oct 2014 17:45:20 +0200
+
 util-linux (2.25.1-3) unstable; urgency=medium
 
   [ Ben Hutchings ]
