@@ -14,3 +14,4 @@ build-sys-use-lutil-for-BSD-only.patch
 libmount-fix-mnt_is_readonly-ifdef.patch
 flock-zero-timeout-is-valid.patch
 build-sys-check-for-libtoolize-rather-than-libtool.patch
+script-may-be-hangs.patch
