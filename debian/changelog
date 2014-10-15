@@ -1,3 +1,16 @@
+util-linux (2.25.1-5) unstable; urgency=medium
+
+  * Add debian/patches/build-sys-check-for-libtoolize-rather-than-libtool.patch
+    - Cherry-picked from upstream commit e71b0aadaa20b21e9
+      "build-sys: check for libtoolize rather than libtool"
+    Thanks to Helmut Grohne for fixing this upstream (and more).
+    (Closes: #764387)
+  * Add debian/patches/script-may-be-hangs.patch
+    - Cherry-picked from upstream commit 032228c9af6fbda5177c
+      "script: may be hangs" (Closes: #764547)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 15 Oct 2014 09:19:30 +0200
+
 util-linux (2.25.1-4) unstable; urgency=medium
 
   [ Sebastian Ramacher ]
