@@ -2,16 +2,4 @@ Multiarch-support-in-util-linux-build.patch
 cfdisk.8-mention-slang-next-to-curses.-Closes-295487.patch
 man-page-tweaks-cleanup-my_dev_t.h-ancient-stuff.patch
 Disable-the-fallback-clause-in-hwclock-when-dev-rtc-.patch
-Report-correct-disk-size-on-GNU-kFreeBSD.-Thanks-Tuc.patch
-remaining-kFreeBSD-hackery-for-building.patch
-2.20.1-1.2.patch
-kFreeBSD-add-hacks-in-ipcrm-to-avoid-FTBFS.patch
 verbose-tests.patch
-libmount-only-invoke-loopcxt-on-linux.patch
-libmount-only-include-context-on-linux.patch
-build-sys-build-libmount-everywhere.patch
-build-sys-use-lutil-for-BSD-only.patch
-libmount-fix-mnt_is_readonly-ifdef.patch
-flock-zero-timeout-is-valid.patch
-build-sys-check-for-libtoolize-rather-than-libtool.patch
-script-may-be-hangs.patch
