@@ -9,9 +9,10 @@ debian/tmp/usr/bin/rename => /usr/bin/rename.ul
 # Rename mkswap to mkswap.linux on non-linux.
 [linux-any] sbin/mkswap
 [!linux-any] debian/tmp/sbin/mkswap => /sbin/mkswap.linux
+# weekly fstrim only available on linux
+[linux-any] lib/systemd/system/fstrim.timer
+[linux-any] lib/systemd/system/fstrim.service
 bin/more
-lib/systemd/system/fstrim.timer
-lib/systemd/system/fstrim.service
 sbin/agetty
 sbin/blkid
 sbin/cfdisk
