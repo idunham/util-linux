@@ -1,3 +1,9 @@
+util-linux (2.25.2-2) unstable; urgency=medium
+
+  * Only ship fstrim service and timer on linux
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 24 Oct 2014 18:57:29 +0200
+
 util-linux (2.25.2-1) unstable; urgency=medium
 
   * Imported Upstream version 2.25.2
