@@ -1,3 +1,9 @@
+util-linux (2.25.2-1) UNRELEASED; urgency=medium
+
+  * Imported Upstream version 2.25.2
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 24 Oct 2014 15:40:05 +0200
+
 util-linux (2.25.1-5) unstable; urgency=medium
 
   * Add debian/patches/build-sys-check-for-libtoolize-rather-than-libtool.patch
