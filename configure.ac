@@ -26,7 +26,7 @@ PACKAGE_VERSION_RELEASE=0
 
 dnl libblkid version
 LIBBLKID_VERSION="$PACKAGE_VERSION_MAJOR.$PACKAGE_VERSION_MINOR.$PACKAGE_VERSION_RELEASE"
-LIBBLKID_DATE="03-Sep-2014"
+LIBBLKID_DATE="24-Oct-2014"
 LIBBLKID_LT_MAJOR=1
 LIBBLKID_LT_MINOR=1
 LIBBLKID_LT_MICRO=0
@@ -135,9 +135,17 @@ PKG_PROG_PKG_CONFIG
 GTK_DOC_CHECK([1.10])
 AC_PATH_PROG([XSLTPROC], [xsltproc])
 
+
 linux_os=no
-AS_CASE([${host_os}], [*linux*], [linux_os=yes])
+bsd_os=no
+AS_CASE([${host_os}],
+  [*linux*],
+     [linux_os=yes],
+  [*bsd*],
+     [bsd_os=yes])
 AM_CONDITIONAL([LINUX], [test "x$linux_os" = xyes])
+AM_CONDITIONAL([BSD], [test "x$bsd_os" = xyes])
+
 
 dnl define ARCH_<NAME> conditionals
 UL_SET_ARCH([I86], [i?86-*])
@@ -295,7 +303,7 @@ AC_CHECK_FUNCS([ \
 	err \
 	errx \
 	fsync \
-	futimens \
+	utimensat \
 	getdomainname \
 	getdtablesize \
 	getexecname \
@@ -789,7 +797,6 @@ AC_ARG_ENABLE([libmount],
   [], [UL_DEFAULT_ENABLE([libmount], [check])]
 )
 UL_BUILD_INIT([libmount])
-UL_REQUIRES_LINUX([libmount])
 UL_REQUIRES_BUILD([libmount], [libblkid])
 UL_REQUIRES_HAVE([libmount], [scanf_alloc_modifier], [scanf string alloc modifier])
 AM_CONDITIONAL([BUILD_LIBMOUNT], [test "x$build_libmount" = xyes])
@@ -846,6 +853,7 @@ AC_ARG_ENABLE([mount],
   [], [UL_DEFAULT_ENABLE([mount], [check])]
 )
 UL_BUILD_INIT([mount])
+UL_REQUIRES_LINUX([mount])
 UL_REQUIRES_BUILD([mount], [libmount])
 AM_CONDITIONAL([BUILD_MOUNT], [test "x$build_mount" = xyes])
 
