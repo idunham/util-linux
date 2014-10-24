@@ -10,6 +10,8 @@ debian/tmp/usr/bin/rename => /usr/bin/rename.ul
 [linux-any] sbin/mkswap
 [!linux-any] debian/tmp/sbin/mkswap => /sbin/mkswap.linux
 bin/more
+lib/systemd/system/fstrim.timer
+lib/systemd/system/fstrim.service
 sbin/agetty
 sbin/blkid
 sbin/cfdisk
