@@ -1,3 +1,10 @@
+util-linux (2.25.2-3) unstable; urgency=medium
+
+  * Ship fstrim timer/service units as examples only (Closes: #767194)
+    - this works around #757891 and #767429 / #760168
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 06 Nov 2014 13:54:04 +0100
+
 util-linux (2.25.2-2) unstable; urgency=medium
 
   * Only ship fstrim service and timer on linux
