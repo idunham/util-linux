@@ -12,7 +12,6 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
 CONFOPTS += --enable-raw
 CONFOPTS += --with-selinux
 CONFOPTS += --enable-partx
-CONFOPTS += --with-systemd
 CONFOPTS += --enable-tunelp
 endif
 
